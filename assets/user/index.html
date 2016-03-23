@@ -1,0 +1,177 @@
+
+<html>
+  
+<!-- Mirrored from www.sekolahkoding.com/user/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Mar 2016 10:33:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Sekolah Koding</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Video tutorial untuk belajar Web Design dan Development dalam bahasa Indonesia">
+		<meta name="keywords" content="video, tutorial, belajar,web,design, development, bahasa, indonesia">
+		<meta name="author" content="SekolahKoding">
+		<link rel="stylesheet" href="css/front.css" media="screen" title="no title" charset="utf-8">
+		<!-- for facebook graph-->
+    <link rel="stylesheet" href="css/main-app.css" charset="utf-8">
+<script src="../../code.jquery.com/jquery-2.1.3.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="icon" href="../favicon.ico" type="image/x-icon" />
+		<meta property="og:title" content="SekolahKoding">
+    <meta property="og:type" content="Website">
+		<meta property="og:image" content="http://sekolahkoding.com/asset/blue-logo.png">
+		<meta property="og:description" content="Tutorial online belajar Web Programming dan Design dalam bahasa Indonesia di SekolahKoding">
+
+    <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59878621-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '389996164532722',
+    xfbml      : true,
+    version    : 'v2.4'
+  });
+};
+
+(function(d, s, id){
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement(s); js.id = id;
+   js.src = "../../connect.facebook.net/en_US/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="homepage-hero-module">
+    <div class="video-container">
+
+          <div class="title-container">
+
+            <div id="logo-sk">
+              <img src="../../sekolahkoding.com/asset/blue-logo.png" alt="" />
+            </div>
+
+            <div id="wrap-h1">
+              <h1>Sekolah Koding</h1>
+              <h2>Luaskan ilmu, luaskan manfaat.</h2>
+            </div>
+
+            <div id="main-btn-wrapper">
+              <a href="login.html" class="main-btn btn-masuk">Masuk</a>
+              <a href="daftar.html" class="main-btn btn-daftar">Daftar</a>
+            </div>
+            <div class="clear"></div>
+
+
+          </div>
+
+          <div id="footer-main">
+
+          <div id="soc-med">
+            <a href="https://twitter.com/sekolahkoding"><img src="../../sekolahkoding.com/img/twitter.png" alt="" /></a>
+            <a href="https://youtube.com/SekolahKoding"><img src="../../sekolahkoding.com/img/utube.png" alt="" /></a>
+            <a href="https://www.facebook.com/sekolahkoding"><img src="../../sekolahkoding.com/img/fb.png" alt="" /></a>
+          </div>
+
+            <div id="extra-menu">
+              <a href="../forum.html">Forum </a>
+              <a href="../kelas/index.html">Kelas </a>
+              <a href="../syarat.html">Syarat </a>
+              <a href="../tentang.html">Tentang </a>
+            </div>
+
+          </div>
+      	<div class="clear"></div>
+        <div class="filter"></div>
+        <video autoplay loop poster="../asset/video/For_Wes/Snapshots/For_Wes.jpg" class="fillWidth">
+            <source src="../asset/video/For_Wes/MP4/For_Wes.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            <source src="../asset/video/For_Wes/WEBM/For_Wes.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+
+    </div>
+</div>
+
+<script src="../../ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+//jQuery is required to run this code
+$( document ).ready(function() {
+
+  scaleVideoContainer();
+
+  initBannerVideoSize('.video-container .poster img');
+  initBannerVideoSize('.video-container .filter');
+  initBannerVideoSize('.video-container video');
+
+  $(window).on('resize', function() {
+      scaleVideoContainer();
+      scaleBannerVideoSize('.video-container .poster img');
+      scaleBannerVideoSize('.video-container .filter');
+      scaleBannerVideoSize('.video-container video');
+  });
+
+});
+
+function scaleVideoContainer() {
+
+  var height = $(window).height() + 5;
+  var unitHeight = parseInt(height) + 'px';
+  $('.homepage-hero-module').css('height',unitHeight);
+
+}
+
+function initBannerVideoSize(element){
+
+  $(element).each(function(){
+      $(this).data('height', $(this).height());
+      $(this).data('width', $(this).width());
+  });
+
+  scaleBannerVideoSize(element);
+
+}
+
+function scaleBannerVideoSize(element){
+
+  var windowWidth = $(window).width(),
+  windowHeight = $(window).height() + 5,
+  videoWidth,
+  videoHeight;
+
+  console.log(windowHeight);
+
+  $(element).each(function(){
+      var videoAspectRatio = $(this).data('height')/$(this).data('width');
+
+      $(this).width(windowWidth);
+
+      if(windowWidth < 1000){
+          videoHeight = windowHeight;
+          videoWidth = videoHeight / videoAspectRatio;
+          $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+
+          $(this).width(videoWidth).height(videoHeight);
+      }
+
+      $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+  });
+}
+</script>
+
+</body>
+
+<!-- Mirrored from www.sekolahkoding.com/user/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Mar 2016 10:33:20 GMT -->
+</html>
+

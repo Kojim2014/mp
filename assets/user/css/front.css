@@ -1,0 +1,223 @@
+*{
+  margin: 0; padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  border: 0;
+}
+
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+  #wrap-h1{
+    background-color: rgba(94, 155, 204, 0.6);
+    margin-bottom: 70px;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  #wrap-h1 h1{
+      font-size: 50px;
+
+  }
+
+  #wrap-h1 h2{
+      font-size: 40px;
+      font-family: 'PT Sans', sans-serif;
+  }
+
+  .landing-cover h2 {
+    text-align: center;
+    width: 70%;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    font-size: 30px;
+  }
+
+  #main-btn-wrapper{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .main-btn{
+    width: 47%;
+    margin: 0 1%;
+    /*background-color: #5E9BCC;*/
+    color:#5E9BCC;
+    border: 3px solid #5E9BCC;
+    padding: 10px 0;
+    text-align:center;
+    display: inline-block;
+    float: left;
+    font-size:25px;
+  }
+
+  .main-btn:hover{
+    background-color: #5E9BCC;
+    border: 3px solid #5E9BCC;
+    color:white;
+  }
+
+.video-container .title-container {
+  z-index: 1000;
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+}
+
+#logo-sk{
+  margin-bottom: 20px;
+}
+
+.video-container #footer-main {
+  z-index: 1000;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  height: 30px;
+}
+
+#footer-main img{
+  width: 30px;
+}
+
+#soc-med{
+  position: absolute;
+  left:30px;
+}
+
+#extra-menu{
+  position: absolute;
+  right:30px;
+  width: 500px;
+}
+
+#extra-menu a{
+  color: white;
+  display: inline-block;
+  font-size: 24px;
+  margin-right: 5%;
+  float: right;
+  text-decoration: underline;
+}
+
+.clear{clear: both;}
+
+@media only screen and (max-width:1024px){
+  .video-container .title-container{
+    top:10%;
+  }
+
+  #wrap-h1{
+    padding: 20px 50px;
+  }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait){
+  .video-container .title-container{
+    top:20%;
+  }
+  .main-btn{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #logo-sk img{
+    width: 200px;
+  }
+
+}
+
+@media only screen and (max-width:760px){
+  .main-btn{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #wrap-h1 h1{
+      font-size: 30px;
+  }
+
+  #wrap-h1 h2{
+      font-size: 23px;
+  }
+
+  .video-container #footer-main{
+    bottom: 30px;
+    height: 50px;
+  }
+
+  #soc-med,  #extra-menu{
+    float: none;
+    position: static;
+    width: auto;
+  }
+
+  #extra-menu{
+    margin: 10px 30px 10px 0;
+  }
+
+  #extra-menu a{
+    font-size: 15px;
+  }
+
+}
+
+/*---------------------------------*/
+/*------ bigger screen size  ---------*/
+/*---------------------------------*/
+@media only screen and (min-width: 1500px){
+  body{
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+}

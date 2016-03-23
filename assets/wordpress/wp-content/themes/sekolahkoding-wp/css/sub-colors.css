@@ -1,0 +1,49 @@
+/*---- green CSS ------------ */
+.green-main{
+    color:#2E9F83;
+}
+
+.green-sub-main{
+    color:#36BD98;
+}
+
+.green-border{
+    border:4px solid #2E9F83;
+}
+
+.green-bg{
+    background-color:#2E9F83;
+}
+
+.green-sub-bg{
+    background-color:#36BD98;
+}
+
+.green-borderLeft{
+  border-left:5px solid #2E9F83;
+}
+
+/*---- orange javascript ------------ */
+.orange-main{
+    color:#E17F00;
+}
+
+.orange-sub-main{
+    color:#EF9D00;
+}
+
+.orange-border{
+    border:4px solid #E17F00;
+}
+
+.orange-bg{
+    background-color:#E17F00;
+}
+
+.orange-sub-bg{
+    background-color:#EF9D00;
+}
+
+.orange-borderLeft{
+  border-left:5px solid #E17F00;
+}

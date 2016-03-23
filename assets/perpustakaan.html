@@ -1,0 +1,357 @@
+
+<html>
+  
+<!-- Mirrored from www.sekolahkoding.com/perpustakaan by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Mar 2016 10:13:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Perpustakaan Sekolah Koding  </title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Perpustakaan web developer dan programmer indonesia, diskusi seputar web development, programming dan design di sini. SekolahKoding, tempat belajar web development online">
+		<meta name="keywords" content="perpustakaan,programmer,web,developer,diskusi,development,website,indonesia,web,designer,html,bahasa,belajar,tutorial,css,javascript,java,photshop,illustrator">
+		<meta name="author" content="SekolahKoding">
+		<link rel="stylesheet" href="user/css/main-app.css" charset="utf-8">
+<script src="../code.jquery.com/jquery-2.1.3.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<!-- for facebook graph-->
+		<meta property="og:title" content="Perpustakaan Sekolah Koding">
+		<meta property="og:image" content="/asset/blue-logo.png">
+		<meta property="og:description" content="Perpustakaan web developer dan programmer indonesia, diskusi seputar web development, programming dan design di sini. SekolahKoding, tempat belajar web development online">
+	</head>
+	<body class="body-class">
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59878621-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<div id="page-wrapper">
+
+	
+	<div id="menu_left_back"></div>
+	<div id="menu_left" class="menu_forum">
+		<div id="menu_title">
+		  <h2><a href="perpustakaan.html">Perpustakaan SekolahKoding</a></h2>
+		  <h3> Menulis, tinggalkan karya yang bermanfaat untuk diri sendiri dan orang lain </h3>
+		</div>
+
+	<div id="menu_left_bottom">
+  <a href="upacara.html"><li> <img src="asset/upacara-icon.png" alt="" />  Upacara </li></a>
+  <a href="forum.html"><li> <img src="asset/forum-icon.png" alt="" />  Forum</li></a>
+  <a href="perpustakaan.html"><li> <img src="asset/perpus-icon.png" alt="" /> Perpustakaan </li></a>
+  <a href="kelas/index.html"><li> <img src="asset/kelas-icon.png" alt="" /> Kelas </li></a>
+  <a href="perjalanan.html"><li> <img src="asset/jejak-icon.png" alt="" /> Perjalanan </li></a>
+  <a href="member.html"><li> <img src="asset/member-icon.png" alt="" /> Member </li></a>
+  <!-- <a href="/syarat"> <li> <img src="/asset/donasi-icon.png" alt="" /> Syarat  </li></a> -->
+</div>
+
+	<br>
+	<div id="halalad_companion_ad_div_TGKcTDQBBfRZZhEVEHgq5Rb3v2U=dhbdsljhbdDjTchvMzkx" style="display: none;"> <script id="widget_lib_TGKcTDQBBfRZZhEVEHgq5Rb3v2U=dhbdsljhbdDjTchvMzkx" src="../www.halal.ad/assets/javascripts/publisher/widgets/had_widget_lib.js" async></script> <script id="widget_formatter_TGKcTDQBBfRZZhEVEHgq5Rb3v2U=dhbdsljhbdDjTchvMzkx" type="text/javascript" src="../www.halal.ad/assets/javascripts/publisher/widgets/widget_300_250.js" async></script> <iframe id="halalad_ads_frame_TGKcTDQBBfRZZhEVEHgq5Rb3v2U=dhbdsljhbdDjTchvMzkx" style="display : block ;" name="halalad_ads_frame" target-domain="https://www.halal.ad" width="0" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true"> </iframe> <script src="https://www.halal.ad/getWidgetBootstrap?widgetToken=TGKcTDQBBfRZZhEVEHgq5Rb3v2U=dhbdsljhbdDjTchvMzkx" async></script> </div>
+
+
+	</div><!-- end menu_left -->
+
+	<div id="main_wrapper" class="main_forum">
+
+		<div id="menu-top-profil">
+			<div id="blue-logo">
+  <a href="user.html"><img src="../sekolahkoding.com/asset/blue-logo.png" alt=""/></a>
+</div>
+
+<ul>
+  <li class="login"><a href="user/login.html">Masuk</a></li>
+<li><a href="user.html">Profil</a></li>
+<li><a href="kelas/index.html">Kelas</a></li>
+
+<li>
+	<!-- notifikasi -->
+		<!-- end of notifikasi -->
+</li>
+
+</ul>
+<!-- sweetalert-->
+<script src="../sekolahkoding.com/user/js/sweetalert-dev.js"></script>
+<link rel="stylesheet" href="../sekolahkoding.com/user/js/sweetalert.css">
+
+<script>
+$(document).ready(function() {
+
+ $(".logout").on('click',function(){
+   swal({  title: "Yakin mau keluar?",
+           type: "warning",
+           showCancelButton: true,
+           confirmButtonColor: "#DD6B55",
+           confirmButtonText: "Keluar",
+           cancelButtonText: "Batal",
+           closeOnConfirm: false
+         },function(response){
+             if(response == true){
+
+               $url = 'index.html';
+               $data = { args : 'logout' }
+
+               $.post($url, $data).done(function(){
+                 swal("Sampai jumpa!", "istirahat ya..");
+                 setTimeout(keluar, 1500)
+               });
+
+               function keluar() {
+                   window.location.href = "user/login.html";
+                 }
+             }
+         });
+     return false;
+ });
+
+
+}); //end jquery doc ready
+</script>
+		</div>
+
+		<div class="title_content"> <h1> Daftar bacaan </h1> </div>
+
+	<div class="content">
+
+		<div id="create_forum">
+			<a href="perpustakaan.html"><span>Tulis tutorial ✎</span></a>
+		</div>
+		<a href="perpustakaan/aturan-main.html" class="box_aturanmain"> Aturan main</a>
+
+		<div class="clear_on_sp"></div>
+
+		<div class="clear"></div>
+
+		<div id="tutorial_wrapper">
+
+					<div class="each_topic">
+
+				<div class="col-15">
+					<div class="pertanyaan_by_foto"> <img src="user/foto/ups.png" width=50 /> </div>
+				</div>
+
+				<div class="col-65">
+					<div class="pertanyaan">	<a href="perpustakaan/bagaimana-cara-menghapus-delete-undo-last-github-commit.html">Bagaimana Cara Menghapus (Delete/Undo) Last Github Commit</a> </div>
+					<div class="pertanyaan_by"> Oleh <a href="user/profile/newbieindonesian24.html">@newbieindonesian24</a>  dipost: 1 bulan yang lalu </div>
+					<div class="tag_pertanyaan">  <span><a href="perpustakaan.html">github</a></span>  </p> </div>
+				</div>
+
+										<div class="col-10">
+						<div class="jumlah_jawaban"> 1 <span>Komentar</span> </div>
+					</div>
+
+					<div class="col-10">
+						<div class="jumlah_jawaban"> 152 <span>kali dilihat</span> </div>
+					</div>
+					
+			<div class="clear"></div>
+			</div> <!-- end each_topic -->
+					<div class="each_topic">
+
+				<div class="col-15">
+					<div class="pertanyaan_by_foto"> <img src="user/foto/ups.png" width=50 /> </div>
+				</div>
+
+				<div class="col-65">
+					<div class="pertanyaan">	<a href="perpustakaan/Apa-Itu-Curl.html">Apa Itu Curl</a> </div>
+					<div class="pertanyaan_by"> Oleh <a href="user/profile/newbieindonesian24.html">@newbieindonesian24</a>  dipost: 1 bulan yang lalu </div>
+					<div class="tag_pertanyaan">  <span><a href="perpustakaan.html">curl</a></span>  <span><a href="perpustakaan.html">php</a></span>  </p> </div>
+				</div>
+
+										<div class="col-10">
+						<div class="jumlah_jawaban"> 4 <span>Komentar</span> </div>
+					</div>
+
+					<div class="col-10">
+						<div class="jumlah_jawaban"> 399 <span>kali dilihat</span> </div>
+					</div>
+					
+			<div class="clear"></div>
+			</div> <!-- end each_topic -->
+					<div class="each_topic">
+
+				<div class="col-15">
+					<div class="pertanyaan_by_foto"> <img src="user/foto/avatar.jpg" width=50 /> </div>
+				</div>
+
+				<div class="col-65">
+					<div class="pertanyaan">	<a href="perpustakaan/Membuat-aplikasi-chat-dengan-nodejs-express-socketio.html">[EDIT] Membuat aplikasi chat dengan nodejs, express, socket.io</a> </div>
+					<div class="pertanyaan_by"> Oleh <a href="user/profile/ardyhim.html">@ardyhim</a>  dipost: 1 bulan yang lalu </div>
+					<div class="tag_pertanyaan">  <span><a href="perpustakaan.html">html</a></span>  <span><a href="perpustakaan.html">css</a></span>  <span><a href="perpustakaan.html">nodejs</a></span>  <span><a href="perpustakaan.html">socket.io</a></span>  <span><a href="perpustakaan.html">express</a></span>  </p> </div>
+				</div>
+
+										<div class="col-10">
+						<div class="jumlah_jawaban"> 5 <span>Komentar</span> </div>
+					</div>
+
+					<div class="col-10">
+						<div class="jumlah_jawaban"> 567 <span>kali dilihat</span> </div>
+					</div>
+					
+			<div class="clear"></div>
+			</div> <!-- end each_topic -->
+					<div class="each_topic">
+
+				<div class="col-15">
+					<div class="pertanyaan_by_foto"> <img src="user/foto/10979530_792721670808528_151716279_a.jpg" width=50 /> </div>
+				</div>
+
+				<div class="col-65">
+					<div class="pertanyaan">	<a href="perpustakaan/Membuat-Logo-SEKOLAH-KODING-dengan-Corel-Draw.html">Membuat Logo SEKOLAH KODING dengan Corel Draw</a> </div>
+					<div class="pertanyaan_by"> Oleh <a href="user/profile/Saputroandhi.html">@Saputroandhi</a>  dipost: 1 bulan yang lalu </div>
+					<div class="tag_pertanyaan">  <span><a href="perpustakaan.html">design</a></span>  <span><a href="perpustakaan.html">coreldraw</a></span>  <span><a href="perpustakaan.html">logo</a></span>  <span><a href="perpustakaan.html">membuatlogo</a></span>  </p> </div>
+				</div>
+
+										<div class="col-10">
+						<div class="jumlah_jawaban"> 2 <span>Komentar</span> </div>
+					</div>
+
+					<div class="col-10">
+						<div class="jumlah_jawaban"> 470 <span>kali dilihat</span> </div>
+					</div>
+					
+			<div class="clear"></div>
+			</div> <!-- end each_topic -->
+					<div class="each_topic">
+
+				<div class="col-15">
+					<div class="pertanyaan_by_foto"> <img src="user/foto/avatar.jpg" width=50 /> </div>
+				</div>
+
+				<div class="col-65">
+					<div class="pertanyaan">	<a href="perpustakaan/membuat-api-crud-di-nodejs-dan-mongodb.html">membuat api crud di nodejs dan mongodb</a> </div>
+					<div class="pertanyaan_by"> Oleh <a href="user/profile/ardyhim.html">@ardyhim</a>  dipost: 1 bulan yang lalu </div>
+					<div class="tag_pertanyaan">  <span><a href="perpustakaan.html">nodejs</a></span>  <span><a href="perpustakaan.html">mongodb</a></span>  <span><a href="perpustakaan.html">api</a></span>  <span><a href="perpustakaan.html">crud</a></span>  </p> </div>
+				</div>
+
+										<div class="col-10">
+						<div class="jumlah_jawaban"> 6 <span>Komentar</span> </div>
+					</div>
+
+					<div class="col-10">
+						<div class="jumlah_jawaban"> 536 <span>kali dilihat</span> </div>
+					</div>
+					
+			<div class="clear"></div>
+			</div> <!-- end each_topic -->
+					<div class="each_topic">
+
+				<div class="col-15">
+					<div class="pertanyaan_by_foto"> <img src="user/foto/trickster.jpg" width=50 /> </div>
+				</div>
+
+				<div class="col-65">
+					<div class="pertanyaan">	<a href="perpustakaan/Mudahnya-Membuat-Game-HTML5-Dengan-Construct-2.html">Mudahnya Membuat Game HTML5 Dengan Construct 2</a> </div>
+					<div class="pertanyaan_by"> Oleh <a href="user/profile/OutAttacker.html">@OutAttacker</a>  dipost: 1 bulan yang lalu </div>
+					<div class="tag_pertanyaan">  <span><a href="perpustakaan.html">game</a></span>  <span><a href="perpustakaan.html">gamedev</a></span>  <span><a href="perpustakaan.html">construct</a></span>  <span><a href="perpustakaan.html">html5</a></span>  <span><a href="perpustakaan.html">mobile</a></span>  </p> </div>
+				</div>
+
+										<div class="col-10">
+						<div class="jumlah_jawaban"> 7 <span>Komentar</span> </div>
+					</div>
+
+					<div class="col-10">
+						<div class="jumlah_jawaban"> 544 <span>kali dilihat</span> </div>
+					</div>
+					
+			<div class="clear"></div>
+			</div> <!-- end each_topic -->
+					<div class="each_topic">
+
+				<div class="col-15">
+					<div class="pertanyaan_by_foto"> <img src="user/foto/logo-big.jpg" width=50 /> </div>
+				</div>
+
+				<div class="col-65">
+					<div class="pertanyaan">	<a href="perpustakaan/cara-hosting-website-gratis-dengan-github-pages.html">cara hosting website gratis dengan github pages</a> </div>
+					<div class="pertanyaan_by"> Oleh <a href="user/profile/hilmanrdn.html">@hilmanrdn</a>  dipost: 2 bulan yang lalu </div>
+					<div class="tag_pertanyaan">  <span><a href="perpustakaan.html">github</a></span>  <span><a href="perpustakaan.html">hosting</a></span>  </p> </div>
+				</div>
+
+										<div class="col-10">
+						<div class="jumlah_jawaban"> 12 <span>Komentar</span> </div>
+					</div>
+
+					<div class="col-10">
+						<div class="jumlah_jawaban"> 918 <span>kali dilihat</span> </div>
+					</div>
+					
+			<div class="clear"></div>
+			</div> <!-- end each_topic -->
+					<div class="each_topic">
+
+				<div class="col-15">
+					<div class="pertanyaan_by_foto"> <img src="user/foto/logo-big_1444378418.jpg" width=50 /> </div>
+				</div>
+
+				<div class="col-65">
+					<div class="pertanyaan">	<a href="js/perkenalan-javascript/index.html">Referensi Javascript untuk pemula</a> </div>
+					<div class="pertanyaan_by"> Oleh <a href="user/profile/sekolahkoding.html">@sekolahkoding</a>  dipost: 2 bulan yang lalu </div>
+					<div class="tag_pertanyaan">  <span><a href="perpustakaan.html">javascript</a></span>  </p> </div>
+				</div>
+
+					
+			<div class="clear"></div>
+			</div> <!-- end each_topic -->
+					<div class="each_topic">
+
+				<div class="col-15">
+					<div class="pertanyaan_by_foto"> <img src="user/foto/logo-big_1444378418.jpg" width=50 /> </div>
+				</div>
+
+				<div class="col-65">
+					<div class="pertanyaan">	<a href="css/perkenalan-css/index.html">Referensi CSS untuk pemula</a> </div>
+					<div class="pertanyaan_by"> Oleh <a href="user/profile/sekolahkoding.html">@sekolahkoding</a>  dipost: 2 bulan yang lalu </div>
+					<div class="tag_pertanyaan">  <span><a href="perpustakaan.html">css</a></span>  </p> </div>
+				</div>
+
+					
+			<div class="clear"></div>
+			</div> <!-- end each_topic -->
+					<div class="each_topic">
+
+				<div class="col-15">
+					<div class="pertanyaan_by_foto"> <img src="user/foto/logo-big_1444378418.jpg" width=50 /> </div>
+				</div>
+
+				<div class="col-65">
+					<div class="pertanyaan">	<a href="html/perkenalan-html/index.html">Referensi HTML untuk pemula</a> </div>
+					<div class="pertanyaan_by"> Oleh <a href="user/profile/sekolahkoding.html">@sekolahkoding</a>  dipost: 2 bulan yang lalu </div>
+					<div class="tag_pertanyaan">  <span><a href="perpustakaan.html">html</a></span>  </p> </div>
+				</div>
+
+					
+			<div class="clear"></div>
+			</div> <!-- end each_topic -->
+		
+
+	</div><!-- end topic wrapper -->
+
+	</div><!-- end content-->
+
+	<div class="clear_h"></div>
+	<div id="footer">
+		
+<span style="padding-left:10px;">&copy; 2016 <span>SekolahKoding</span></span>
+
+
+<div id="soc-med-menu">
+  <a target="_blank" href="https://twitter.com/sekolahkoding"><img src="../sekolahkoding.com/img/twitter.png" alt="logo twitter sekolah koding" /></a>
+  <a target="_blank" href="https://youtube.com/SekolahKoding"><img src="../sekolahkoding.com/img/utube.png" alt="logo youtube sekolah koding" /></a>
+  <a target="_blank" href="https://www.facebook.com/sekolahkoding"><img src="../sekolahkoding.com/img/fb.png" alt="logo facebook sekolah koding" /></a>
+</div>
+
+<div id="footer_extra_menu">
+  <a href="blog/index.html">Blog</a>
+  <a href="tentang.html">Tentang</a>
+  <a href="syarat.html">Syarat</a>
+</div>
+	</div>
+
+	</div> <!-- end main wrapper -->
+	<div class="clear"></div>
+
+</div> <!-- end page wrapper -->

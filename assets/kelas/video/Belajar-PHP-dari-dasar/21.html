@@ -1,0 +1,386 @@
+
+
+<html>
+  
+<!-- Mirrored from www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/21 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Mar 2016 10:56:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Belajar PHP untuk pemula ( Metode String 2 ) - Belajar PHP dari dasar - Sekolah Koding</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Belajar PHP untuk pemula ( Metode String 2 ). Belajar PHP dari dasar - Belajar PHP untuk pemula, tutorial PHP bahasa indonesia dari dasar. Untuk teman teman yang mau mulai membuat website dinamis">
+    <meta name="keywords" content="Belajar,PHP,untuk,pemula,(,Metode,String,2,), Belajar,PHP,dari,dasar,video,tutorial,bahasa,indonesia,webdesign,web development,website">
+    <meta name="author" content="SekolahKoding">
+    <link rel="stylesheet" href="https://www.sekolahkoding.com/user/css/main-app.css" charset="utf-8">
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="icon" href="https://www.sekolahkoding.com/favicon.ico" type="image/x-icon" />
+    <!-- for facebook graph-->
+    <meta property="og:title" content="Belajar PHP dari dasar - Sekolah Koding">
+    <meta property="og:image" content="/asset/cover/cover-php.png">
+    <meta property="og:description" content="Belajar PHP untuk pemula ( Metode String 2 ). Belajar PHP dari dasar - Belajar PHP untuk pemula, tutorial PHP bahasa indonesia dari dasar. Untuk teman teman yang mau mulai membuat website dinamis">
+  </head>
+  <body class="body-class">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59878621-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  <div id="page-wrapper">
+
+    
+
+  <div id="menu_left_back"></div>
+  <div id="menu_left" class="menu_playlist">
+    <div id="menu_title">
+      <h2>Belajar PHP dari dasar</h2>
+      <h3>Tanam ilmu sekarang, biar nanti bisa panen</h3>
+    </div>
+    <div id="menu_left_bottom">
+  <a href="https://www.sekolahkoding.com/upacara"><li> <img src="https://www.sekolahkoding.com/asset/upacara-icon.png" alt="" />  Upacara </li></a>
+  <a href="https://www.sekolahkoding.com/forum"><li> <img src="https://www.sekolahkoding.com/asset/forum-icon.png" alt="" />  Forum</li></a>
+  <a href="https://www.sekolahkoding.com/perpustakaan"><li> <img src="https://www.sekolahkoding.com/asset/perpus-icon.png" alt="" /> Perpustakaan </li></a>
+  <a href="https://www.sekolahkoding.com/kelas"><li> <img src="https://www.sekolahkoding.com/asset/kelas-icon.png" alt="" /> Kelas </li></a>
+  <a href="https://www.sekolahkoding.com/perjalanan"><li> <img src="https://www.sekolahkoding.com/asset/jejak-icon.png" alt="" /> Perjalanan </li></a>
+  <a href="https://www.sekolahkoding.com/member"><li> <img src="https://www.sekolahkoding.com/asset/member-icon.png" alt="" /> Member </li></a>
+  <!-- <a href="/syarat"> <li> <img src="/asset/donasi-icon.png" alt="" /> Syarat  </li></a> -->
+</div>
+    <br>
+    <div id="halalad_companion_ad_div_TGKcTDQBBfRZZhEVEHgq5Rb3v2U=dhbdsljhbdDjTchvMzkx" style="display: none;"> <script id="widget_lib_TGKcTDQBBfRZZhEVEHgq5Rb3v2U=dhbdsljhbdDjTchvMzkx" src="https://www.halal.ad/assets/javascripts/publisher/widgets/had_widget_lib.js" async></script> <script id="widget_formatter_TGKcTDQBBfRZZhEVEHgq5Rb3v2U=dhbdsljhbdDjTchvMzkx" type="text/javascript" src="https://www.halal.ad/assets/javascripts/publisher/widgets/widget_300_250.js" async></script> <iframe id="halalad_ads_frame_TGKcTDQBBfRZZhEVEHgq5Rb3v2U=dhbdsljhbdDjTchvMzkx" style="display : block ;" name="halalad_ads_frame" target-domain="https://www.halal.ad" width="0" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true"> </iframe> <script src="https://www.halal.ad/getWidgetBootstrap?widgetToken=TGKcTDQBBfRZZhEVEHgq5Rb3v2U=dhbdsljhbdDjTchvMzkx" async></script> </div>
+
+  </div><!-- end menu_left -->
+
+  	<div id="main_wrapper" class="main_playlist">
+
+  		<div id="menu-top-profil">
+  			<div id="blue-logo">
+  <a href="https://www.sekolahkoding.com/user"><img src="https://www.sekolahkoding.com/asset/blue-logo.png" alt=""/></a>
+</div>
+
+<ul>
+  <li class="login"><a href="https://sekolahkoding.com/user/login.php">Masuk</a></li>
+<li><a href="https://www.sekolahkoding.com/user">Profil</a></li>
+<li><a href="https://www.sekolahkoding.com/kelas">Kelas</a></li>
+
+<li>
+	<!-- notifikasi -->
+		<!-- end of notifikasi -->
+</li>
+
+</ul>
+<!-- sweetalert-->
+<script src="https://sekolahkoding.com/user/js/sweetalert-dev.js"></script>
+<link rel="stylesheet" href="https://sekolahkoding.com/user/js/sweetalert.css">
+
+<script>
+$(document).ready(function() {
+
+ $(".logout").on('click',function(){
+   swal({  title: "Yakin mau keluar?",
+           type: "warning",
+           showCancelButton: true,
+           confirmButtonColor: "#DD6B55",
+           confirmButtonText: "Keluar",
+           cancelButtonText: "Batal",
+           closeOnConfirm: false
+         },function(response){
+             if(response == true){
+
+               $url = 'https://www.sekolahkoding.com/user/logout.php';
+               $data = { args : 'logout' }
+
+               $.post($url, $data).done(function(){
+                 swal("Sampai jumpa!", "istirahat ya..");
+                 setTimeout(keluar, 1500)
+               });
+
+               function keluar() {
+                   window.location.href = "https://www.sekolahkoding.com/user/login.php";
+                 }
+             }
+         });
+     return false;
+ });
+
+
+}); //end jquery doc ready
+</script>
+  		</div>
+
+          <div class="title_content">
+            <h1>
+              Belajar PHP untuk pemula ( Metode String 2 )            </h1>
+          </div>
+
+          <div class="content">
+
+            
+            
+            <!-- buat yg udah daftar, tapi di landing page-->
+            
+                          <p id="not_login_invite"> <a href="https://www.sekolahkoding.com/user/login.php" target="_blank">Masuk</a> atau <a href="https://www.sekolahkoding.com/user/daftar.php" target="_blank">daftar</a> jika belum untuk mulai belajar</p>
+              <div id="gambar_kelas">
+                <img src="https://www.sekolahkoding.com/asset/cover/cover-php.png" alt="" />
+              </div>
+                        <br>
+            <p id="trigger_forum" style="text-align:center"> Ada pertanyaan seputar pelajaran? meluncur ke <a href="https://www.sekolahkoding.com/forum" style="text-decoration:underline"> Forum</a> </p>
+
+            <br>
+            <div id="daftar_episode">
+              <h4>Daftar Epsiode</h4>
+          	   <!--List Kategori-->
+<div id="video-lists-wrapper">
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/0">
+           Belajar PHP untuk pemula ( Persiapan )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/1">
+           Belajar PHP untuk pemula ( Echo )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/2">
+           Belajar PHP untuk pemula ( Komentar )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/3">
+           Belajar PHP untuk pemula ( Variabel )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/4">
+           Belajar PHP untuk pemula ( Operator )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/5">
+           Belajar PHP untuk pemula ( Kondisional If Else )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/6">
+           Belajar PHP untuk pemula ( Tipe Data Boolean)        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/7">
+           Belajar PHP untuk pemula (Operator Komparasi)        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/8">
+           Belajar PHP untuk pemula (Operator Logika)        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/9">
+           Belajar PHP untuk pemula ( Switch Case )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/10">
+           Belajar PHP untuk pemula ( Loop Pengulangan )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/11">
+           Belajar PHP untuk pemula ( Fungsi / Function )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/12">
+           Belajar PHP untuk pemula ( Parameter )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/13">
+           Belajar PHP untuk pemula ( Array )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/14">
+           Belajar PHP untuk pemula ( Array : Multi )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/15">
+           Belajar PHP untuk pemula ( Get dan Post )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/16">
+           Belajar PHP untuk pemula (Anonymous Function)        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/17">
+           Belajar PHP untuk pemula (Callback Function)        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/18">
+           Belajar PHP untuk pemula (Include ||  Require)        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/19">
+           Belajar PHP untuk pemula (Include_once  ||  Require_once)        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/20">
+           Belajar PHP untuk pemula ( Metode String 1 )        </a>
+  </div>
+  
+  <div class="video-lists video-lists-active">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/21">
+           Belajar PHP untuk pemula ( Metode String 2 )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/22">
+           Belajar PHP untuk pemula ( Implode || Explode )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/23">
+           Belajar PHP untuk pemula ( Tampilan Waktu )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/24">
+           Belajar PHP untuk pemula ( Cookie )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/25">
+           Belajar PHP untuk pemula ( Session )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/26">
+           Belajar PHP untuk pemula ( FileHandling: Membaca File )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/27">
+           Belajar PHP untuk pemula ( FileHandling: fgets )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/28">
+           Belajar PHP untuk pemula ( FileHandling: file_get_contents )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/29">
+           Belajar PHP untuk pemula ( FileHandling: Menulis File )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/30">
+           Belajar PHP untuk pemula ( FileHandling: Contoh Program )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/31">
+           Belajar PHP untuk pemula ( FileHandling: Folder )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/32">
+           Belajar PHP untuk pemula ( Upload : Dasar )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/33">
+           Belajar PHP untuk pemula ( Upload : Validasi )        </a>
+  </div>
+  
+  <div class="video-lists ">
+        <a href="https://www.sekolahkoding.com/kelas/video/Belajar-PHP-dari-dasar/34">
+           Belajar PHP untuk pemula ( Upload : Validasi Nama sama )        </a>
+  </div>
+  
+</div>
+            </div>
+
+            <br>
+            <b>Deskripsi Kelas</b>
+            <p>Belajar PHP untuk pemula, tutorial PHP bahasa indonesia dari dasar. Untuk teman teman yang mau mulai membuat website dinamis</p>
+
+        </div><!-- end content-->
+
+			<div class="clear_h"></div>
+	    <div id="footer">
+				
+<span style="padding-left:10px;">&copy; 2016 <span>SekolahKoding</span></span>
+
+
+<div id="footer_extra_menu">
+  <a href="https://www.sekolahkoding.com/blog">Blog</a>
+  <a href="https://www.sekolahkoding.com/tentang">Tentang</a>
+  <a href="https://www.sekolahkoding.com/syarat">Syarat</a>
+</div>
+	    </div>
+
+  	</div> <!-- end main wrapper -->
+  	<div class="clear"></div>
+
+  </div> <!-- end page wrapper -->
+
+
+<script>
+$( document ).ready(function() {
+  //bisa ajax buat save kelas atau save PR
+
+  //ikuti kelas
+  $('.info_kelas_ikut').on('click', function(){
+    //prevent double
+    $('.info_kelas_ikut').fadeOut();
+  });
+
+  //save pr
+  $('#save-materi-text').on('click', function(){
+
+      //prevent double
+      $("#save-materi-text").fadeOut();
+
+      $url  = "https://sekolahkoding.com/kelas/tambah_pr.php";
+      $data = { nama    : "Belajar-PHP-dari-dasar",
+                episode : "21",
+                user_id : ""
+              }
+
+      $.post( $url, $data, function() {
+          }).done(function(data) {
+            console.log(data);
+            if(data == 'okay'){
+               nama_kelas = "pr-success";
+               message    = "video masuk daftar PR";
+            }
+            if(data == 'max'){
+              nama_kelas = "pr-failed";
+              message = "Maaf, PR maksimal 5 ya";
+            }
+
+            $("#save-materi-text").fadeOut(function(){
+              $("#save-msg").text(message).addClass(nama_kelas);
+            });
+
+        });
+ });
+
+
+}); //end jquery doc ready
+
+</script>

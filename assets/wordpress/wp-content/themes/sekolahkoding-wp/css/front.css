@@ -1,0 +1,249 @@
+#landing-page{
+  margin:0px;
+  padding:0px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget iframe{
+    max-width:100%;
+}
+
+/*-------     Landing-Cover    ------*/
+.landing-cover{
+  background-image: url(../../../../../img/bg-desk.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding:150px 0 100px 0;
+
+  margin-bottom:30px;
+}
+
+
+#wrap-h1{
+  background-color:rgba(0,0,0,0.5);
+  margin-bottom: 70px;
+}
+
+.landing-cover h1{
+  text-align: center;
+  color:white;
+  font-size: 60px;
+  width:75%;
+  line-height: 70px;
+  padding:20px;
+
+  margin: 0 auto;
+}
+
+.landing-cover h2{
+  text-align: center;
+  color:rgba(255,255,255,0.8);
+  width:70%;
+  padding-bottom:20px;
+  margin: 0 auto;
+  font-size:30px;
+}
+
+
+.landing-cover a{
+  text-decoration:none;
+}
+
+button#mulai{
+  background-color:#69afe8;
+  display:block;
+  margin: 0 auto;
+  color:white;
+  font-size: 40px;
+  padding:10px 20px;
+
+
+  border-width:1px 1px 3px;
+  border-color:rgba(0,0,0,0.5) ;
+
+  border-radius:15px;
+  -moz-border-radius:15px;
+  -webkit-border-radius:15px;
+  -o-border-radius:15px;
+
+  box-shadow: 0px -1px 0 rgba(0,0,0,0.5) inset;
+}
+
+button#mulai:hover{
+  cursor: pointer;
+  background-color:#5e9bcc;
+}
+
+
+/*-------     Landing-Second    ------*/
+
+#second h3{
+  color:#5e9bcc;
+  font-size: 40px;
+  text-align:center;
+
+  margin:0 auto 20px auto;
+  padding:10px 0;
+
+  border-top:6px solid #5e9bcc;
+  border-bottom:6px solid #5e9bcc;
+
+  width:30%;
+
+}
+
+#second a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.materi-list{
+  float:left;
+  width:28%;
+  padding:1% 1%;
+
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:2.5%;
+
+  text-align:center;
+  font-size:24px;
+}
+
+
+.materi-list:hover{
+  color:white;
+  background-color:#9466AA;
+}
+
+
+.materi-list img{
+  width: 80%;
+}
+
+
+#socmed{
+  float:right;
+  position:absolute;
+  left:30px;
+}
+
+#socmed img{
+  width:20px;
+}
+
+/* --------------------------- */
+/*  responsive media queries   */
+/* --------------------------- */
+
+
+@media only screen and (min-width : 767px) and (max-width : 1024px) {
+
+
+  .landing-cover h1{
+    width:85%;
+    font-size:50px;
+  }
+
+  #second h3{
+    width:35%;
+  }
+
+
+}
+
+
+/* from smartphone until 767px big */
+@media only screen and (max-width : 767px) {
+
+  /*  reponsive landing page cover */
+
+  .landing-cover{
+    padding-top:60px;
+    padding-bottom:60px;
+  }
+
+  .landing-cover h1{
+    width:96%;
+    margin:2%;
+    padding:0px;
+    padding-top:10px;
+    font-size:32px;
+    line-height:40px;
+  }
+
+  .landing-cover h2{
+     width: 85%;
+  }
+
+  button#mulai{
+    background-color:#9466AF;
+    display:block;
+    margin: 0 auto;
+    color:white;
+    font-size: 30px;
+    padding:10px 15px;
+  }
+
+
+  #second h3{
+    font-size:30px;
+    width:40%;
+  }
+
+  .materi-list {
+    float:none;
+    width:80%;
+    margin:40px auto;
+  }
+
+  .materi-list img{
+    float:left;
+    width:60%;
+  }
+
+
+}
+
+
+@media only screen and (max-width : 480px) {
+
+  .landing-cover{
+    padding-top:40px;
+    padding-bottom:40px;
+   }
+
+   #wrap-h1{
+      margin-bottom: 50px;
+   }
+
+    .landing-cover h1{
+        font-size:28px;
+        line-height:35px;
+    }
+
+  .landing-cover h2{
+        font-size:20px ;
+        width:96%;
+        margin:2%;
+   }
+
+
+  #second h3{
+    font-size:25px;
+    width:60%;
+    border-width:4px;
+  }
+
+  .materi-list img{
+    float:none;
+    width:80%;
+  }
+
+  .materi-list{
+    font-size:22px;
+    margin:20px auto;
+  }
+
+}

@@ -1,0 +1,143 @@
+/*
+css untuk blog seklahkoding
+@28 Mei 2015
+@hilmanrdn
+*/
+
+#post-main, #single-post, #disqus-comment{
+  width: 75%;
+  margin: 5% auto 0 auto;
+}
+
+#disqus-comment{
+  margin-top: 10px;
+}
+
+#post-main h1 span{
+    float:left;
+    width:50%;
+}
+
+#post-main h1 span{
+  font-size: 35px;
+  color: #5e9bbc;
+}
+
+.post-h1 a{
+  text-decoration: none;
+  font-size: 24px;
+  margin-top: 5px;
+  color: #5e9bbc;
+  line-height: 28px;
+}
+
+#post-categories{
+  width: 80%;
+  margin: 5% auto;
+}
+
+.post-excerpt-each {
+  float: left;
+  width: 25%;
+  margin: 2% 4%;
+  min-height: 320px;
+}
+
+.post-img-thumbs img{
+  max-width: 100%;
+  margin-top:8px;
+}
+
+.post-tags{
+ float:left;
+ width:50%;
+ text-transform: capitalize;
+}
+
+.post-times{
+ text-align:right;
+}
+
+/*-- single post --*/
+
+
+#single-post h1{
+  margin-bottom: 25px;
+}
+
+#single-post h1 a{
+   color: #5e9bbc;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+#single-post img{
+  max-width: 100%;
+  height: auto;
+}
+
+#single-post p{
+  font-size: 22px;
+  line-height: 30px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/*-- search --*/
+#search-text{
+  border: solid 1px grey;
+  padding: 5px;
+  width: 200px;
+}
+
+#search-submit{
+  background-color: #5e9bbc;
+  color: white;
+  border: none;
+  height: 26px;
+  width: 50px;
+  text-align: left;
+}
+
+
+/*-----------------------*/
+/*------ tablet  --------*/
+/*-----------------------*/
+@media only screen and (max-width:1024px){
+  .post-excerpt-each {
+      width: 50%;
+  }
+}
+
+/*-----------------------*/
+/*------ smarthpone  ----*/
+/*-----------------------*/
+@media only screen and (max-width:768px){
+
+    #post-main h1 span{
+     width:100%;
+     margin:10px 0;
+   }
+
+  .post-excerpt-each {
+      float: none;
+      width: 100%;
+      margin: 2% 0;
+  }
+
+  #single-post h1 a{
+      font-size:25px;
+  }
+
+  #post-main, #single-post, #disqus-comment{
+    width: 90%;
+  }
+
+  #single-post p{
+    font-size: 17px;
+  }
+
+  #post-categories{
+      width:100%;
+  }
+}

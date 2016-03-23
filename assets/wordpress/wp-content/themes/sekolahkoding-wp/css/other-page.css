@@ -1,0 +1,416 @@
+#page-wrap{
+  width:75%;
+  margin:0 auto;
+}
+
+#page-wrap-materi{
+  width:80%;
+  margin:0 auto;
+  min-height:750px;
+}
+
+#page-wrap h1, #page-wrap-materi h1{
+ font-size:35px;
+ font-weight:550;
+ text-align:center;
+ color:#5e9bcc;
+
+ margin:0 auto;
+ margin-bottom:20px;
+}
+
+#page-wrap h1 span, #page-wrap-materi h1 span{
+ display:inline-block;
+ padding:15px 0;
+ border-top:5px solid #5e9bcc;
+ border-bottom:5px solid #5e9bcc;
+ margin-bottom:30px;
+}
+
+#page-wrap-materi h1 span{
+  margin-bottom:15px;
+}
+
+#page-text{
+    font-size:25px;
+    line-height:33px;
+    text-indent:30px;
+    text-align:justify;
+    color:rgba(150,88,187,0.8);
+}
+
+#page-text a{
+     color:#5e9bcc;
+}
+
+/* ---- Halaman Tim ----  */
+
+.profil-text{
+    width: 100%;
+}
+
+#tim{
+    width: 20%;
+    float:left;
+    margin-right:10%;
+}
+
+.tim-each{
+    width:100%;
+    text-align:center;
+}
+
+.tim-each img{
+    max-width:100%;
+    height:auto;
+
+    margin-bottom:10px;
+     filter: grayscale(100%);
+     -webkit-filter: grayscale(1);
+     -webkit-filter: grayscale(100%);
+     -o-filter: grayscale(100%);
+     -moz-filter: grayscale(100%);
+     filter: gray;
+}
+
+.tim-each-second img{
+     margin-top:10px;
+}
+
+.tim-each a, .tim-each p{
+    color:rgba(0,0,0,0.8);
+    font-size:20px;
+    text-decoration:none;
+    line-height:22px;
+    text-align:right;
+}
+
+.status{
+    color:rgba(0,0,0,0.8);
+    font-size:26px;
+    display: inline-block;
+    border-bottom:3px solid rgba(0,0,0,0.8);
+    padding-bottom:4px;
+    margin-bottom:15px;
+}
+
+
+.tim-each:hover a, .tim-each:hover img, .tim-each:hover p{
+    color:#5e9bcc;
+     filter: none;
+      filter: grayscale(0%);
+     -webkit-filter: grayscale(0);
+     -webkit-filter: grayscale(0%);
+     -o-filter: grayscale(0%);
+     -moz-filter: grayscale(0%);
+}
+
+.tim-each:hover .status{
+    color:#5e9bcc;
+    border-bottom:3px solid #5e9bcc;
+}
+
+
+/*----  Halaman FAQ  ----*/
+.faq-pertanyaan{
+    font-weight:600;
+    margin-top:20px;
+    margin-bottom:10px;
+    text-align:center;
+}
+
+/* ---- Halaman Materi ----  */
+
+.each_lesson{
+    width:28%;
+    margin:0 2%;
+    float:left;
+    margin-bottom:2%;
+    min-height:340px;
+}
+
+.thumb_lesson{
+    width:100%;
+    height:200px;
+    position:relative;
+    overflow:hidden;
+    box-sizing:content-box;
+    margin-bottom:20px;
+    opacity:0.5;
+}
+
+.thumb_lesson:hover{
+    opacity:1;
+}
+
+.thumb_lesson img{
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+.thumb_lesson:hover img{
+    transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+}
+
+.title_lesson{
+    position:absolute;
+    bottom:0px;
+    background-color:rgba(0,0,0,1);
+    color:white;
+    width:100%;
+    padding:10px 15px;
+    text-align:left;
+    font-size:22px;
+    line-height:26px;
+}
+
+.title_lesson h2{
+    max-width:75%;
+}
+
+.desc_lesson{
+    font-size:18px;
+    line-height:20px;
+    text-align:justify;
+    color:rgba(0,0,0,0.8);
+    border-left: solid 2px rgba(0,0,0,1);
+    padding-left: 10px;
+}
+
+/*------- Category Tags for Lesson  --------*/
+
+.lesson_tags{
+    width:60%;
+    margin:0 auto;
+}
+
+.lesson_tags ul > :first-child{
+    margin-left:2%;
+}
+
+.lesson_tags a{
+   text-transform: uppercase;
+   float:left;
+   display:inline-block;
+   font-size:22px;
+   padding:8px;
+   margin-left:3px;
+   margin-bottom:2%;
+   border: 3px solid purple;
+   color:purple;
+   text-decoration:none;
+}
+
+.cat-item-3 a{
+     border: 3px solid #3128A0;
+     color:#3128A0;
+}
+
+.cat-item-3 a:hover{
+     background-color:#3128A0;
+     color:white;
+}
+
+.cat-item-4 a{
+     border: 3px solid #0DAA87;
+     color:#0DAA87
+}
+
+.cat-item-4 a:hover{
+     background-color:#0DAA87;
+     color:white;
+}
+
+.cat-item-5 a{
+     border: 3px solid orange;
+     color:orange;
+}
+
+.cat-item-5 a:hover{
+     background-color:orange;
+     color:white;
+}
+
+.cat-item-6 a{
+     border: 3px solid darkgrey;
+     color:darkgrey;
+}
+
+.cat-item-6 a:hover{
+     background-color:darkgrey;
+     color:white;
+}
+
+.cat-item-7 a{
+     border: 3px solid purple;
+     color:purple;
+}
+
+.cat-item-7 a:hover{
+     background-color:purple;
+     color:white;
+}
+
+.cat-item-8 a{
+     border: 3px solid #ff5358;
+     color:#ff5358;;
+}
+
+.cat-item-8 a:hover{
+     background-color:#ff5358;;
+     color:white;
+}
+
+.cat-item-9 a{
+     border: 3px solid #d55403;
+     color:#d55403;
+}
+
+.cat-item-9 a:hover{
+     background-color:#d55403;
+     color:white;
+}
+
+.cat-item-10 a{
+     border: 3px solid red;
+     color:red;
+}
+
+.cat-item-10 a:hover{
+     background-color:red;
+     color:white;
+}
+
+.cat-item-11 a{
+     border: 3px solid #1383b3;
+     color:#1383b3;
+}
+
+.cat-item-11 a:hover{
+     background-color:#1383b3;
+     color:white;
+}
+
+.cat-item-13 a{
+     border: 3px solid #b41d58;
+     color:#b41d58;
+}
+
+.cat-item-13 a:hover{
+     background-color:#b41d58;
+     color:white;
+}
+
+
+.scrollup {
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    display: none;
+    padding:5px;
+    padding-top:10px;
+    background-color:purple;
+    color:white;
+    text-decoration:none;
+    font-size:50px;
+}
+
+@media screen and (max-width: 768px){
+
+     /* - halaman materi -- */
+
+    #page-wrap-materi{
+        width:90%;
+    }
+
+    .each_lesson{
+      width:42%;
+      margin:0 3%;
+    }
+
+    .lesson_tags{
+       width:80%;
+    }
+
+     /* - halaman tim -- */
+
+     #tim{
+        width: 100%;
+        float:none;
+        margin:0 auto;
+    }
+
+    .tim-each{
+        width:40%;
+        margin-left:5%;
+        float:left;
+    }
+
+    .tim-each-second{
+        margin-left:10%;
+    }
+
+    .tim-each-second img{
+         margin-top:0px;
+    }
+
+    .other-clear{
+        clear:both;
+        height:20px;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+
+    #page-wrap h1, #page-wrap-materi h1{
+         font-size:24px;
+         margin:25px auto;
+    }
+
+    #page-wrap h1 span, #page-wrap-materi h1 span{
+     margin-bottom:0px;
+     border-top:3px solid #5e9bcc;
+     border-bottom:3px solid #5e9bcc;
+    }
+
+    #page-text{
+        font-size:18px;
+        line-height:25px;
+    }
+
+     /* - halaman materi -- */
+     .lesson_tags a{
+         font-size:16px;
+         border-width:2px !important;
+     }
+
+    .each_lesson{
+     width:96%;
+     margin:0 2%;
+    }
+
+     /* - halaman tim -- */
+
+     .tim-each{
+        width:90%;
+        float:none;
+    }
+
+    .status{
+        font-size:22px;
+    }
+
+    .tim-each a, .tim-each p{
+         font-size:20px;
+    }
+
+
+}
