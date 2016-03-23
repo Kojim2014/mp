@@ -151,10 +151,10 @@
         </div>
         <div id="short_menu" class="wow slideInRight">
           <p>Tidak tahu apa-apa? Mau mulai dari 0? jangan khawatir!</p>
-          <a href="kelas/index.html"><img src="asset/homepage/sm_nonton.png" alt="belajar web development logo">Nonton ratusan kelas yang terus diupdate</a>
-          <a href="forum.html" class="short_menu_child"><img src="asset/homepage/sm_forum.png" alt="forum web developer indonesia logo">Diskusi dengan ribuan member lain</a>
-          <a href="perpustakaan.html" class="short_menu_child"><img src="asset/homepage/sm_perpus.png" alt="belajar membuat website logo">Baca referensi pelajaran di perpustakaan</a>
-          <a href="perjalanan.html" class="short_menu_child"><img src="asset/homepage/sm_peta.png" alt="belajar cara membuat website logo">Lihat peta pelajaran untuk memulai</a>
+          <a href="kelas/index.html"><img src="<?php echo base_url();?>assets/asset/homepage/sm_nonton.png" alt="belajar web development logo">Nonton ratusan kelas yang terus diupdate</a>
+          <a href="forum.html" class="short_menu_child"><img src="<?php echo base_url();?>assets/asset/homepage/sm_forum.png" alt="forum web developer indonesia logo">Diskusi dengan ribuan member lain</a>
+          <a href="perpustakaan.html" class="short_menu_child"><img src="<?php echo base_url();?>assets/asset/homepage/sm_perpus.png" alt="belajar membuat website logo">Baca referensi pelajaran di perpustakaan</a>
+          <a href="perjalanan.html" class="short_menu_child"><img src="<?php echo base_url();?>assets/asset/homepage/sm_peta.png" alt="belajar cara membuat website logo">Lihat peta pelajaran untuk memulai</a>
         </div>
     </div>
   </div>
