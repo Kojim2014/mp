@@ -12,13 +12,13 @@
     <!-- for facebook graph-->
 		<meta property="og:title" content="SekolahKoding">
     <meta property="og:type" content="Website">
-		<meta property="og:image" content="../sekolahkoding.com/<?php echo base_url();?>assets/asset/blue-logo.png">
+		<meta property="og:image" content="<?php echo base_url('assets/asset/blue-logo.png');?>">
 		<meta property="og:description" content="Tutorial online belajar Web Programming dan Design dalam bahasa Indonesia di SekolahKoding">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="<?php echo base_url('/assets/user/css/homepage.css') ?>">
-    <link rel="stylesheet" href="user/css/animate.css">
-    <script src="../ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="user/js/wow.min.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url('/assets/user/css/animate.css') ?>">
+    <script src="<?php echo base_url('/assets/user/js/jquery.min.js') ?>"></script>
+    <script src="<?php echo base_url('/assets/user/js/wow.min.js') ?>"></script>
 
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
@@ -79,7 +79,7 @@
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
-     js.src = "../connect.facebook.net/en_US/sdk.js";
+     js.src = "<?php echo base_url('/assets/user/js/sdk.js') ?>";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
   </script>
@@ -88,7 +88,7 @@
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','<?php echo base_url('/assets/user/js/analytics.js') ?>','ga');
 
   ga('create', 'UA-59878621-1', 'auto');
   ga('send', 'pageview');
@@ -117,8 +117,8 @@
         </div>
 
         <div id="tombol_wrapper">
-          <a class="tombol" href="user/login.html">Masuk</a>
-          <a class="tombol" href="user/daftar.html">Daftar</a>
+          <a class="tombol" href="<?php echo site_url('main/sign_in'); ?>">Masuk</a>
+          <a class="tombol" href="<?php echo site_url('main/sign_up'); ?>">Daftar</a>
         </div>
     </div>
   </div>
@@ -151,10 +151,10 @@
         </div>
         <div id="short_menu" class="wow slideInRight">
           <p>Tidak tahu apa-apa? Mau mulai dari 0? jangan khawatir!</p>
-          <a href="kelas/index.html"><img src="<?php echo base_url();?>assets/asset/homepage/sm_nonton.png" alt="belajar web development logo">Nonton ratusan kelas yang terus diupdate</a>
-          <a href="forum.html" class="short_menu_child"><img src="<?php echo base_url();?>assets/asset/homepage/sm_forum.png" alt="forum web developer indonesia logo">Diskusi dengan ribuan member lain</a>
-          <a href="perpustakaan.html" class="short_menu_child"><img src="<?php echo base_url();?>assets/asset/homepage/sm_perpus.png" alt="belajar membuat website logo">Baca referensi pelajaran di perpustakaan</a>
-          <a href="perjalanan.html" class="short_menu_child"><img src="<?php echo base_url();?>assets/asset/homepage/sm_peta.png" alt="belajar cara membuat website logo">Lihat peta pelajaran untuk memulai</a>
+          <a href="kelas/index.html"><img src="<?php echo base_url('assets/asset/homepage/sm_nonton.png');?>" alt="belajar web development logo">Nonton ratusan kelas yang terus diupdate</a>
+          <a href="forum.html" class="short_menu_child"><img src="<?php echo base_url('assets/asset/homepage/sm_forum.png');?>" alt="forum web developer indonesia logo">Diskusi dengan ribuan member lain</a>
+          <a href="perpustakaan.html" class="short_menu_child"><img src="<?php echo base_url('assets/asset/homepage/sm_perpus.png');?>" alt="belajar membuat website logo">Baca referensi pelajaran di perpustakaan</a>
+          <a href="perjalanan.html" class="short_menu_child"><img src="<?php echo base_url('assets/asset/homepage/sm_peta.png');?>" alt="belajar cara membuat website logo">Lihat peta pelajaran untuk memulai</a>
         </div>
     </div>
   </div>
@@ -163,11 +163,11 @@
     <div class="wrapper">
         <h4><span>Media</span></h4>
         <div id="media_wrapper" class="wow flipInY">
-          <a class="media_net" target="_blank" href="https://www.youtube.com/watch?v=Om28d-snPkI"><img height="65" src="<?php echo base_url();?>assets/asset/homepage/net_tv.png" alt="logo net tv"></a>
-          <a class="media_cp" target="_blank" href="http://www.codepolitan.com/belajar-koding-di-sekolahkoding-com/"><img src="<?php echo base_url();?>assets/asset/homepage/codepolitan_logo.png" alt="logo codepolitan" /></a>
-          <a class="media_ds" target="_blank" href="https://dailysocial.net/post/sekolahkoding/"><img src="<?php echo base_url();?>assets/asset/homepage/dailysocial_logo.png" alt="logo dailysocial"></a>
-          <a class="media_m" target="_blank" href="http://marketeers.com/article/belajar-coding-sulit-datanglah-ke-sekolah-koding.html"><img src="<?php echo base_url();?>assets/asset/homepage/marketers.jpg" alt="logo marketeers"></a>
-          <a class="media_tel" target="_blank" href="http://blog.telkomsel.com/gadgetapps/Profil-Finalis-The-NextDev-2015:-SekolahKoding"><img src="<?php echo base_url();?>assets/asset/homepage/Telkomsel_2013.png" alt="logo telkomsel"></a>
+          <a class="media_net" target="_blank" href="https://www.youtube.com/watch?v=Om28d-snPkI"><img height="65" src="<?php echo base_url('assets/asset/homepage/net_tv.png');?>" alt="logo net tv"></a>
+          <a class="media_cp" target="_blank" href="http://www.codepolitan.com/belajar-koding-di-sekolahkoding-com/"><img src="<?php echo base_url('assets/asset/homepage/codepolitan_logo.png');?>" alt="logo codepolitan" /></a>
+          <a class="media_ds" target="_blank" href="https://dailysocial.net/post/sekolahkoding/"><img src="<?php echo base_url('assets/asset/homepage/dailysocial_logo.png');?>" alt="logo dailysocial"></a>
+          <a class="media_m" target="_blank" href="http://marketeers.com/article/belajar-coding-sulit-datanglah-ke-sekolah-koding.html"><img src="<?php echo base_url('assets/asset/homepage/marketers.jpg');?>" alt="logo marketeers"></a>
+          <a class="media_tel" target="_blank" href="http://blog.telkomsel.com/gadgetapps/Profil-Finalis-The-NextDev-2015:-SekolahKoding"><img src="<?php echo base_url('assets/asset/homepage/Telkomsel_2013.png');?>" alt="logo telkomsel"></a>
         </div>
     </div>
   </div>
@@ -179,7 +179,7 @@
           <a href="perjalanan/frontend.html">
           <div class="perjalanan_wrapper">
             <div class="each_perjalanan_title"> Front End </div>
-            <img src="<?php echo base_url();?>assets/asset/cover/css3.png" alt="cara menjadi web developer">
+            <img src="<?php echo base_url('assets/asset/cover/css3.png');?>" alt="cara menjadi web developer">
             <div class="each_perjalanan_desc">
               Pintu pertama yang harus kita buka untuk mulai belajar cara membuat website, yaitu front-end (bagian depan).
             </div>
@@ -191,7 +191,7 @@
           <a href="perjalanan/portofolio.html">
           <div class="perjalanan_wrapper">
             <div class="each_perjalanan_title"> Membuat Portofolio </div>
-            <img src="<?php echo base_url();?>assets/asset/cover/tema_wp.png" alt="">
+            <img src="<?php echo base_url('assets/asset/cover/tema_wp.png');?>" alt="">
             <div class="each_perjalanan_desc">
               Seri kelas mulai dari mendesain website, mengubah menjadi HTML, CSS dan Javascript.
               Tidak ketinggalan cara untuk mengubah website menjadi responsive.
@@ -204,7 +204,7 @@
           <a href="perjalanan/php.html">
           <div class="perjalanan_wrapper">
             <div class="each_perjalanan_title"> PHP </div>
-            <img src="<?php echo base_url();?>assets/asset/cover/php-oop.png" alt="belajar php cover">
+            <img src="<?php echo base_url('assets/asset/cover/php-oop.png');?>" alt="belajar php cover">
             <div class="each_perjalanan_desc">
               Bahasa program yang sangat populer untuk membuat website dinamis dan berinteraksi dengan database.
               Komponen utama untuk menjadi ahli back-end.
@@ -238,10 +238,10 @@
   <div class="section section_partner">
     <div class="wrapper">
         <h4><span>Partner Kami</span></h4>
-        <a class="partner_cs" target="_blank" href="http://codesaya.com/"><img id="ri" src="<?php echo base_url();?>assets/asset/homepage/codesaya_logo_blue.png" alt=""></a>
-        <a class="partner_cp" target="_blank" href="http://codepolitan.com/"><img id="ri" src="<?php echo base_url();?>assets/asset/homepage/codepolitan-logo_small.png" alt=""></a>
-        <a class="partner_php" target="_blank" href="http://www.phpindonesia.or.id/"><img id="ri" src="<?php echo base_url();?>assets/asset/homepage/php_indonesia.png" alt=""></a>
-        <a class="partner_pp" target="_blank" href="http://pondokprogrammer.com/"><img id="ri" src="<?php echo base_url();?>assets/asset/homepage/Logo-PP1.png" alt=""></a>
+        <a class="partner_cs" target="_blank" href="http://codesaya.com/"><img id="ri" src="<?php echo base_url('assets/asset/homepage/codesaya_logo_blue.png');?>" alt=""></a>
+        <a class="partner_cp" target="_blank" href="http://codepolitan.com/"><img id="ri" src="<?php echo base_url('assets/asset/homepage/codepolitan-logo_small.png');?>" alt=""></a>
+        <a class="partner_php" target="_blank" href="http://www.phpindonesia.or.id/"><img id="ri" src="<?php echo base_url('assets/asset/homepage/php_indonesia.png');?>" alt=""></a>
+        <a class="partner_pp" target="_blank" href="http://pondokprogrammer.com/"><img id="ri" src="<?php echo base_url('assets/asset/homepage/Logo-PP1.png');?>" alt=""></a>
     </div>
   </div>
 
@@ -296,9 +296,9 @@ Luaskan ilmu, luaskan manfaat.</p>
         </div><!-- end footer extra info-->
 
         <div id="footer_social_media">
-          <a target="_blank" href="https://facebook.com/sekolahkoding"><img src="<?php echo base_url();?>assets/asset/homepage/f_l.png" alt="facebook sekolahkoding"></a>
-          <a target="_blank" href="https://twitter.com/sekolahkoding"><img src="<?php echo base_url();?>assets/asset/homepage/t_l.png" alt="twitter sekolahkoding"></a>
-          <a target="_blank" href="https://youtube.com/sekolahkoding"><img src="<?php echo base_url();?>assets/asset/homepage/u_l.png" alt="youtube sekolahkoding"></a>
+          <a target="_blank" href="https://facebook.com/sekolahkoding"><img src="<?php echo base_url('assets/asset/homepage/f_l.png');?>" alt="facebook sekolahkoding"></a>
+          <a target="_blank" href="https://twitter.com/sekolahkoding"><img src="<?php echo base_url('assets/asset/homepage/t_l.png');?>" alt="twitter sekolahkoding"></a>
+          <a target="_blank" href="https://youtube.com/sekolahkoding"><img src="<?php echo base_url('assets/asset/homepage/u_l.png');?>" alt="youtube sekolahkoding"></a>
         </div>
 
         <div id="footer_last">
