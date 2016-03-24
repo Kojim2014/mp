@@ -1,67 +1,101 @@
 <!DOCTYPE html>
 <html >
   <head>
-    <meta charset="UTF-8">
-    <title>Web Media | Sign in</title>
+  <meta charset="UTF-8">
+  <title>Sign-Up/Login Form</title>
 
-    <!-- Style -->
-    <link href='<?php echo base_url('/assets/login/css/open-sans.css') ?>' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="<?php echo base_url('/assets/login/font-awesome/css/font-awesome.min.css') ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('/assets/login/css/style.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('/assets/login/css/normalize.css') ?>">
-    
-    <!-- Javascript -->
-    <script src="<?php echo base_url('/assets/login/js/prefixfree.min.js') ?>"></script>
-
-    <style type="text/css">
-      .form-footer{
-        width: 100%;
-      }
-      .register{
-        display: none;
-      }
-    </style>
-
+  <link href='<?php echo base_url('/assets/login/css/titilium.css') ?>' rel='stylesheet' type='text/css'>    
+  <link rel="stylesheet" href="<?php echo base_url('/assets/login/css/normalize.css') ?>">  
+  <link rel="stylesheet" href="<?php echo base_url('/assets/login/css/style.css') ?>">
 </head>
 <body>
-  <div class="wrapper">
-      <form class="login">
-        <p class="title">Sign in</p>
-        <input type="text" placeholder="Username" required autofocus/>
-        <i class="fa fa-user"></i>
-        <input type="password" placeholder="Password" required />
-        <i class="fa fa-key"></i>
-        <footer class="message">Belum mendaftar?<a href="#daftar">Daftar</a></footer>
-        <button>
-          <i class="spinner"></i>
-          <span class="state">Masuk</span>
-        </button>
-      </form>
-      <form class="register">
-        <p class="title">Register</p>
-        <input type="text" placeholder="Username" required />
-        <i class="fa fa-user"></i>
-        <input type="email" placeholder="E-mail" required />
-        <i class="fa fa-at"></i>
-        <input type="password" placeholder="Password" required />
-        <i class="fa fa-key"></i>
-        <footer class="message">Sudah mendaftar?<a href="#masuk">Masuk</a></footer>
-        <button>
-          <i class="spinner"></i>
-          <span class="state">Daftar</span>
-        </button>
-      </form>
-    <footer>&copy;Copyright 2016 - <em><a href="">Fakhrurrozi</a></em></footer>
-  </div>
-    
-  <!-- Javascript -->
-  <script src='<?php echo base_url('/assets/login/js/jquery.min.js') ?>'></script>
+
+  <div class="form">
+    <div class="logo"><img src="" alt="Logo"></div>
+    <ul class="tab-group">
+      <li class="tab active"><a href="#login">Masuk</a></li>
+      <li class="tab"><a href="#signup">Daftar</a></li>
+    </ul>
+  
+    <div class="tab-content">
+      <div id="login">   
+        <h1>Log In to Start Study!</h1>
+      
+        <form action="" method="post">
+      
+          <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off"/>
+          </div>
+      
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off"/>
+          </div>
+      
+          <p class="forgot"><a href="#">Forgot Password?</a></p>
+      
+          <button class="button button-block"/>Log In</button>
+      
+         </form>
+      </div>
+
+      <div id="signup">   
+        <h1>Sign Up for Free</h1>
+      
+        <!-- Form -->
+        <form action="" method="post">
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" />
+            </div>
+          
+            <div class="field-wrap">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off"/>
+            </div>
+          </div>
+  
+          <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                Password<span class="req">*</span>
+              </label>
+              <input type="password" required autocomplete="off" />
+            </div>
+          
+            <div class="field-wrap">
+              <label>
+                Confirm Password<span class="req">*</span>
+              </label>
+              <input type="password"required autocomplete="off"/>
+            </div>
+          </div>
+          <button type="submit" class="button button-block"/>Register</button>
+        </form>
+      </div>
+    </div><!-- tab-content -->
+  </div> <!-- /form -->
+
+  <!-- script -->
+  <script src="<?php echo base_url('/assets/login/js/jquery.min.js') ?>"></script>
   <script src="<?php echo base_url('/assets/login/js/index.js') ?>"></script>
 
-  <script type="text/javascript">
-      $('.message a').click(function(){
-        $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-      });
-  </script>
 </body>
 </html>
