@@ -20,8 +20,8 @@
     <script src="<?php echo base_url('/assets/user/js/jquery.min.js') ?>"></script>
     <script src="<?php echo base_url('/assets/user/js/wow.min.js') ?>"></script>
 
-    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+    <link href="<?php echo base_url('/assets/login/css/nunito.css') ?>" rel='stylesheet' type='text/css'>
+    <link href="<?php echo base_url('/assets/login/css/pt-mono.css') ?>" rel='stylesheet' type='text/css'>
     <style media="screen">
     h1{ font-family: 'Nunito', sans-serif; }
     h2, h3 {font-family: 'PT Mono', cursive;}
@@ -117,8 +117,8 @@
         </div>
 
         <div id="tombol_wrapper">
-          <a class="tombol" href="<?php echo site_url('main/sign_in'); ?>">Masuk</a>
-          <a class="tombol" href="<?php echo site_url('main/sign_up'); ?>">Daftar</a>
+          <a class="tombol" href="<?php echo site_url('main/masuk'); ?>">Masuk</a>
+          <a class="tombol" href="<?php echo site_url('main/daftar'); ?>">Daftar</a>
         </div>
     </div>
   </div>

@@ -8,9 +8,21 @@ class Main extends CI_Controller {
 		$this->load->view('homepage');
 	}
 
-	public function sign_in()
+	public function masuk()
 	{
-		$this->load->view('masuk');
+		$data['data'] = "masuk";
+		$this->load->view('masuk', $data);
+	}
+
+	public function daftar()
+	{
+		$data['data'] = "daftar";
+		$this->load->view('masuk', $data);
+	}
+
+	public function forgot()
+	{
+		$this->load->view('forgot');
 	}
 
 }
