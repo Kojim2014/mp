@@ -1,4 +1,4 @@
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,11 +15,12 @@
 		<meta property="og:image" content="../sekolahkoding.com/<?php echo base_url();?>assets/asset/blue-logo.png">
 		<meta property="og:description" content="Tutorial online belajar Web Programming dan Design dalam bahasa Indonesia di SekolahKoding">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="<?php echo base_url('/assets/user/css/homepage.css') ?>">
-    <link rel="stylesheet" href="user/css/animate.css">
-    <script src="../ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="user/js/wow.min.js"></script>
-
+    <link rel="stylesheet" href="<?php echo base_url('assets/user/css/homepage.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/user/css/animate.css">
+    <script src="<?php echo base_url();?>assets/user/js/wow.min.js"></script>
+    <script src="<?php echo base_url();?>assets/user/js/jquery-2.1.4.min.js"></script>
+    <link rel='stylesheet' href='<?php echo base_url();?>assets/user/css/hover-min.css'/>
+    <link rel='stylesheet' href='https://mas-andes.googlecode.com/svn/trunk/hover-min.css' media='all'/>
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
     <style media="screen">
@@ -63,6 +64,7 @@
           padding-top: 0px;
         }
     }
+
     </style>
 </head>
 <body>
@@ -102,32 +104,59 @@
           <nav>
             <div id="toggle_menu">Menu</div>
             <div id="menu_wrap">
-              <a href="kelas/index.html">Kelas</a>
-              <a href="forum.html">Forum</a>
-              <a href="perjalanan.html">Perjalanan</a>
-              <a href="tentang.html">Tentang</a>
+             <a  href="#tentang" onclick="gotoo($(''+$(this).attr('href')+''));"><b>Tentang</b></a>
+             <a  href="#testi" onclick="gotoo($(''+$(this).attr('href')+''));"><b>Testimoni</b></a>
+             <a  href="#panduan" onclick="gotoo($(''+$(this).attr('href')+''));"><b>Panduan</b></a>
             </div>
           </nav>
         </header>
-
         <div id="main_text">
-          <h1 class="wow bounceInUp">Sekolah Koding</h1>
-          <h2>Belajar Web development dan programming</h2>
-          <h3>Luaskan ilmu, luaskan manfaat</h3>
+          <div class="example2"> <h2>WEB Media Pembelajaran</h2> </div>
+          <div class="example2"> <h2>Belajar Lebih Modern dan Interaktif Dengan Media Pembelajaran Berbasis WEB</h2> </div>
+          <div class="example2"> <h3>Sebar Ilmu = Sebar Kebaikan</h3></div>
         </div>
 
         <div id="tombol_wrapper">
-          <a class="tombol" href="user/login.html">Masuk</a>
-          <a class="tombol" href="user/daftar.html">Daftar</a>
+          <center>
+          <div class="wow fadeIn">
+            
+            <a rel='hover-shadow' class='btn button turqoise hover-shadow'>Masuk</a>
+            <a rel='hover-shadow' class='btn button turqoise hover-shadow'>Daftar</a>
+</div>
+          </center>
         </div>
+
+        <div id="back-top">
+          <a href="#top"><img src="<?php echo base_url();?>assets/asset/homepage/top.png" alt=""> </a>
+        </div>
+        <div class="gmb1" id="gmb" style="display:none;"><img src="<?php echo base_url();?>assets/asset/homepage/buk.png" alt=""></div>
+        <div class="gmb2" id="gmb" style="display:none;"><img src="<?php echo base_url();?>assets/asset/homepage/kal.png" alt=""></div>
+        <div class="gmb3" id="gmb" style="display:none;"><img src="<?php echo base_url();?>assets/asset/homepage/kom.png" alt=""></div>
+        <div class="gmb4" id="gmb" style="display:none;"><img src="<?php echo base_url();?>assets/asset/homepage/ner.png" alt=""></div>
+        <div class="gmb5" id="gmb" style="display:none;"><img src="<?php echo base_url();?>assets/asset/homepage/diskusi.png" alt=""></div>
+        <div class="gmb6" id="gmb" style="display:none;"><img src="<?php echo base_url();?>assets/asset/homepage/guru.png" alt=""></div>
     </div>
   </div>
-
-  <div class="section section_testimoni">
+ <div class="wow rollIn">
+  <div class="section section_donasi" id="tentang">
     <div class="wrapper">
-          <h4><span> Apa Kata Mereka </span></h4>
+    <h4><span>Tentang WEB Media Pembelajaran</span></h4>
+        <h5 align="left">Apa Itu Web Media Pembelajaran? </h5>
+        <p style="padding-left:3%" align="left"><b>-</b> Web media Pembelajaran Adalah sebuah Situs yang Memuat Tentang Berbagai Macam Mata Pelajarn Yang berbasis WEB.</p>
+        <br>
+        <h5 align="left">Kenapa Harus Menggunakan WEB Media Pembelajaran? </h5>
+        <p style="padding-left:3%" align="left"><b>-</b> WEB Media Pembelajaran Berfungsi Sebagai Media Shareing Berbagai Macam Pelajaran, Antara Pendidik Dan Peserta Didik,Content Yang Dapat Di shareing Antara Lain Artikel,Video dan Diskusi Forum.</p>
+        <br>
+        <h5 align="left">Apa Tujuan WEB Media Pembelajaran? </h5>
+        <p style="padding-left:3%" align="left"><b>-</b> Tujuan WEB MEdia Pembelajaran Adalah Peserta Didik Tidak hanya Aktif Belajar Disekolah saja Tetapi Bisa Aktif Belajar Lewat WEB Media Pembelajaran, Sehingga Belajar Bisa Lebih Efektif dan Efisien.</p>
+    </div>
+  </div>
+  </div>
+  <div class="section section_testimoni" id="testi">
+    <div class="wrapper">
+          <h4><span> Testimonial </span></h4>
           <div class="each_testimoni clearfix wow flipInX">
-            <img src=" <?php echo base_url();?>assets/asset/homepage/peter_jack.jpg" alt="foto peter komunitas php">
+            <img  src=" <?php echo base_url();?>assets/asset/homepage/peter_jack.jpg" alt="">
             <p>"Sebagai sebuah komunitas programming terbesar di indonesia, PHP Indonesia memiliki kewajiban moral untuk bersinergi dengan organisasi manapun yang memiliki tujuan yang sama yakni pengembangan SDM TI yang berkualitas bagi Indonesia. Setelah berdiskusi panjang lebar dengan Founder Sekolah Koding, saya sangat yakin Sekolah Koding adalah sebuah institusi pengembangan skill programming yang memiliki visi dan misi yang hebat untuk kemajuan TI di Indonesia dan dunia, oleh karena itu menjalin hubungan yang baik dengan Sekolah Koding adalah sebuah aliansi strategis demi mencapai tujuan bersama. Sukses untuk Sekolah Koding, mari BERSAMA kita BERKARYA, dan bersama kita BERJAYA!!!!.... "</p>
             <div id="testimoni_oleh"><a href="http://phpindonesia.or.id/">Peter J. Kambey, <span>Head of Executive | PHP Indonesia Community</span></a></div>
           </div>
@@ -144,97 +173,120 @@
       </div>
     </div>
 
-  <div class="section section_highlight">
+  <div class="section section_highlight" id="panduan">
     <div class="wrapper">
         <div id="col_video" class="wow rollIn">
           <iframe width="420" height="315" src="https://www.youtube.com/embed/Y7oZU3T867M" frameborder="0" allowfullscreen></iframe>
         </div>
         <div id="short_menu" class="wow slideInRight">
-          <p>Tidak tahu apa-apa? Mau mulai dari 0? jangan khawatir!</p>
-          <a href="kelas/index.html"><img src="<?php echo base_url();?>assets/asset/homepage/sm_nonton.png" alt="belajar web development logo">Nonton ratusan kelas yang terus diupdate</a>
-          <a href="forum.html" class="short_menu_child"><img src="<?php echo base_url();?>assets/asset/homepage/sm_forum.png" alt="forum web developer indonesia logo">Diskusi dengan ribuan member lain</a>
-          <a href="perpustakaan.html" class="short_menu_child"><img src="<?php echo base_url();?>assets/asset/homepage/sm_perpus.png" alt="belajar membuat website logo">Baca referensi pelajaran di perpustakaan</a>
-          <a href="perjalanan.html" class="short_menu_child"><img src="<?php echo base_url();?>assets/asset/homepage/sm_peta.png" alt="belajar cara membuat website logo">Lihat peta pelajaran untuk memulai</a>
+        <h4><span>Panduan</span></h4>
+          <p>Panduan Penggunaan WEB Media Pembelajaran.</p>
+          <a href="kelas/index.html"><img src="<?php echo base_url();?>assets/asset/homepage/sm_perpus.png" alt="belajar web development logo">Panduan Register Akun</a>
+          <a href="forum.html" class="short_menu_child"><img src="<?php echo base_url();?>assets/asset/homepage/sm_perpus.png" alt="forum web developer indonesia logo">Cara Bergabung Dengan Kelas</a>
+          <a href="perpustakaan.html" class="short_menu_child"><img src="<?php echo base_url();?>assets/asset/homepage/sm_perpus.png" alt="belajar membuat website logo">Interaksi DI Forum</a>
         </div>
     </div>
   </div>
 
-  <div class="section section_media">
+  <div id="akdmik" class="section section_perjalanan">
     <div class="wrapper">
-        <h4><span>Media</span></h4>
-        <div id="media_wrapper" class="wow flipInY">
-          <a class="media_net" target="_blank" href="https://www.youtube.com/watch?v=Om28d-snPkI"><img height="65" src="<?php echo base_url();?>assets/asset/homepage/net_tv.png" alt="logo net tv"></a>
-          <a class="media_cp" target="_blank" href="http://www.codepolitan.com/belajar-koding-di-sekolahkoding-com/"><img src="<?php echo base_url();?>assets/asset/homepage/codepolitan_logo.png" alt="logo codepolitan" /></a>
-          <a class="media_ds" target="_blank" href="https://dailysocial.net/post/sekolahkoding/"><img src="<?php echo base_url();?>assets/asset/homepage/dailysocial_logo.png" alt="logo dailysocial"></a>
-          <a class="media_m" target="_blank" href="http://marketeers.com/article/belajar-coding-sulit-datanglah-ke-sekolah-koding.html"><img src="<?php echo base_url();?>assets/asset/homepage/marketers.jpg" alt="logo marketeers"></a>
-          <a class="media_tel" target="_blank" href="http://blog.telkomsel.com/gadgetapps/Profil-Finalis-The-NextDev-2015:-SekolahKoding"><img src="<?php echo base_url();?>assets/asset/homepage/Telkomsel_2013.png" alt="logo telkomsel"></a>
-        </div>
-    </div>
-  </div>
-
-  <div class="section section_perjalanan">
-    <div class="wrapper">
-        <h4><span>Perjalanan</span></h4>
+        <h4><span>Ringkasan</span></h4>
         <div class="each_perjalanan each_perjalanan_fe wow slideInDown">
-          <a href="perjalanan/frontend.html">
-          <div class="perjalanan_wrapper">
-            <div class="each_perjalanan_title"> Front End </div>
+        <div class="perjalanan_wrapper">
+            <div class="each_perjalanan_title"> Materi </div>
             <img src="<?php echo base_url();?>assets/asset/cover/css3.png" alt="cara menjadi web developer">
             <div class="each_perjalanan_desc">
-              Pintu pertama yang harus kita buka untuk mulai belajar cara membuat website, yaitu front-end (bagian depan).
+              Pintu pertama yang harus kita buka untuk mulai belajar cara membuat website, yaitu front-end (bagian depan).<a href="#popup"class="popup-link">Detail</a>
             </div>
           </div>
-          </a>
+          <div id="closed"></div>
+              <div class="popup-wrapper" id="popup">
+                <div class="popup-container">
+                  
+                    <h2>Ikuti Update !!</h2>
+                    <p>Daripada hanya melihat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
+                    <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
+                    <div class="input-group">
+                      <p> 
+                      <input type="hidden" name="action" value="subscribe"> 
+                      <input type="hidden" name="source" value="http://www.syakirurohman.net/2015/01/tutorial-membuat-popup-tanpa-javascript-jquery"> 
+                      <input type="hidden" name="sub-type" value="widget"> 
+                      <input type="hidden" name="redirect_fragment" value="blog_subscription-2"> 
+                      <input type="hidden" id="_wpnonce" name="_wpnonce" value="aaf0b68fcd"> 
+                      </p>
+                    </div>
+                    <a class="popup-close" href="#akdmik">X</a>
+                  
+                </div>
+              </div>
         </div>
 
         <div class="each_perjalanan each_perjalanan_folio wow slideInDown">
-          <a href="perjalanan/portofolio.html">
-          <div class="perjalanan_wrapper">
-            <div class="each_perjalanan_title"> Membuat Portofolio </div>
-            <img src="<?php echo base_url();?>assets/asset/cover/tema_wp.png" alt="">
+        <div class="perjalanan_wrapper">
+            <div class="each_perjalanan_title"> Forum </div>
+            <img src="<?php echo base_url();?>assets/asset/cover/css3.png" alt="cara menjadi web developer">
             <div class="each_perjalanan_desc">
-              Seri kelas mulai dari mendesain website, mengubah menjadi HTML, CSS dan Javascript.
-              Tidak ketinggalan cara untuk mengubah website menjadi responsive.
+              Pintu pertama yang harus kita buka untuk mulai belajar cara membuat website, yaitu front-end (bagian depan).<a href="#popup"class="popup-link">Detail</a>
             </div>
           </div>
-          </a>
+          <div id="closed"></div>
+              <div class="popup-wrapper" id="popup">
+                <div class="popup-container">
+                  
+                    <h2>Ikuti Update !!</h2>
+                    <p>Daripada hanya melihat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
+                    <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
+                    <div class="input-group">
+                      <p> 
+                      <input type="hidden" name="action" value="subscribe"> 
+                      <input type="hidden" name="source" value="http://www.syakirurohman.net/2015/01/tutorial-membuat-popup-tanpa-javascript-jquery"> 
+                      <input type="hidden" name="sub-type" value="widget"> 
+                      <input type="hidden" name="redirect_fragment" value="blog_subscription-2"> 
+                      <input type="hidden" id="_wpnonce" name="_wpnonce" value="aaf0b68fcd"> 
+                      </p>
+                    </div>
+                    <a class="popup-close" href="#akdmik">X</a>
+                  
+                </div>
+              </div>
         </div>
 
-        <div class="each_perjalanan each_perjalanan_php wow slideInDown">
-          <a href="perjalanan/php.html">
-          <div class="perjalanan_wrapper">
-            <div class="each_perjalanan_title"> PHP </div>
-            <img src="<?php echo base_url();?>assets/asset/cover/php-oop.png" alt="belajar php cover">
+
+
+<div class="each_perjalanan each_perjalanan_js wow slideInDown">
+        <div class="perjalanan_wrapper">
+            <div class="each_perjalanan_title"> Kelas </div>
+            <img src="<?php echo base_url();?>assets/asset/cover/css3.png" alt="cara menjadi web developer">
             <div class="each_perjalanan_desc">
-              Bahasa program yang sangat populer untuk membuat website dinamis dan berinteraksi dengan database.
-              Komponen utama untuk menjadi ahli back-end.
-             </div>
+              Pintu pertama yang harus kita buka untuk mulai belajar cara membuat website, yaitu front-end (bagian depan).<a href="#popup"class="popup-link">Detail</a>
+            </div>
           </div>
-          </a>
+          <div id="closed"></div>
+              <div class="popup-wrapper" id="popup">
+                <div class="popup-container">
+                  
+                    <h2>Ikuti Update !!</h2>
+                    <p>Daripada hanya melihat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
+                    <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
+                    <div class="input-group">
+                      <p> 
+                      <input type="hidden" name="action" value="subscribe"> 
+                      <input type="hidden" name="source" value="http://www.syakirurohman.net/2015/01/tutorial-membuat-popup-tanpa-javascript-jquery"> 
+                      <input type="hidden" name="sub-type" value="widget"> 
+                      <input type="hidden" name="redirect_fragment" value="blog_subscription-2"> 
+                      <input type="hidden" id="_wpnonce" name="_wpnonce" value="aaf0b68fcd"> 
+                      </p>
+                    </div>
+                    <a class="popup-close" href="#akdmik">X</a>
+                  
+                </div>
+              </div>
         </div>
+
+
     </div>
   </div>
-
-  <div class="section section_donasi">
-    <div class="wrapper">
-        <p>Anda yang menentukan sendiri berapa biaya belajar di sekolah koding.
-          Jangan ragu investasi untuk diri sendiri, wujudkan ide dan kejar cita-cita sekarang.
-          Lebih detail kunjungi halaman <a href="https://sekolahkoding.com/syarat">syarat</a>.
-        </p>
-    </div>
-  </div>
-
-  <div class="section section_statistik">
-    <div class="wrapper">
-        <h4><span>Statistik</span></h4>
-        <div id="statistik_box_wrapper" class="wow lightSpeedIn">
-          <div class="statistik_box"> 11740<span>member</span> </div>
-          <div class="statistik_box"> 488 <span>video tutorial</span> </div>
-          <div class="statistik_box">  3751 <span>aktivitas forum</span> </div>
-        </div>
-    </div>
-  </div>
-
+  <div class="wow slideInUp">
   <div class="section section_partner">
     <div class="wrapper">
         <h4><span>Partner Kami</span></h4>
@@ -244,54 +296,34 @@
         <a class="partner_pp" target="_blank" href="http://pondokprogrammer.com/"><img id="ri" src="<?php echo base_url();?>assets/asset/homepage/Logo-PP1.png" alt=""></a>
     </div>
   </div>
-
+</div>
   <div class="section section_action">
     <div class="wrapper">
         <p class="wow bounceInDown">Buka pintu ilmu dan luaskan manfaat dengan sekolah koding</p>
         <div id="tombol_wrapper_action" class="clearfix">
-          <div class="tombol_action"><a href="user/daftar.html">Daftar Sekarang</a></div>
-          <div class="tombol_action"><a href="kelas/index.html">Lihat Kelas</a></div>
+          <a style="background-color:orange;" rel='curl-top-left' class='button purple curl-top-left'>Daftar Sekarang Juga</a>
         </div>
-        <p id="extra_action">Ada pertanyaan? Hubungi kami di <a href="mailto:tanyaadmin@sekolahkoding.com">tanyaadmin@sekolahkoding.com</a></p>
     </div>
   </div>
 
   <div class="section section_footer">
     <div class="wrapper">
         <div id="footer_main_info">
-          <h5>Sekolah Koding</h5>
+        <div id="logo_foot"><img src="<?php echo base_url();?>assets/asset/homepage/sk_white_transparent.png"></div>
           <p>Video tutorial web development dan programming dalam bahasa Indonesia.
 Luaskan ilmu, luaskan manfaat.</p>
         </div>
 
         <div id="footer_extra_info" class="clearfix">
           <div class="col_3_footer">
-            <h6>Belajar</h6>
-            <ul>
-              <li><a href="kelas/index.html">Kelas</a></li>
-              <li><a href="perjalanan.html">Perjalanan</a></li>
-              <li><a href="perpustakaan.html">Perpustakaan</a></li>
-            </ul>
-          </div>
-          <div class="col_3_footer">
-            <h6>Diskusi</h6>
-            <ul>
-              <li><a href="upacara.html">Upacara</a></li>
-              <li><a href="forum.html">Forum</a></li>
-            </ul>
-          </div>
-          <div class="col_3_footer">
             <h6>Informasi</h6>
             <ul>
-              <li><a href="blog/index.html">Blog</a></li>
-              <li><a href="tentang.html">Tentang</a></li>
-              <li><a href="syarat.html">Syarat</a></li>
-              <li><a href="member.html">Member</a></li>
+
+              <li><a href="#tentang" onclick="gotoo($(''+$(this).attr('href')+''));"><b>Tentang</b></a></li>
+              <li><a href="#testi" onclick="gotoo($(''+$(this).attr('href')+''));"><b>Testimoni</b></a></li>
+              <li><a href="#panduan" onclick="gotoo($(''+$(this).attr('href')+''));"><b>Panduan</b></a></li>
             </ul>
-            <ul>
-              <li><a href="user/login.html">Masuk</a></li>
-              <li><a href="user/daftar.html">Daftar</a></li>
-            </ul>
+
           </div>
         </div><!-- end footer extra info-->
 
@@ -303,15 +335,12 @@ Luaskan ilmu, luaskan manfaat.</p>
 
         <div id="footer_last">
           <div id="copyright">&copy;SekolahKoding 2016</div>
-          <div id="made_in"> [ ] dengan <span>❤</span> di Berlin</div>
         </div>
 
     </div>
   </div>
-
   <script>
   jQuery(function($){
-
       //main nav toggle menu
       $('#toggle_menu').on('click', function(e) {
         $('#menu_wrap').toggleClass('show');
@@ -320,10 +349,55 @@ Luaskan ilmu, luaskan manfaat.</p>
 
   });
 
+    function gotoo(element){
+      $('html, body').animate({scrollTop:element.offset().top}, 1500);
+    }
+
+
   //  new WOW().init();
+$(document).ready(function(){
+        // $("#div1").fadeIn();
+        $(".gmb1").fadeIn("4000");
+        $(".gmb2").fadeIn("7000");
+        $(".gmb3").fadeIn("9000");
+        $(".gmb4").fadeIn("10000");
+        $(".gmb5").fadeIn("12000");
+        $(".gmb6").fadeIn("13000");
+        //$("#div3").fadeIn(3000);
+        //$("#div4").fadeIn(6000);
+
+});
+
+$(document).ready(function(){
+
+  // hide #back-top first
+  $("#back-top").hide();
+  
+  // fade in #back-top
+  $(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $('#back-top').fadeIn();
+      } else {
+        $('#back-top').fadeOut();
+      }
+    });
+
+    // scroll body to 0px on click
+    $('#back-top a').click(function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
+  });
+
+});
 
 </script>
+<script>
+new WOW().init();
+</script>
 </body>
-
 <!-- Mirrored from www.sekolahkoding.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Mar 2016 10:11:47 GMT -->
 </html>
