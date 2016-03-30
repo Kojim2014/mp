@@ -12,7 +12,7 @@
     <!-- for facebook graph-->
 		<meta property="og:title" content="SekolahKoding">
     <meta property="og:type" content="Website">
-		<meta property="og:image" content="../sekolahkoding.com/<?php echo base_url();?>assets/asset/blue-logo.png">
+		<meta property="og:image" content="<?php echo base_url();?>assets/asset/blue-logo.png">
 		<meta property="og:description" content="Tutorial online belajar Web Programming dan Design dalam bahasa Indonesia di SekolahKoding">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="<?php echo base_url('assets/user/css/homepage.css') ?>">
@@ -20,9 +20,9 @@
     <script src="<?php echo base_url();?>assets/user/js/wow.min.js"></script>
     <script src="<?php echo base_url();?>assets/user/js/jquery-2.1.4.min.js"></script>
     <link rel='stylesheet' href='<?php echo base_url();?>assets/user/css/hover-min.css'/>
-    <link rel='stylesheet' href='https://mas-andes.googlecode.com/svn/trunk/hover-min.css' media='all'/>
+<!--     <link rel='stylesheet' href='https://mas-andes.googlecode.com/svn/trunk/hover-min.css' media='all'/>
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'> -->
     <style media="screen">
     h1{ font-family: 'Nunito', sans-serif; }
     h2, h3 {font-family: 'PT Mono', cursive;}
@@ -111,9 +111,9 @@
           </nav>
         </header>
         <div id="main_text">
-          <div class="example2"> <h2>WEB Media Pembelajaran</h2> </div>
-          <div class="example2"> <h2>Belajar Lebih Modern dan Interaktif Dengan Media Pembelajaran Berbasis WEB</h2> </div>
-          <div class="example2"> <h3>Sebar Ilmu = Sebar Kebaikan</h3></div>
+           <h2>WEB Media Pembelajaran</h2> 
+           <h2>Belajar Lebih Modern dan Interaktif Dengan Media Pembelajaran Berbasis WEB</h2> 
+           <h3>Sebar Ilmu = Sebar Kebaikan</h3>
         </div>
 
         <div id="tombol_wrapper">
@@ -127,7 +127,7 @@
         </div>
 
         <div id="back-top">
-          <a href="#top"><img src="<?php echo base_url();?>assets/asset/homepage/top.png" alt=""> </a>
+          <a href="#top"><img class="gtop" src="<?php echo base_url();?>assets/asset/homepage/top.png" alt=""> </a>
         </div>
         <div class="gmb1" id="gmb" style="display:none;"><img src="<?php echo base_url();?>assets/asset/homepage/buk.png" alt=""></div>
         <div class="gmb2" id="gmb" style="display:none;"><img src="<?php echo base_url();?>assets/asset/homepage/kal.png" alt=""></div>
@@ -188,95 +188,67 @@
     </div>
   </div>
 
-  <div id="akdmik" class="section section_perjalanan">
+  <div class="section section_perjalanan">
     <div class="wrapper">
         <h4><span>Ringkasan</span></h4>
-        <div class="each_perjalanan each_perjalanan_fe wow slideInDown">
+
+<div class="each_perjalanan each_perjalanan_java wow slideInDown">
         <div class="perjalanan_wrapper">
-            <div class="each_perjalanan_title"> Materi </div>
+            <div class="each_perjalanan_title"> Kelas </div>
             <img src="<?php echo base_url();?>assets/asset/cover/css3.png" alt="cara menjadi web developer">
             <div class="each_perjalanan_desc">
-              Pintu pertama yang harus kita buka untuk mulai belajar cara membuat website, yaitu front-end (bagian depan).<a href="#popup"class="popup-link">Detail</a>
+            Kelas berfungsi sebagai tempat untuk guru memberikan materi berdasarkan kelas tersebut.<a href="#popup"class="popup-link">Detail</a>
             </div>
           </div>
           <div id="closed"></div>
               <div class="popup-wrapper" id="popup">
                 <div class="popup-container">
-                  
+    
                     <h2>Ikuti Update !!</h2>
                     <p>Daripada hanya melihat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
                     <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
-                    <div class="input-group">
-                      <p> 
-                      <input type="hidden" name="action" value="subscribe"> 
-                      <input type="hidden" name="source" value="http://www.syakirurohman.net/2015/01/tutorial-membuat-popup-tanpa-javascript-jquery"> 
-                      <input type="hidden" name="sub-type" value="widget"> 
-                      <input type="hidden" name="redirect_fragment" value="blog_subscription-2"> 
-                      <input type="hidden" id="_wpnonce" name="_wpnonce" value="aaf0b68fcd"> 
-                      </p>
-                    </div>
                     <a class="popup-close" href="#akdmik">X</a>
                   
                 </div>
               </div>
         </div>
 
-        <div class="each_perjalanan each_perjalanan_folio wow slideInDown">
+<div class="each_perjalanan each_perjalanan_folio wow slideInDown">
         <div class="perjalanan_wrapper">
-            <div class="each_perjalanan_title"> Forum </div>
+            <div class="each_perjalanan_title"> Kelas </div>
             <img src="<?php echo base_url();?>assets/asset/cover/css3.png" alt="cara menjadi web developer">
             <div class="each_perjalanan_desc">
-              Pintu pertama yang harus kita buka untuk mulai belajar cara membuat website, yaitu front-end (bagian depan).<a href="#popup"class="popup-link">Detail</a>
+            Kelas berfungsi sebagai tempat untuk guru memberikan materi berdasarkan kelas tersebut.<a href="#popup"class="popup-link">Detail</a>
             </div>
           </div>
           <div id="closed"></div>
               <div class="popup-wrapper" id="popup">
                 <div class="popup-container">
-                  
+    
                     <h2>Ikuti Update !!</h2>
                     <p>Daripada hanya melihat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
                     <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
-                    <div class="input-group">
-                      <p> 
-                      <input type="hidden" name="action" value="subscribe"> 
-                      <input type="hidden" name="source" value="http://www.syakirurohman.net/2015/01/tutorial-membuat-popup-tanpa-javascript-jquery"> 
-                      <input type="hidden" name="sub-type" value="widget"> 
-                      <input type="hidden" name="redirect_fragment" value="blog_subscription-2"> 
-                      <input type="hidden" id="_wpnonce" name="_wpnonce" value="aaf0b68fcd"> 
-                      </p>
-                    </div>
                     <a class="popup-close" href="#akdmik">X</a>
                   
                 </div>
               </div>
         </div>
-
-
 
 <div class="each_perjalanan each_perjalanan_js wow slideInDown">
         <div class="perjalanan_wrapper">
             <div class="each_perjalanan_title"> Kelas </div>
             <img src="<?php echo base_url();?>assets/asset/cover/css3.png" alt="cara menjadi web developer">
             <div class="each_perjalanan_desc">
-              Pintu pertama yang harus kita buka untuk mulai belajar cara membuat website, yaitu front-end (bagian depan).<a href="#popup"class="popup-link">Detail</a>
+            Kelas berfungsi sebagai tempat untuk guru memberikan materi berdasarkan kelas tersebut.<a href="#popup"class="popup-link">Detail</a>
             </div>
           </div>
           <div id="closed"></div>
               <div class="popup-wrapper" id="popup">
                 <div class="popup-container">
-                  
+    
                     <h2>Ikuti Update !!</h2>
                     <p>Daripada hanya melihat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
                     <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
-                    <div class="input-group">
-                      <p> 
-                      <input type="hidden" name="action" value="subscribe"> 
-                      <input type="hidden" name="source" value="http://www.syakirurohman.net/2015/01/tutorial-membuat-popup-tanpa-javascript-jquery"> 
-                      <input type="hidden" name="sub-type" value="widget"> 
-                      <input type="hidden" name="redirect_fragment" value="blog_subscription-2"> 
-                      <input type="hidden" id="_wpnonce" name="_wpnonce" value="aaf0b68fcd"> 
-                      </p>
-                    </div>
                     <a class="popup-close" href="#akdmik">X</a>
                   
                 </div>
@@ -284,10 +256,13 @@
         </div>
 
 
-    </div>
+
+    </div> 
   </div>
+
+
   <div class="wow slideInUp">
-  <div class="section section_partner">
+<!--   <div class="section section_partner">
     <div class="wrapper">
         <h4><span>Partner Kami</span></h4>
         <a class="partner_cs" target="_blank" href="http://codesaya.com/"><img id="ri" src="<?php echo base_url();?>assets/asset/homepage/codesaya_logo_blue.png" alt=""></a>
@@ -295,11 +270,11 @@
         <a class="partner_php" target="_blank" href="http://www.phpindonesia.or.id/"><img id="ri" src="<?php echo base_url();?>assets/asset/homepage/php_indonesia.png" alt=""></a>
         <a class="partner_pp" target="_blank" href="http://pondokprogrammer.com/"><img id="ri" src="<?php echo base_url();?>assets/asset/homepage/Logo-PP1.png" alt=""></a>
     </div>
-  </div>
+  </div> -->
 </div>
   <div class="section section_action">
     <div class="wrapper">
-        <p class="wow bounceInDown">Buka pintu ilmu dan luaskan manfaat dengan sekolah koding</p>
+        <p class="wow bounceInDown">Ayo Bergabung Sekarang Juga Untuk Belajar Lebih Seru dan Interaktif!</p>
         <div id="tombol_wrapper_action" class="clearfix">
           <a style="background-color:orange;" rel='curl-top-left' class='button purple curl-top-left'>Daftar Sekarang Juga</a>
         </div>
@@ -340,6 +315,8 @@ Luaskan ilmu, luaskan manfaat.</p>
     </div>
   </div>
   <script>
+new WOW().init();
+
   jQuery(function($){
       //main nav toggle menu
       $('#toggle_menu').on('click', function(e) {
@@ -394,9 +371,6 @@ $(document).ready(function(){
 
 });
 
-</script>
-<script>
-new WOW().init();
 </script>
 </body>
 <!-- Mirrored from www.sekolahkoding.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Mar 2016 10:11:47 GMT -->
