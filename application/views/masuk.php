@@ -15,7 +15,7 @@
     <ul class="tab-group">
       <li class="tab <?php echo ($data == "masuk") ? "active" : ""?>"><a id="masuk" href="#login">Masuk</a></li>
       <li class="tab <?php echo ($data == "daftar") ? "active" : ""?>"><a id="daftar" href="#signup">Daftar</a></li>
-    </ul>
+    </ul> 
 
     <div class="tab-content">
       <div id="signup" style="display: <?php echo ($data == "masuk") ? "none" : '' ?>">   
@@ -28,14 +28,14 @@
               <label>
                 First Name<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" />
+              <input type="text" name="fname" required autocomplete="off" />
             </div>
           
             <div class="field-wrap">
               <label>
                 Last Name<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off"/>
+              <input type="text" name="lname" required autocomplete="off"/>
             </div>
           </div>
   
@@ -43,14 +43,14 @@
             <label>
               Username<span class="req">*</span>
             </label>
-            <input type="text"required autocomplete="off"/>
+            <input type="text" name="uname" required autocomplete="off"/>
           </div>
 
           <div class="field-wrap">
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input type="email" name="email" required autocomplete="off"/>
           </div>
           
           <div class="top-row">
@@ -58,7 +58,7 @@
               <label>
                 Password<span class="req">*</span>
               </label>
-              <input type="password" id="pass" required autocomplete="off" />
+              <input type="password" name="pword" id="pass" required autocomplete="off" />
             </div>
           
             <div class="field-wrap">
@@ -69,9 +69,19 @@
             </div>
           </div>
 
+          <div class="field-wrap">
+            <label>
+              Contact Person<span class="req">*</span>
+            </label>
+            <input type="text" name="conpers" required autocomplete="off"/>
+          </div>
+
           <div class="top-row">
             <div class="field-wrap">
-              <input type="radio" id="pass" required autocomplete="off" />
+              <select form="select" name="jekel">
+                  <option value="laki-laki">laki-laki</option>
+                  <option value="perempuan">perempuan</option>
+              </select>
             </div>
           </div>
 
@@ -80,9 +90,18 @@
       </div>
 
       <div id="login"  style="display: <?php echo ($data == "daftar") ? "none" : '' ?>">
-        <h1>Log In to Start Study!</h1>
-      
-        <form action="<?php echo site_url('main/login_auth') ?>" method="post">
+        <!-- <?php 
+          if ($this->session->flashdata('reg_ret')) {
+            echo "<h1>".$this->session->flashdata('reg_ret')."</h1>";
+          }
+        ?> -->
+        <?php if ($this->session->flashdata('reg_ret')): ?>
+          <h1>
+            <?php echo $this->session->flashdata('reg_ret'); ?>
+          </h1>
+        <?php endif ?>
+
+        <form action="<?php echo site_url('main/login'); ?>" method="post">
       
           <div class="field-wrap">
             <label>

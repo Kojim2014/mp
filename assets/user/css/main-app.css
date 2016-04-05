@@ -13,7 +13,7 @@
 body, html {
   height: 100%;
 }
-
+ 
 *{
   padding: 0;
   margin: 0;
@@ -170,14 +170,14 @@ input[type="password"], input[type="email"]
   width: 25%;
   padding:0 2.5% 10px;
   float: left;
-  background-color: #5E9BCC;
+  background-color: rgb(0, 150, 136);
   height: auto;
   color: white;
 }
 
 #menu_left_back{
   position: absolute;
-  background-color: #5E9BCC;
+  background-color: rgb(0, 150, 136);
   z-index: -1;
   top: 0;
   left: 0;
@@ -430,11 +430,13 @@ input[type="submit"]:hover{
 .title_content{
   padding: 8px 10px;
   margin-bottom: 10px;
-  background-color: #A0C5E2;
+  background-color: rgb(0, 150, 136);
   color: white;
   font-size: 23px;
 }
-
+.notif{
+  float: right;
+}
 .title_content h1{
   font-weight: normal;
   font-size: 24px;
@@ -840,6 +842,7 @@ input[type="submit"]:hover{
 
 .pagination{
   float: right;  
+  
 }
 
 .pagination a{
@@ -2058,6 +2061,7 @@ and (orientation : portrait){
   #create_forum{
     float: none;
     width: 70%;
+    float: right;
   }
 
   .jawaban_info_wrapper{
