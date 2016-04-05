@@ -68,14 +68,14 @@ img, iframe{ max-width: 100%;}
 
 .section_landing .tombol{
   display: block;
-  background-color: rgba(255, 204, 0, 0.5);
+  background-color: rgba(0, 150, 136, 0.3);
   padding: 15px 3%;
-  border-top-right-radius: 30%;
-  border-top-left-radius: 30%;
-  border-bottom-left-radius: 30%;
-  border-bottom-right-radius: 30%;
   width: 40%;
   float: left;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
   margin: 0 1%;
   text-align: center;
   font-size: 24px;
@@ -83,7 +83,7 @@ img, iframe{ max-width: 100%;}
   color:white;
 }
 .section_landing .tombol:hover{
-  background-color: rgba(239, 134, 33, 1);
+  background-color: rgba(0, 150, 136, 1);
   cursor: pointer;
 }
 h4{
@@ -125,7 +125,7 @@ h4 span{
 }
 .testimoni_mini{ padding-top: 35px;}
 .section_highlight{
-  background-color: rgb(218, 191, 91);
+  background-color: rgb(0, 150, 136);
 }
 #col_video{
   float: right;
@@ -254,7 +254,7 @@ h4 span{
   background-color: rgb(221, 98, 6);
 }
 .section_donasi, .section_donasi a{
-  background-color: rgb(226, 193, 2);
+  background-color: rgb(0, 150, 136); 
   color:white;
   text-align: center;
   font-size: 24px;
@@ -570,6 +570,46 @@ h6{ font-size: 25px; margin-bottom: 10px;}
     -moz-transition:all 1s;
     transition:all 1s;
   }
+  #popup1 {
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -200px;
+  }
+  #popup1:target {
+    visibility:visible;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:0;
+    z-index: 99999999999;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    transition:all 1s;
+  }
+  #popup2 {
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -200px;
+  }
+  #popup2:target {
+    visibility:visible;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:0;
+    z-index: 99999999999;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    transition:all 1s;
+  }
 
   @media (min-width: 768px){
     .popup-container {
@@ -610,9 +650,11 @@ h6{ font-size: 25px; margin-bottom: 10px;}
     color:#fff;
   }
 .gtop{
-  float: right;
+  float: right; 
 }
-
+.padd{
+  padding-left: 10%;
+}
 
 /*Untuk Scrool Ke atas*/
 

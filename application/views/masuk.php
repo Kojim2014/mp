@@ -15,7 +15,7 @@
     <ul class="tab-group">
       <li class="tab <?php echo ($data == "masuk") ? "active" : ""?>"><a id="masuk" href="#login">Masuk</a></li>
       <li class="tab <?php echo ($data == "daftar") ? "active" : ""?>"><a id="daftar" href="#signup">Daftar</a></li>
-    </ul>
+    </ul> 
 
     <div class="tab-content">
       <div id="signup" style="display: <?php echo ($data == "masuk") ? "none" : '' ?>">   
@@ -68,7 +68,7 @@
       <div id="login"  style="display: <?php echo ($data == "daftar") ? "none" : '' ?>">
         <h1>Log In to Start Study!</h1>
       
-        <form action="" method="post">
+        <form action="<?php echo site_url('main/login'); ?>" method="post">
       
           <div class="field-wrap">
             <label>

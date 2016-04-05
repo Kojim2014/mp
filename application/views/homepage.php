@@ -12,30 +12,17 @@
     <!-- for facebook graph-->
 		<meta property="og:title" content="SekolahKoding">
     <meta property="og:type" content="Website">
-<<<<<<< HEAD
-		<meta property="og:image" content="<?php echo base_url();?>assets/asset/blue-logo.png">
-		<meta property="og:description" content="Tutorial online belajar Web Programming dan Design dalam bahasa Indonesia di SekolahKoding">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="<?php echo base_url('assets/user/css/homepage.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/user/css/animate.css">
-    <script src="<?php echo base_url();?>assets/user/js/wow.min.js"></script>
-    <script src="<?php echo base_url();?>assets/user/js/jquery-2.1.4.min.js"></script>
-    <link rel='stylesheet' href='<?php echo base_url();?>assets/user/css/hover-min.css'/>
-<!--     <link rel='stylesheet' href='https://mas-andes.googlecode.com/svn/trunk/hover-min.css' media='all'/>
-    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'> -->
-=======
 		<meta property="og:image" content="<?php echo base_url('assets/asset/blue-logo.png');?>">
 		<meta property="og:description" content="Tutorial online belajar Web Programming dan Design dalam bahasa Indonesia di SekolahKoding">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="<?php echo base_url('/assets/user/css/homepage.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('/assets/user/css/animate.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/user/css/hover-min.css') ?>">
     <script src="<?php echo base_url('/assets/user/js/jquery.min.js') ?>"></script>
     <script src="<?php echo base_url('/assets/user/js/wow.min.js') ?>"></script>
 
     <link href="<?php echo base_url('/assets/login/css/nunito.css') ?>" rel='stylesheet' type='text/css'>
     <link href="<?php echo base_url('/assets/login/css/pt-mono.css') ?>" rel='stylesheet' type='text/css'>
->>>>>>> 58c031d09a59d453cf128537d48fb2f83e73f207
     <style media="screen">
     h1{ font-family: 'Nunito', sans-serif; }
     h2, h3 {font-family: 'PT Mono', cursive;}
@@ -124,14 +111,14 @@
           </nav>
         </header>
         <div id="main_text">
-           <h2>WEB Media Pembelajaran</h2> 
+           <h2>"WEB Media Pembelajaran</h2> 
            <h2>Belajar Lebih Modern dan Interaktif Dengan Media Pembelajaran Berbasis WEB</h2> 
-           <h3>Sebar Ilmu = Sebar Kebaikan</h3>
+           <h3>Sebar Ilmu  Sebar Kebaikan"</h3>
         </div>
 
         <div id="tombol_wrapper">
-          <a class="tombol" href="<?php echo site_url('main/masuk'); ?>">Masuk</a>
-          <a class="tombol" href="<?php echo site_url('main/daftar'); ?>">Daftar</a>
+          <a rel='hover-shadow' href="<?php echo site_url('Main/daftar'); ?>" class='button turqoise hover-shadow tombol'>Daftar</a>
+          <a rel='hover-shadow' href="<?php echo site_url('Main/masuk'); ?>" class='button turqoise hover-shadow tombol'>Masuk</a>
         </div>
 
         <div id="back-top">
@@ -183,6 +170,7 @@
 
   <div class="section section_highlight" id="panduan">
     <div class="wrapper">
+    <h4><span> Panduan </span></h4>
         <div id="col_video" class="wow rollIn">
           <iframe width="420" height="315" src="https://www.youtube.com/embed/Y7oZU3T867M" frameborder="0" allowfullscreen></iframe>
         </div>
@@ -196,24 +184,12 @@
     </div>
   </div>
 
-  <div class="section section_media">
-    <div class="wrapper">
-        <h4><span>Media</span></h4>
-        <div id="media_wrapper" class="wow flipInY">
-          <a class="media_net" target="_blank" href="https://www.youtube.com/watch?v=Om28d-snPkI"><img height="65" src="<?php echo base_url('assets/asset/homepage/net_tv.png');?>" alt="logo net tv"></a>
-          <a class="media_cp" target="_blank" href="http://www.codepolitan.com/belajar-koding-di-sekolahkoding-com/"><img src="<?php echo base_url('assets/asset/homepage/codepolitan_logo.png');?>" alt="logo codepolitan" /></a>
-          <a class="media_ds" target="_blank" href="https://dailysocial.net/post/sekolahkoding/"><img src="<?php echo base_url('assets/asset/homepage/dailysocial_logo.png');?>" alt="logo dailysocial"></a>
-          <a class="media_m" target="_blank" href="http://marketeers.com/article/belajar-coding-sulit-datanglah-ke-sekolah-koding.html"><img src="<?php echo base_url('assets/asset/homepage/marketers.jpg');?>" alt="logo marketeers"></a>
-          <a class="media_tel" target="_blank" href="http://blog.telkomsel.com/gadgetapps/Profil-Finalis-The-NextDev-2015:-SekolahKoding"><img src="<?php echo base_url('assets/asset/homepage/Telkomsel_2013.png');?>" alt="logo telkomsel"></a>
-        </div>
-    </div>
-  </div>
 
   <div class="section section_perjalanan">
     <div class="wrapper">
-        <h4><span>Perjalanan</span></h4>
+        <h4><span>Ringkasan</span></h4>
         <div class="each_perjalanan each_perjalanan_fe wow slideInDown">
-          <a href="perjalanan/frontend.html">
+          
           <div class="perjalanan_wrapper">
             <div class="each_perjalanan_title"> Front End </div>
             <img src="<?php echo base_url('assets/asset/cover/css3.png');?>" alt="cara menjadi web developer">
@@ -226,7 +202,7 @@
                 <div class="popup-container">
     
                     <h2>Ikuti Update !!</h2>
-                    <p>Daripada hanya melihat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
+                    <p>Daripada hanya sbdvdvgsvhdhscgmelihat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
                     <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
                     <a class="popup-close" href="#akdmik">X</a>
                   
@@ -235,16 +211,15 @@
         </div>
 
         <div class="each_perjalanan each_perjalanan_folio wow slideInDown">
-          <a href="perjalanan/portofolio.html">
           <div class="perjalanan_wrapper">
             <div class="each_perjalanan_title"> Membuat Portofolio </div>
             <img src="<?php echo base_url('assets/asset/cover/tema_wp.png');?>" alt="">
             <div class="each_perjalanan_desc">
-            Kelas berfungsi sebagai tempat untuk guru memberikan materi berdasarkan kelas tersebut.<a href="#popup"class="popup-link">Detail</a>
+            Kelas berfungsi sebagai tempat untuk guru memberikan materi berdasarkan kelas tersebut.<a href="#popup1"class="popup-link">Detail</a>
             </div>
           </div>
           <div id="closed"></div>
-              <div class="popup-wrapper" id="popup">
+              <div class="popup-wrapper" id="popup1">
                 <div class="popup-container">
     
                     <h2>Ikuti Update !!</h2>
@@ -257,16 +232,15 @@
         </div>
 
         <div class="each_perjalanan each_perjalanan_php wow slideInDown">
-          <a href="perjalanan/php.html">
           <div class="perjalanan_wrapper">
             <div class="each_perjalanan_title"> PHP </div>
             <img src="<?php echo base_url('assets/asset/cover/php-oop.png');?>" alt="belajar php cover">
             <div class="each_perjalanan_desc">
-            Kelas berfungsi sebagai tempat untuk guru memberikan materi berdasarkan kelas tersebut.<a href="#popup"class="popup-link">Detail</a>
+            Kelas berfungsi sebagai tempat untuk guru memberikan materi berdasarkan kelas tersebut.<a href="#popup2"class="popup-link">Detail</a>
             </div>
           </div>
           <div id="closed"></div>
-              <div class="popup-wrapper" id="popup">
+              <div class="popup-wrapper" id="popup2">
                 <div class="popup-container">
     
                     <h2>Ikuti Update !!</h2>
@@ -277,6 +251,8 @@
                 </div>
               </div>
         </div>
+
+
 
 
 
@@ -299,7 +275,7 @@
     <div class="wrapper">
         <p class="wow bounceInDown">Ayo Bergabung Sekarang Juga Untuk Belajar Lebih Seru dan Interaktif!</p>
         <div id="tombol_wrapper_action" class="clearfix">
-          <a style="background-color:orange;" rel='curl-top-left' class='button purple curl-top-left'>Daftar Sekarang Juga</a>
+          <a style="background-color:rgb(0, 150, 136);" rel='curl-top-left' class='button purple curl-top-left'>Daftar Sekarang Juga</a>
         </div>
     </div>
   </div>

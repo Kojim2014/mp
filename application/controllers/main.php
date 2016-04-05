@@ -14,6 +14,11 @@ class Main extends CI_Controller {
 		$this->load->view('masuk', $data);
 	}
 
+	public function login()
+	{
+		$this->main_model->login();
+	}
+
 	public function daftar()
 	{
 		$data['data'] = "daftar";
@@ -24,7 +29,18 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('forgot');
 	}
-
+	public function user()
+	{
+		$this->load->view('user/member');
+	}
+	public function diskusi()
+	{
+		$this->load->view('user/forum');
+	}
+	public function kelaspel()
+	{
+		$this->load->view('user/kelas');
+	}
 }
 
 /* End of file main.php */
