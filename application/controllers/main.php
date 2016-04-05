@@ -25,6 +25,11 @@ class Main extends CI_Controller {
 		$this->load->view('forgot');
 	}
 
+	public function login_auth()
+	{
+		$this->Model1->auth();
+	}
+
 }
 
 /* End of file main.php */

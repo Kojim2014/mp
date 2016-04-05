@@ -8,7 +8,7 @@
 		<meta name="description" content="Profil dimasferianto alias dimdf di sekolah koding, dimasferianto adalah member sekolah koding, tempat belajar programming dan web development">
 		<meta name="keywords" content="Profil, dimdf ,dimasferianto, biodata, programmer, website, sekolah, koding, belajar, programming, dan, web, development">
 		<meta name="author" content="SekolahKoding">
-		<link rel="stylesheet" href="../css/main-app.css" charset="utf-8">
+		<link rel="stylesheet" href="<?php echo base_url('/assets/css/main-app.css') ?>" charset="utf-8">
 <script src="../../../code.jquery.com/jquery-2.1.3.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
@@ -43,18 +43,17 @@
 			</div>
 
 			<p> <img src="../../asset/time-icon.png" alt="" /> Bergabung sejak Maret, 2016 </p>
-		  						<div id="biodata"> <p>  </p> </div>
+		  						<div id="biodata"> <p>Nama Lembaga</p> </div>
+			<p style="text-align: right;"><a href="">Edit</a></p>
 	</div>
-
+<hr>
 	  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<div id="menu_left_bottom">
-			<a href="../../upacara.html"><li> <img src="../../asset/upacara-icon.png" alt="" /> Upacara</li> </a>
-			<a href="../../forum.html">  <li> <img src="../../asset/forum-icon.png" alt="" />  Forum </li></a>
-			<a href="../../perpustakaan.html"> <li> <img src="../../asset/perpus-icon.png" alt="" /> Perpustakaan  </li></a>
-			<a href="../../kelas/index.html">  <li> <img src="../../asset/kelas-icon.png" alt="" /> Kelas </li></a>
-			<a href="../../perjalanan.html">  <li> <img src="../../asset/jejak-icon.png" alt="" /> Perjalanan </li></a>
-			<a href="../../member.html"> <li> <img src="../../asset/member-icon.png" alt="" /> Member  </li></a>
-			<a href="../../syarat.html"> <li> <img src="../../asset/donasi-icon.png" alt="" /> Syarat  </li></a>
+			<a href=""><li> <img src="../../asset/upacara-icon.png" alt="" /> Home</li> </a>
+			<a href="">  <li> <img src="../../asset/forum-icon.png" alt="" />  Kelas </li></a>
+			<a href=""> <li> <img src="../../asset/perpus-icon.png" alt="" /> Forum  </li></a>
+			<a href="">  <li> <img src="../../asset/kelas-icon.png" alt="" /> Member </li></a>
+			<a href="">  <li> <img src="../../asset/jejak-icon.png" alt="" /> Keluar </li></a>
 					</div>
 	 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 	 <div class="clear"></div>
@@ -62,15 +61,12 @@
 
 	<div id="main_wrapper" class="main_profil">
 
-		<div id="menu-top-profil">
-			<div id="blue-logo">
-  <a href="../../user.html"><img src="../../../sekolahkoding.com/asset/blue-logo.png" alt=""/></a>
+		<div id="menu-top-profil" style="background-color: skyblue;">
+<div id="blue-logo">
+  <a href=""><img src="<?php echo base_url('/assets/img/forum-icon.png') ?>" alt=""/></a>
 </div>
 
 <ul>
-  <li class="login"><a href="../login.html">Masuk</a></li>
-<li><a href="../../user.html">Profil</a></li>
-<li><a href="../../kelas/index.html">Kelas</a></li>
 <li>
 	<!-- notifikasi -->
 		<!-- end of notifikasi -->
@@ -79,41 +75,56 @@
 </ul>
 <!-- sweetalert-->
 <script src="../../../sekolahkoding.com/user/js/sweetalert-dev.js"></script>
-<!-- <link rel="stylesheet" href="../../../sekolahkoding.com/user/js/sweetalert.css"> -->
+<link rel="stylesheet" href="../../../sekolahkoding.com/user/js/sweetalert.css">
 
 		</div>
 
-			<div id="daftar_aktivitas">
-				<div class="title_content"> <p> Aktivitas terakhir: 0 Kontribusi | 0 Poin </p> </div>
-				<div class="content">
-				 <div class="col-50">
-											</div>
-
-					<div class="col-50">
-											</div>
-
-					<div class="clear"></div>
-								</div>
-			</div> <!-- end aktifitas -->
-
 						<div class="clear"></div>
-
-			<div id="daftar_pr">
-
-				<div class="title_content">  <p> Daftar-PR    : </p> </div>
-					<div class="content">
-													</div>
-					</div> <!-- end daftar pr-->
 
 					<div id="daftar_kelas">
 					  <div class="title_content"> <p> Daftar-Kelas : </p></div>
 						<div class="content content_profil">
-															<li class="cover-wrapper">
-										<a href="../../kelas/video/Belajar-Codeigniter-untuk-pemula.html">
-											<div class="bg_transparent"></div>
-											<p>Belajar Codeigniter untuk pemula</p>
-											<img src="../../asset/cover/codeigniter.png" alt="" />
-										</a>
+								<li class="cover-wrapper">
+									<a href="../../kelas/video/Belajar-Codeigniter-untuk-pemula.html">
+										<div class="bg_transparent"></div>
+										<p>Belajar Codeigniter untuk pemula</p>
+										<img src="../../asset/cover/codeigniter.png" alt="" />
+									</a>
+								</li>
+								<li class="cover-wrapper">
+									<a href="../../kelas/video/Belajar-Codeigniter-untuk-pemula.html">
+										<div class="bg_transparent"></div>
+										<p>Belajar Codeigniter untuk pemula</p>
+										<img src="../../asset/cover/codeigniter.png" alt="" />
+									</a>
+								</li>
+								<li class="cover-wrapper">
+									<a href="../../kelas/video/Belajar-Codeigniter-untuk-pemula.html">
+										<div class="bg_transparent"></div>
+										<p>Belajar Codeigniter untuk pemula</p>
+										<img src="../../asset/cover/codeigniter.png" alt="" />
+									</a>
+								</li>
+								<li class="cover-wrapper">
+									<a href="../../kelas/video/Belajar-Codeigniter-untuk-pemula.html">
+										<div class="bg_transparent"></div>
+										<p>Belajar Codeigniter untuk pemula</p>
+										<img src="../../asset/cover/codeigniter.png" alt="" />
+									</a>
+								</li>
+								<li class="cover-wrapper">
+									<a href="../../kelas/video/Belajar-Codeigniter-untuk-pemula.html">
+										<div class="bg_transparent"></div>
+										<p>Belajar Codeigniter untuk pemula</p>
+										<img src="../../asset/cover/codeigniter.png" alt="" />
+									</a>
+								</li>
+								<li class="cover-wrapper">
+									<a href="../../kelas/video/Belajar-Codeigniter-untuk-pemula.html">
+										<div class="bg_transparent"></div>
+										<p>Belajar Codeigniter untuk pemula</p>
+										<img src="../../asset/cover/codeigniter.png" alt="" />
+									</a>
 								</li>
 														<div class="clear"></div>
 						</div>
@@ -126,9 +137,9 @@
 
 
 <div id="soc-med-menu">
-  <a target="_blank" href="https://twitter.com/sekolahkoding"><img src="../../../sekolahkoding.com/img/twitter.png" alt="logo twitter sekolah koding" /></a>
-  <a target="_blank" href="https://youtube.com/SekolahKoding"><img src="../../../sekolahkoding.com/img/utube.png" alt="logo youtube sekolah koding" /></a>
-  <a target="_blank" href="https://www.facebook.com/sekolahkoding"><img src="../../../sekolahkoding.com/img/fb.png" alt="logo facebook sekolah koding" /></a>
+  <a target="_blank" href="https://twitter.com/sekolahkoding"><img src="../../../sekolahkoding.com/img/twitter.png" /></a>
+  <a target="_blank" href="https://youtube.com/SekolahKoding"><img src="../../../sekolahkoding.com/img/utube.png" /></a>
+  <a target="_blank" href="https://www.facebook.com/sekolahkoding"><img src="../../../sekolahkoding.com/img/fb.png" /></a>
 </div>
 
 <div id="footer_extra_menu">

@@ -41,6 +41,13 @@
   
           <div class="field-wrap">
             <label>
+              Username<span class="req">*</span>
+            </label>
+            <input type="text"required autocomplete="off"/>
+          </div>
+
+          <div class="field-wrap">
+            <label>
               Email Address<span class="req">*</span>
             </label>
             <input type="email"required autocomplete="off"/>
@@ -61,6 +68,13 @@
               <input type="password" id="confpass" required autocomplete="off"/>
             </div>
           </div>
+
+          <div class="top-row">
+            <div class="field-wrap">
+              <input type="radio" id="pass" required autocomplete="off" />
+            </div>
+          </div>
+
           <button type="submit" class="button button-block"/>Register</button>
         </form>
       </div>
@@ -68,7 +82,7 @@
       <div id="login"  style="display: <?php echo ($data == "daftar") ? "none" : '' ?>">
         <h1>Log In to Start Study!</h1>
       
-        <form action="" method="post">
+        <form action="<?php echo site_url('main/login_auth') ?>" method="post">
       
           <div class="field-wrap">
             <label>
