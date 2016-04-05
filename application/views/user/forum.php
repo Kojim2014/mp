@@ -10,6 +10,7 @@
 		<meta name="keywords" content="forum,programmer,web,developer,diskusi,development,website,indonesia,web,designer,html,bahasa,belajar,tutorial,css,javascript,java,photshop,illustrator">
 		<meta name="author" content="SekolahKoding">
     <link rel="stylesheet" href="<?php echo base_url('assets/user/css/main-app.css');?>" charset="utf-8">
+
 <script src="<?php echo base_url('assets/user/js/jquery-2.1.3.min.js');?>"></script>
 <link rel="stylesheet" href="<?php echo base_url('assets/user/css/hover-min.css') ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -114,7 +115,7 @@ $(document).ready(function() {
 	<div class="content">
 
 		<div id="create_forum">
-			<a href="user.html"><span>Tanya ✎</span></a>
+			<a href="<?php echo site_url('main/ftanya');?>"><span>Tanya ✎</span></a>
 		</div>
 
 
@@ -1553,4 +1554,5 @@ $(document).ready(function(){
  }
 
 });
+
 </script>

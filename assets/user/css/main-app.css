@@ -191,7 +191,7 @@ input[type="password"], input[type="email"]
 
 #main_wrapper{
   width: 70%;
-  float: left;
+  float: right;
   height: auto;
   min-height: 100%;
 }

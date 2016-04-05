@@ -41,6 +41,10 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('user/kelas');
 	}
+	public function ftanya()
+	{
+		$this->load->view('user/tanya');
+	}
 }
 
 /* End of file main.php */
