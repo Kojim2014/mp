@@ -17,7 +17,7 @@ body, html {
 *{
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: sans-serif; #
 }
 
 a{
@@ -414,11 +414,12 @@ input[type="submit"]:hover{
 }
 
 #menu_left_bottom{
-  line-height: 27px;
+  line-height: 35px;
+  font-size: 140%;
 }
 
 #menu_left_bottom img{
-  width: 20px;
+  width: 35px;
   vertical-align: middle;
 }
 
@@ -1501,7 +1502,7 @@ text-decoration: underline;
 }
 
 #daftar_materi{
-  padding: 10px 30px;
+  padding: 35px 30px;
 }
 
 #forum_cat_list a, #daftar_materi a{

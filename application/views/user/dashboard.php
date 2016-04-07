@@ -7,6 +7,7 @@
 		<meta charset="UTF-8">
 		<meta name="author" content="SekolahKoding">
 		<link rel="stylesheet" href="<?php echo base_url('assets/user/css/main-app.css');?>" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/login/font-awesome/css/font-awesome.css'); ?>">
 <script src="<?php echo base_url('assets/user/js/jquery-2.1.4.min.js'); ?>"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="icon" href="<?php echo base_url('assets/favicon.ico'); ?>" type="image/x-icon" />
@@ -41,19 +42,19 @@
 			  <p>	@dimdf </p>
 			</div>
 
-			<p> <img src="<?php echo base_url('assets/asset/time-icon.png');?>" alt="" /> Bergabung sejak Maret, 2016 </p>
+			<p><i class="fa fa-clock-o"></i> Bergabung sejak Maret, 2016 </p>
 		  						<div id="biodata"> <p>  </p> </div>
 
-		 <a style="float:right;" href="">Edit Profile</a>
+		 <a style="float:right;" href=""><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
 	</div>
 
 	  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-		<div id="menu_left_bottom">
-			<a href="<?php echo site_url('home');?>"><li> <img src="<?php echo base_url('assets/asset/upacara-icon.png');?>" alt="" /> Home</li> </a>
-			<a href="<?php echo site_url('main/kelaspel');?>">  <li> <img src="<?php echo base_url('assets/asset/forum-icon.png');?>" alt="" />  Kelas </li></a>
-			<a href="<?php echo site_url('main/diskusi');?>"> <li> <img src="<?php echo base_url('assets/asset/perpus-icon.png');?>" alt="" /> Forum  </li></a>
-			<a href="<?php echo site_url('main/user');?>"> <li> <img src="<?php echo base_url('assets/asset/member-icon.png'); ?>" alt="" /> Member  </li></a>
-			<a href="../../syarat.html"> <li> <img src="<?php echo base_url('assets/asset/donasi-icon.png');?>" alt="" /> Keluar  </li></a>
+		<div id="menu_left_bottom"> 
+			<a href="<?php echo site_url('home');?>"><li> <i class="fa fa-home"></i> Home</li> </a>
+			<a href="<?php echo site_url('main/kelaspel');?>">  <li> <i class="fa fa-book"></i>  Kelas </li></a>
+			<a href="<?php echo site_url('main/diskusi');?>"> <li> <i class="fa fa-forumbee"></i> Forum  </li></a>
+			<a href="<?php echo site_url('main/user');?>"> <li> <i class="fa fa-users"></i> Member  </li></a>
+			<a href="../../syarat.html"> <li> <i class="fa fa-sign-out"></i> Keluar  </li></a>
 					</div>
 	 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 	 <div class="clear"></div>

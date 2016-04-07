@@ -13,12 +13,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="<?php echo base_url('assets/user/css/hover-min.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/login/font-awesome/css/font-awesome.css'); ?>">
 		<!-- for facebook graph-->
 		<meta property="og:title" content="SekolahKoding">
 		<meta property="og:image" content="/asset/blue-logo.png">
 		<meta property="og:description" content="Belajar Web Programming dan Design Online di SekolahKoding">
 	</head>
-	<body class="body-class">
+	<body class="body-class"> 
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -42,23 +43,23 @@
         <p> @dimdf </p>
       </div>
 
-      <p> <img src="<?php echo base_url('assets/asset/time-icon.png');?>" alt="" /> Bergabung sejak Maret, 2016 </p>
+      <p><i class="fa fa-clock-o"></i> Bergabung sejak Maret, 2016 </p>
                   <div id="biodata"> <p>  </p> </div>
 
-     <a style="float:right;" href="">Edit Profile</a>
+     <a style="float:right;" href=""><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
   </div>
 
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <div id="menu_left_bottom">
-      <a href="../../upacara.html"><li> <img src="<?php echo base_url('assets/asset/upacara-icon.png');?>" alt="" /> Home</li> </a>
-      <a href="../../forum.html">  <li> <img src="<?php echo base_url('assets/asset/forum-icon.png');?>" alt="" />  Kelas </li></a>
-      <a href="../../perpustakaan.html"> <li> <img src="<?php echo base_url('assets/asset/perpus-icon.png');?>" alt="" /> Forum  </li></a>
-      <a href="<?php echo site_url('main/user');?>"> <li> <img src="<?php echo base_url('assets/asset/member-icon.png'); ?>" alt="" /> Member  </li></a>
-      <a href="../../syarat.html"> <li> <img src="<?php echo base_url('assets/asset/donasi-icon.png');?>" alt="" /> Keluar  </li></a>
+    <div id="menu_left_bottom"> 
+      <a href="<?php echo site_url('home');?>"><li> <i class="fa fa-home"></i> Home</li> </a>
+      <a href="<?php echo site_url('main/kelaspel');?>">  <li> <i class="fa fa-book"></i>  Kelas </li></a>
+      <a href="<?php echo site_url('main/diskusi');?>"> <li> <i class="fa fa-forumbee"></i> Forum  </li></a>
+      <a href="<?php echo site_url('main/user');?>"> <li> <i class="fa fa-users"></i> Member  </li></a>
+      <a href="../../syarat.html"> <li> <i class="fa fa-sign-out"></i> Keluar  </li></a>
           </div>
    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
    <div class="clear"></div>
-</div>
+</div><!-- end menu_left -->
 
 	<div id="main_wrapper" class="main_profil">
 
