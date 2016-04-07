@@ -8,9 +8,17 @@ class Main extends CI_Controller {
 		$this->load->view('homepage');
 	}
 
+	public function val()
+	{
+		if ($this->session->userdata('status')) {
+			redirect('home','refresh');
+		}
+	}
+
 	public function masuk()
 	{
 		$data['data'] = "masuk";
+		$this->val();
 		$this->load->view('masuk', $data);
 	}
 
@@ -22,6 +30,7 @@ class Main extends CI_Controller {
 	public function daftar()
 	{
 		$data['data'] = "daftar";
+		$this->val();
 		$this->load->view('masuk', $data);
 	}
 
