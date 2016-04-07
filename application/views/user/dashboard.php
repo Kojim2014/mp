@@ -38,7 +38,7 @@
 			<div id="data_diri_main">
 
 				 <img src="<?php echo base_url('assets/asset/homepage/guru.png'); ?>" width="150">
-			  <div id="fullname">	<p> dimasferianto</p> </div>
+			  <div id="fullname">	<p> dimasferianto <?php echo $this->session->userdata('foto'); ?></p> </div>
 			  <p>	@dimdf </p>
 			</div>
 
@@ -54,7 +54,7 @@
 			<a href="<?php echo site_url('main/kelaspel');?>">  <li> <img src="<?php echo base_url('assets/asset/forum-icon.png');?>" alt="" />  Kelas </li></a>
 			<a href="<?php echo site_url('main/diskusi');?>"> <li> <img src="<?php echo base_url('assets/asset/perpus-icon.png');?>" alt="" /> Forum  </li></a>
 			<a href="<?php echo site_url('main/user');?>"> <li> <img src="<?php echo base_url('assets/asset/member-icon.png'); ?>" alt="" /> Member  </li></a>
-			<a href="../../syarat.html"> <li> <img src="<?php echo base_url('assets/asset/donasi-icon.png');?>" alt="" /> Keluar  </li></a>
+			<a href="<?php echo site_url('home/logout'); ?>"> <li> <img src="<?php echo base_url('assets/asset/donasi-icon.png');?>" alt="" /> Keluar  </li></a>
 					</div>
 	 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 	 <div class="clear"></div>

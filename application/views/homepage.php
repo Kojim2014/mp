@@ -117,8 +117,8 @@
         </div>
 
         <div id="tombol_wrapper">
-          <a rel='hover-shadow' href="<?php echo site_url('Main/daftar'); ?>" class='button turqoise hover-shadow tombol'>Daftar</a>
-          <a rel='hover-shadow' href="<?php echo site_url('Main/masuk'); ?>" class='button turqoise hover-shadow tombol'>Masuk</a>
+          <a rel='hover-shadow' href="<?php echo site_url('main/daftar'); ?>" class='button turqoise hover-shadow tombol'>Daftar</a>
+          <a rel='hover-shadow' href="<?php echo site_url('main/masuk'); ?>" class='button turqoise hover-shadow tombol'>Masuk</a>
         </div>
 
         <div id="back-top">

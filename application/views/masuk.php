@@ -90,31 +90,26 @@
       </div>
 
       <div id="login"  style="display: <?php echo ($data == "daftar") ? "none" : '' ?>">
-        <!-- <?php 
-          if ($this->session->flashdata('reg_ret')) {
-            echo "<h1>".$this->session->flashdata('reg_ret')."</h1>";
+        <?php 
+          if ($this->session->flashdata('login')) {
+            echo "<h1>".$this->session->flashdata('login')."</h1>";
           }
-        ?> -->
-        <?php if ($this->session->flashdata('reg_ret')): ?>
-          <h1>
-            <?php echo $this->session->flashdata('reg_ret'); ?>
-          </h1>
-        <?php endif ?>
+        ?>
 
         <form action="<?php echo site_url('main/login'); ?>" method="post">
       
           <div class="field-wrap">
             <label>
-              Email Address<span class="req">*</span>
+              Username<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input type="text" name="username" required autocomplete="off"/>
           </div>
       
           <div class="field-wrap">
             <label>
               Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input type="password" name="password" required autocomplete="off"/>
           </div>
       
           <p class="forgot"><a href="<?php echo site_url('main/forgot'); ?>">Forgot Password?</a></p>
