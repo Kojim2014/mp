@@ -38,7 +38,7 @@
 			<div id="data_diri_main">
 
 				 <img src="<?php echo base_url('assets/asset/homepage/guru.png'); ?>" width="150">
-			  <div id="fullname">	<p> dimasferianto <?php echo $this->session->userdata('foto'); ?></p> </div>
+			  <div id="fullname">	<p> <?php echo $this->session->userdata('nama'); ?></p> </div>
 			  <p>	@dimdf </p>
 			</div>
 

@@ -31,6 +31,7 @@ class Main_model extends CI_Model {
 	          	$foto = "default.png";
 	          }
 		      $sess_array = array(
+		      	'status' => 'logged-in',
 		        'uid' => $row->id_users,
 		        'idlem' => $row->id_lembaga,
 		        'nama' => $row->nama_lengkap,
@@ -43,7 +44,7 @@ class Main_model extends CI_Model {
 		        'contact' => $row->cp,
 		        'birthday' => $row->create_date
 		      );
-		      $this->session->set_userdata('logged_in', $sess_array);
+		      $this->session->set_userdata($sess_array);
 		    }
 		    redirect('home','refresh');
 		  }

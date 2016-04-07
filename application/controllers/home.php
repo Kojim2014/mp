@@ -5,7 +5,7 @@ class Home extends CI_Controller {
 
 	public function index()
 	{	
-		if (!$this->session->userdata('logged_in')) {
+		if (!$this->session->userdata('status')) {
 			$this->session->set_flashdata('login', 'Harap sign-in terlebih dahulu!');
 			redirect('main/masuk','refresh');
 		}else{
