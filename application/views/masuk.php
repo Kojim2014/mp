@@ -2,7 +2,7 @@
 <html >
   <head>
   <meta charset="UTF-8">
-  <title>Sign-Up/Login Form</title>
+  <title><?php echo ($data == "masuk") ? "Sign-in" : (($data == "daftar") ? "Sign-up" : "")?> Page</title>
 
   <link href='<?php echo base_url('/assets/login/css/titilium.css') ?>' rel='stylesheet' type='text/css'>    
   <link rel="stylesheet" href="<?php echo base_url('/assets/login/css/normalize.css') ?>">  
@@ -173,7 +173,12 @@
       var id = $(this).attr('id');
       var url = "<?php echo site_url('main/" + id + "') ?>";
       history.pushState(state, title, url);
-          
+      if (id === "masuk") {
+        var title = "Sign-in"
+      }else if(id === "daftar"){
+        var title = "Sign-up"
+      }
+      $("title").html(title + " Page");
     });
 
     function pwcf() {

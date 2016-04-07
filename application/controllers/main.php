@@ -10,7 +10,7 @@ class Main extends CI_Controller {
 
 	public function val()
 	{
-		if ($this->session->userdata('status')) {
+		if ($this->session->userdata('uid')) {
 			redirect('home','refresh');
 		}
 	}

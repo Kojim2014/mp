@@ -31,7 +31,6 @@ class Main_model extends CI_Model {
 	          	$foto = "default.png";
 	          }
 		      $sess_array = array(
-		      	'status' => 'logged-in',
 		        'uid' => $row->id_users,
 		        'idlem' => $row->id_lembaga,
 		        'nama' => $row->nama_lengkap,
