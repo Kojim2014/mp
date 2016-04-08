@@ -30,6 +30,13 @@ class Main_model extends CI_Model {
 	          }else{
 	          	$foto = "default.png";
 	          }
+
+	          $ultah = explode(" ", $row->create_date);
+	          $date = explode("-", $ultah[0]);
+	          $tgl = new DateTime();
+	          $tgl->setDate($date[0], $date[1], $date[2]);
+	          $birthday = $tgl->format('M').", ".$date[0];
+
 		      $sess_array = array(
 		        'uid' => $row->id_users,
 		        'idlem' => $row->id_lembaga,
@@ -41,7 +48,7 @@ class Main_model extends CI_Model {
 		        'email' => $row->email,
 		        'level' => $row->level,
 		        'contact' => $row->cp,
-		        'birthday' => $row->create_date
+		        'birthday' => $birthday
 		      );
 		      $this->session->set_userdata($sess_array);
 		    }
@@ -62,7 +69,7 @@ class Main_model extends CI_Model {
 	
 	public function daftar()
 	{
-		$data = array(
+		$insert = array(
 			'nama_lengkap' => $this->input->post('fname')." ".$this->input->post('lname'),
 			'jkl' => $this->input->post('jekel'),
 			'username' => $this->input->post('uname'),
@@ -72,13 +79,14 @@ class Main_model extends CI_Model {
 			'cp' => $this->input->post('conpers'),
 			'status' => '1'
 			);
-		$register = $this->db->insert('users', $data);
-		if ($register == true) {
-			$this->session->set_flashdata('reg_ret', "Pendaftaran Berhasil!");
-		}else {
-			$this->session->set_flashdata('reg_ret', "Pendaftaran Gagal!");
+		$create = $this->db->insert('users', $insert);
+		if ($create == false) {
+			$this->session->set_flashdata('regret', "Something went wrong.");
+			redirect('main/daftar','refresh');
+		}else{
+			$this->session->set_flashdata('login', "Pendaftaran berhasil! Silahkan login.");
+			redirect('main/masuk','refresh');
 		}
-		redirect('main/masuk','refresh');
 	}
 
 }

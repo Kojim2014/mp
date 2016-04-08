@@ -3,22 +3,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  
 class Main extends CI_Controller {
 
-	public function index()
+	public function __construct()
 	{
-		$this->load->view('homepage');
-	}
-
-	public function val()
-	{
+		parent::__construct();
 		if ($this->session->userdata('uid')) {
 			redirect('home','refresh');
 		}
 	}
 
+	public function index()
+	{
+		$this->load->view('homepage');
+	}
+
 	public function masuk()
 	{
 		$data['data'] = "masuk";
-		$this->val();
 		$this->load->view('masuk', $data);
 	}
 
@@ -30,7 +30,6 @@ class Main extends CI_Controller {
 	public function daftar()
 	{
 		$data['data'] = "daftar";
-		$this->val();
 		$this->load->view('masuk', $data);
 	}
 
@@ -42,19 +41,6 @@ class Main extends CI_Controller {
 	public function forgot()
 	{
 		$this->load->view('forgot');
-	}
-
-	public function user()
-	{
-		$this->load->view('user/member');
-	}
-	public function diskusi()
-	{
-		$this->load->view('user/forum');
-	}
-	public function kelaspel()
-	{
-		$this->load->view('user/kelas');
 	}
 
 }

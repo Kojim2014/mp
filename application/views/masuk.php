@@ -7,11 +7,35 @@
   <link href='<?php echo base_url('/assets/login/css/titilium.css') ?>' rel='stylesheet' type='text/css'>    
   <link rel="stylesheet" href="<?php echo base_url('/assets/login/css/normalize.css') ?>">  
   <link rel="stylesheet" href="<?php echo base_url('/assets/login/css/style.css') ?>">
+  <style type="text/css">
+    .logo {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .logo img {
+      max-width: 100%;
+      max-height: 100%;
+      position: inline;
+    }
+    .jekel select {
+      height: 50px;
+      border: 0;
+      background-color: white;
+      color: #4d4d4d;
+      font-family: 'oswaldregular', Calibri;
+      text-transform: uppercase;    
+      font-size: 22px;
+      padding: 10px 0 5px 6px;
+      cursor:pointer;
+      -webkit-appearance: none;
+    }
+  </style>
 </head>
 <body>
 
   <div class="form">
-    <div class="logo"><img src="" alt="Logo"></div>
+    <div class="logo"><img src="<?php echo base_url('/assets/img/bg-desk.jpg') ?>" alt="Logo"></div>
     <ul class="tab-group">
       <li class="tab <?php echo ($data == "masuk") ? "active" : ""?>"><a id="masuk" href="#login">Masuk</a></li>
       <li class="tab <?php echo ($data == "daftar") ? "active" : ""?>"><a id="daftar" href="#signup">Daftar</a></li>
@@ -19,10 +43,14 @@
 
     <div class="tab-content">
       <div id="signup" style="display: <?php echo ($data == "masuk") ? "none" : '' ?>">   
-        <h1>Sign Up for Free</h1>
+        <?php 
+          if ($this->session->flashdata('regret')) {
+            echo "<h1>".$this->session->flashdata('regret')."</h1>";
+          }
+        ?>
       
         <!-- Form -->
-        <form action="<?php echo site_url('main/masuk') ?>" method="post" onsubmit="return pwcf()">
+        <form action="<?php echo site_url('main/register') ?>" method="post" onsubmit="return pwcf()">
           <div class="top-row">
             <div class="field-wrap">
               <label>
@@ -76,11 +104,12 @@
             <input type="text" name="conpers" required autocomplete="off"/>
           </div>
 
-          <div class="top-row">
-            <div class="field-wrap">
-              <select form="select" name="jekel">
-                  <option value="laki-laki">laki-laki</option>
-                  <option value="perempuan">perempuan</option>
+          <div class="field-wrap">
+            <div class="jekel">
+              <select id="gender" name="jekel">
+                <option> - Jenis Kelamin - </option>
+                <option value="laki-laki">laki-laki</option>
+                <option value="perempuan">perempuan</option>
               </select>
             </div>
           </div>
@@ -192,7 +221,13 @@
             match = false;
         }
         else {
+          if ($( "#gender option:selected" ).text() == " - Jenis Kelamin - ") {
+            alert("Pilih Jenis Kelamin!");
+            match = false;
+          }
+          else {
             match = true;
+          }
         }
         return match;
     }
