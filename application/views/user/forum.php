@@ -22,7 +22,7 @@
 		<meta property="og:description" content="Forum web developer dan programmer indonesia, diskusi seputar web development, programming dan design di sini. SekolahKoding, tempat belajar web development online">
 	</head> 
 	<body class="body-class">
-		<script>
+		<script> 
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -48,7 +48,7 @@
       <p><i class="fa fa-clock-o"></i> Bergabung sejak Maret, 2016 </p>
                   <div id="biodata"> <p>  </p> </div>
 
-     <a style="float:right;" href=""><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
+     <a style="float:right;" href="<?php echo site_url('main/edit_profile');?>"><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
   </div>
 
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -65,10 +65,15 @@
 	<div id="main_wrapper" class="main_forum">
 
 		<div id="menu-top-profil">
-			<div id="blue-logo">
-  <a href="user.html"><img src="../sekolahkoding.com/asset/blue-logo.png" alt=""/></a>
-  <a rel='bubble-float-left' class='button orange bubble-float-left notif'>Notifikasi</a>
+<div class="dropdown button orange bubble-float-bottom notif"><div style="margin-top:-15%;">Notifikasi <span>3</span></div>
+  <button class="dropbtn"></button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
 </div>
+
 
 <!-- sweetalert-->
 <script src="../sekolahkoding.com/user/js/sweetalert-dev.js"></script>
@@ -905,10 +910,10 @@ $('#filter_terupdate').on('click', function(){
 	</div><!-- end content-->
 
 	<div class="clear_h"></div>
-	<div id="footer">
-		
-<span style="padding-left:10px;">&copy; 2016 <span>SekolahKoding</span></span>
-	</div>
+		    <div id="footer">
+					
+<span style="padding-left:10px;">&copy; 2016 <span>Media Pembelajaran</span></span>
+		    </div>
 
 	</div> <!-- end main wrapper -->
 	<div class="clear"></div>

@@ -13,6 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="<?php echo base_url('assets/user/css/hover-min.css') ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/login/font-awesome/css/font-awesome.css'); ?>">
 		<!-- for facebook graph-->
 		<meta property="og:title" content="SekolahKoding">
@@ -29,7 +30,7 @@
   ga('create', 'UA-59878621-1', 'auto');
   ga('send', 'pageview');
 
-</script>
+</script> 
 
 <div id="page-wrapper">
 
@@ -45,8 +46,7 @@
 
       <p><i class="fa fa-clock-o"></i> Bergabung sejak Maret, 2016 </p>
                   <div id="biodata"> <p>  </p> </div>
-
-     <a style="float:right;" href=""><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
+     <a style="float:right;" href="<?php echo site_url('main/edit_profile');?>"><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
   </div>
 
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -64,10 +64,15 @@
 	<div id="main_wrapper" class="main_profil">
 
 		<div id="menu-top-profil">
-			<div id="blue-logo">
-  <a href="user.html"><img src="../sekolahkoding.com/asset/blue-logo.png" alt=""/></a>
+<div class="dropdown button orange bubble-float-bottom notif"> <div style="margin-top:-15%;">Notifikasi <span>3</span></div>
+  <button class="dropbtn"></button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
 </div>
-<a rel='bubble-float-left' class='button orange bubble-float-left notif'>Notifikasi</a>
+
 <!-- sweetalert-->
 <script src="../sekolahkoding.com/user/js/sweetalert-dev.js"></script>
 <link rel="stylesheet" href="../sekolahkoding.com/user/js/sweetalert.css">
@@ -129,12 +134,10 @@ foreach ($query->result() as $hasil) {
       <div id="load_more_info_wrapper"></div> -->
 
 				<div class="clear_h"></div>
-		    <div id="footer">
-					
-<span style="padding-left:10px;">&copy; 2016 <span>SekolahKoding</span></span>
-
-
-		    </div>
+        <div id="footer">
+          
+<span style="padding-left:10px;">&copy; 2016 <span>Media Pembelajaran</span></span>
+        </div>
 
 	</div> <!-- end main wrapper -->
 	<div class="clear"></div>

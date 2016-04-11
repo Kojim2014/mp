@@ -7,7 +7,10 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('homepage');
 	}
-
+	public function tentang()
+	{
+		$this->load->view('about');
+	}
 	public function masuk()
 	{
 		$data['data'] = "masuk";
@@ -44,6 +47,10 @@ class Main extends CI_Controller {
 	public function ftanya()
 	{
 		$this->load->view('user/tanya');
+	}
+	public function edit_profile()
+	{
+		$this->load->view('user/edit');
 	}
 }
 

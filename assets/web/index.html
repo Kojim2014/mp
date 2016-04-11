@@ -9,24 +9,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <title>Learner a education bootstrap Website Template | Home :: w3layouts</title>
 <!-- Bootstrap -->
-<link href="<?php echo base_url('assets/web/css/bootstrap.min.css');?>" rel='stylesheet' type='text/css' />
-<link href="<?php echo base_url('assets/web/css/bootstrap.css');?>" rel='stylesheet' type='text/css' />
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
  <!--[if lt IE 9]>
      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-<link href="<?php echo base_url('assets/web/css/style.css');?>" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- start plugins -->
-<script type="text/javascript" src="<?php echo base_url('assets/web/js/jquery.min.js');?>"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/web/js/bootstrap.js');?>"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/web/js/bootstrap.min.js');?>"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- start slider -->
-<link href="<?php echo base_url('assets/web/css/slider.css');?>" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/web/fonts/css/font-awesome.min.css');?>">
-<script type="text/javascript" src="<?php echo base_url('assets/web/js/modernizr.custom.28468.js');?>"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/web/js/jquery.cslider.js');?>"></script>
+<link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
+<script type="text/javascript" src="js/jquery.cslider.js"></script>
 	<script type="text/javascript">
 			$(function() {
 
@@ -38,8 +37,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			});
 		</script>
 <!-- Owl Carousel Assets -->
-<link href="<?php echo base_url('assets/web/css/owl.carousel.css');?>" rel="stylesheet">
-<script src="<?php echo base_url('assets/web/js/owl.carousel.js');?>"></script>
+<link href="css/owl.carousel.css" rel="stylesheet">
+<script src="js/owl.carousel.js"></script>
 		<script>
 			$(document).ready(function() {
 
@@ -59,6 +58,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</script>
 		<!-- //Owl Carousel Assets -->
 <!----font-Awesome----->
+   	<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
 <!----font-Awesome----->
 </head>
 <body>
@@ -66,7 +66,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="container">
 	<div class="row header">
 		<div class="logo navbar-left">
-			<h1><a href="<?php echo site_url('Main');?>">Sinau </a></h1>
+			<h1><a href="index.html">Learner </a></h1>
+		</div>
+		<div class="h_search navbar-right">
+			<form>
+				<input type="text" class="text" value="Enter text here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter text here';}">
+				<input type="submit" value="search">
+			</form>
 		</div>
 		<div class="clearfix"></div>
 	</div>
@@ -87,14 +93,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="<?php echo site_url('Main');?>">Home</a></li>
-		        <li><a href="<?php echo site_url('main/tentang');?>">About</a></li>
-		        <li><a href="<?php echo site_url('main/masuk');?>">Login</a></li>
-		        <li><a href="<?php echo site_url('main/daftar');?>">Daftar</a></li>
+		        <li class="active"><a href="index.html">Home</a></li>
+		        <li><a href="technology.html">Technologies</a></li>
+		        <li><a href="about.html">About</a></li>
+		        <li><a href="blog.html">Blog</a></li>
+		        <li><a href="contact.html">Contact</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		    <!-- start soc_icons -->
 		</nav>
+		<div class="soc_icons navbar-right">
+			<ul class="list-unstyled text-center">
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+				<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+			</ul>	
+		</div>
 	</div>
 </div>
 <div class="slider_bg"><!-- start slider -->
@@ -120,7 +136,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<span class="hide_text"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></p>
 				<h3 class="da-link"><a href="single-page.html" class="fa-btn btn-1 btn-1e">view more</a></h3>
 			</div>
-	   </div>s
+	   </div>
 	</div>
 </div><!-- end slider -->
 <div class="main_bg"><!-- start main -->
@@ -130,70 +146,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<span class="bg"><i class="fa fa-globe"></i></span>
 				<h4><a href="#">Sed Porta Dolor</a></h4>
 				<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 1500s.</p>
-				<a href="#popup" class="fa-btn btn-1 btn-1e">read more</a>
-				<div id="closed"></div> 
-              <div class="popup-wrapper" id="popup">
-                <div class="popup-container">
-    
-                    <h2>Ikuti Update !!</h2>
-                    <p>Daripada hanya melihasdasdsadsaat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
-                    <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
-                    <a class="popup-close" href="#akdmik">X</a>
-                  
-                </div>
-              </div>
+				<a href="single-page.html" class="fa-btn btn-1 btn-1e">read more</a>
 			</div>
 			<div class="col-md-3 images_1_of_4 bg1 text-center">
 				<span class="bg"><i class="fa fa-laptop"></i></span>
 				<h4><a href="#">Lorem Ipsum is</a></h4>
 				<p class="para">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-				<a href="#popup1" class="fa-btn btn-1 btn-1e">read more</a>
-				<div id="closed"></div>
-              <div class="popup-wrapper" id="popup1">
-                <div class="popup-container">
-    
-                    <h2>Ikuti Update !!</h2>
-                    <p>Daripada hanya melihasdasdsadsaat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
-                    <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
-                    <a class="popup-close" href="#akdmik">X</a>
-                  
-                </div>
-              </div>
+				<a href="single-page.html" class="fa-btn btn-1 btn-1e">read more</a>
 			</div>
 			<div class="col-md-3 images_1_of_4 bg1 text-center">
 				<span class="bg"><i class="fa fa-cog"></i></span>
 				<h4><a href="#">Sed Porta Dolor</a></h4>
 				<p class="para">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32  by H. Rackham.</p>
-				<a href="#popup3" class="fa-btn btn-1 btn-1e">read more</a>
-				<div id="closed"></div>
-              <div class="popup-wrapper" id="popup3">
-                <div class="popup-container">
-    
-                    <h2>Ikuti Update !!</h2>
-                    <p>Daripada hanya melihasdasdsadsaat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
-                    <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
-                    <a class="popup-close" href="#akdmik">X</a>
-                  
-                </div>
-              </div>
+				<a href="single-page.html" class="fa-btn btn-1 btn-1e">read more</a>
 			</div>		
-
 			<div class="col-md-3 images_1_of_4 bg1 text-center">
 				<span class="bg"><i class="fa fa-shield"></i> </span>
 				<h4><a href="#">Contrary  belief</a></h4>
 				<p class="para">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-				<a href="#popup4" class="fa-btn btn-1 btn-1e">read more</a>
-		<div id="closed"></div>
-              <div class="popup-wrapper" id="popup4">
-                <div class="popup-container">
-    
-                    <h2>Ikuti Update !!</h2>
-                    <p>Daripada hanya melihasdasdsadsaat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
-                    <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
-                    <a class="popup-close" href="#akdmik">X</a>
-                  
-                </div>
-              </div>		
+				<a href="single-page.html" class="fa-btn btn-1 btn-1e">read more</a>
 			</div>	
 		</div>
 	</div>
@@ -202,7 +173,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="container">
 		<div class="main row">
 			<div class="col-md-6 content_left">
-				<img src="<?php echo base_url('assets/web/images/pic1.jpg');?>" alt="" class="img-responsive">
+				<img src="images/pic1.jpg" alt="" class="img-responsive">
 			</div>
 			<div class="col-md-6 content_right">
 				<h4>Lorem Ipsum is simply <span>dummy text of the ornare  </span> vulputate printing and  There are many variations of passages.</h4>
@@ -214,7 +185,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div id="owl-demo" class="owl-carousel text-center">
 						<div class="item">
 							<div class="cau_left">
-								<img class="lazyOwl" src="<?php echo base_url('assets/web/images/c1.jpg');?>" alt="Lazy Owl Image">
+								<img class="lazyOwl" data-src="images/c1.jpg" alt="Lazy Owl Image">
 							</div>
 							<div class="cau_left">
 								<h4><a href="#">vehicula diam</a></h4>
@@ -225,7 +196,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="item">
 							<div class="cau_left">
-								<img class="lazyOwl" src="<?php echo base_url('assets/web/images/c2.jpg');?>" alt="Lazy Owl Image">
+								<img class="lazyOwl" data-src="images/c2.jpg" alt="Lazy Owl Image">
 							</div>
 							<div class="cau_left">
 								<h4><a href="#">Morbi nunc</a></h4>
@@ -236,7 +207,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="item">
 							<div class="cau_left">
-								<img class="lazyOwl" src="<?php echo base_url('assets/web/images/c3.jpg');?>" alt="Lazy Owl Image">
+								<img class="lazyOwl" data-src="images/c3.jpg" alt="Lazy Owl Image">
 							</div>
 							<div class="cau_left">
 								<h4><a href="#">Lorem ipsum</a></h4>
@@ -247,7 +218,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="item">
 							<div class="cau_left">
-								<img class="lazyOwl" src="<?php echo base_url('assets/web/images/c4.jpg');?>" alt="Lazy Owl Image">
+								<img class="lazyOwl" data-src="images/c4.jpg" alt="Lazy Owl Image">
 							</div>
 							<div class="cau_left">
 								<h4><a href="#">Sed faucibus</a></h4>
@@ -258,7 +229,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="item">
 							<div class="cau_left">
-								<img class="lazyOwl" src="<?php echo base_url('assets/web/images/c2.jpg');?>" alt="Lazy Owl Image">
+								<img class="lazyOwl" data-src="images/c2.jpg" alt="Lazy Owl Image">
 							</div>
 							<div class="cau_left">
 								<h4><a href="#">Lorem ipsum</a></h4>
@@ -269,7 +240,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="item">
 							<div class="cau_left">
-								<img class="lazyOwl" src="<?php echo base_url('assets/web/images/c3.jpg');?>" alt="Lazy Owl Image">
+								<img class="lazyOwl" data-src="images/c3.jpg" alt="Lazy Owl Image">
 							</div>
 							<div class="cau_left">
 								<h4><a href="#">Lorem ipsum</a></h4>
@@ -280,7 +251,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="item">
 							<div class="cau_left">
-								<img class="lazyOwl" src="<?php echo base_url('assets/web/images/c4.jpg');?>" alt="Lazy Owl Image">
+								<img class="lazyOwl" data-src="images/c4.jpg" alt="Lazy Owl Image">
 							</div>
 							<div class="cau_left">
 								<h4><a href="#">vehicula diam</a></h4>
@@ -291,7 +262,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="item">
 							<div class="cau_left">
-								<img class="lazyOwl" src="<?php echo base_url('assets/web/images/c1.jpg');?>" alt="Lazy Owl Image">
+								<img class="lazyOwl" data-src="images/c1.jpg" alt="Lazy Owl Image">
 							</div>
 							<div class="cau_left">
 								<h4><a href="#">Lorem ipsum</a></h4>
@@ -302,7 +273,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="item">
 							<div class="cau_left">
-								<img class="lazyOwl" src="<?php echo base_url('assets/web/images/c2.jpg');?>" alt="Lazy Owl Image">
+								<img class="lazyOwl" data-src="images/c2.jpg" alt="Lazy Owl Image">
 							</div>
 							<div class="cau_left">
 								<h4><a href="#">Lorem ipsum</a></h4>
@@ -313,7 +284,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="item">
 							<div class="cau_left">
-								<img class="lazyOwl" src="<?php echo base_url('assets/web/images/c3.jpg');?>" alt="Lazy Owl Image">
+								<img class="lazyOwl" data-src="images/c3.jpg" alt="Lazy Owl Image">
 							</div>
 							<div class="cau_left">
 								<h4><a href="#">vehicula diam</a></h4>
@@ -324,7 +295,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="item">
 							<div class="cau_left">
-								<img class="lazyOwl" src="<?php echo base_url('assets/web/images/c1.jpg');?>" alt="Lazy Owl Image">
+								<img class="lazyOwl" data-src="images/c1.jpg" alt="Lazy Owl Image">
 							</div>
 							<div class="cau_left">
 								<h4><a href="#">Lorem ipsum</a></h4>
@@ -335,7 +306,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="item">
 							<div class="cau_left">
-								<img class="lazyOwl" src="<?php echo base_url('assets/web/images/c4.jpg');?>" alt="Lazy Owl Image">
+								<img class="lazyOwl" data-src="images/c4.jpg" alt="Lazy Owl Image">
 							</div>
 							<div class="cau_left">
 								<h4><a href="#">Morbi nunc</a></h4>
@@ -348,21 +319,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<!----//End-img-cursual---->
 	</div>
 </div>
-
 <div class="footer_bg"><!-- start footer -->
 	<div class="container">
-<div class="row h_menu">
-<div class="soc_icons navbar-center">
-			<ul class="list-unstyled text-center">
-				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-				<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-				<li><a href="#"><i class="fa fa-youtube"></i></a></li>
-				<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-			</ul>	
-		</div>
-</div>
-
 		<div class="row  footer">
 			<div class="copy text-center">
 				<p class="link"><span>&#169; All rights reserved | Design by&nbsp;<a href="http://w3layouts.com/"> W3Layouts</a></span></p>
@@ -370,6 +328,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 	</div>
 </div>
-
 </body>
 </html>

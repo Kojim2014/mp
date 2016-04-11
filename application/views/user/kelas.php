@@ -27,7 +27,7 @@
   })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-59878621-1', 'auto');
-  ga('send', 'pageview');
+  ga('send', 'pageview'); 
 
 </script>
 
@@ -47,7 +47,7 @@
       <p><i class="fa fa-clock-o"></i> Bergabung sejak Maret, 2016 </p>
                   <div id="biodata"> <p>  </p> </div>
 
-     <a style="float:right;" href=""><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
+     <a style="float:right;" href="<?php echo site_url('main/edit_profile');?>"><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
   </div>
 
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -64,10 +64,15 @@
   	<div id="main_wrapper" class="main_profil">
 
   		<div id="menu-top-profil">
-  			<div id="blue-logo">
-  <a href="../user.html"><img src="../../sekolahkoding.com/asset/blue-logo.png" alt=""/></a>
-  <a rel='bubble-float-left' class='button orange bubble-float-left notif'>Notifikasi</a>
+<div class="dropdown button orange bubble-float-bottom notif"><div style="margin-top:-15%;">Notifikasi <span>3</span></div>
+  <button class="dropbtn"></button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
 </div>
+
 
 <ul>
 </ul>
@@ -247,11 +252,10 @@ $('select[name="daftar_pelajaran"]').change(function() {
 
 
 			<div class="clear_h"></div>
-	    <div id="footer">
-				
-<span style="padding-left:10px;">&copy; 2016 <span>SekolahKoding</span></span>
-
-	    </div>
+        <div id="footer">
+          
+<span style="padding-left:10px;">&copy; 2016 <span>Media Pembelajaran</span></span>
+        </div>
 
   	</div> <!-- end main wrapper -->
   	<div class="clear"></div>

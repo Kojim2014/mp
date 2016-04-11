@@ -17,12 +17,13 @@
 		<meta property="og:image" content="<?php echo base_url('assets/asset/homepage/sk_white_transparent.png');?>">
 		<meta property="og:description" content="Belajar Web Programming dan Design Online di SekolahKoding">
 	</head> 
+
 	<body class="body-class">
 		<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga'); 
 
   ga('create', 'UA-59878621-1', 'auto');
   ga('send', 'pageview');
@@ -45,7 +46,7 @@
 			<p><i class="fa fa-clock-o"></i> Bergabung sejak Maret, 2016 </p>
 		  						<div id="biodata"> <p>  </p> </div>
 
-		 <a style="float:right;" href=""><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
+		 <a style="float:right;" href="<?php echo site_url('main/edit_profile');?>"><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
 	</div>
 
 	  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -63,16 +64,17 @@
 	<div id="main_wrapper" class="main_profil">
 
 		<div id="menu-top-profil">
-			<div id="blue-logo">
-  <a href="../../user.html"><img src="../../../sekolahkoding.com/asset/blue-logo.png" alt=""/></a>
+
+<!-- <a rel='bubble-float-left' class='button orange bubble-float-bottom notif'>Notifikasi</a>
+ -->
+<div class="dropdown button orange bubble-float-bottom notif"><div style="margin-top:-15%;">Notifikasi <span>3</span></div>
+  <button class="dropbtn"></button>
+  <div class="dropdown-content">
+    <a href="#">Linhgvgjvcvhvhvhjvk 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
 </div>
-
-<a rel='bubble-float-left' class='button orange bubble-float-left notif'>Notifikasi</a>
-	<!-- notifikasi -->
-		<!-- end of notifikasi -->
-</li>
-
-</ul>
 <!-- sweetalert-->
 <script src="<?php echo base_url('assets/user/js/sweetalert-dev.js'); ?>"></script>
 <link rel="stylesheet" href="<?php echo base_url('assets/user/css/sweetalert.css'); ?>">
@@ -118,7 +120,7 @@
 				<div class="clear_h"></div>
 		    <div id="footer">
 					
-<span style="padding-left:10px;">&copy; 2016 <span>SekolahKoding</span></span>
+<span style="padding-left:10px;">&copy; 2016 <span>Media Pembelajaran</span></span>
 		    </div>
 
 	</div> <!-- end main wrapper -->
