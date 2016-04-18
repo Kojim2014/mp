@@ -14,6 +14,12 @@
 
 	<div class="clear"></div>
 
+	<?php
+		$this->db->order_by('created', 'DESC');
+		$this->db->limit(10);
+		$data = $this->db->get('forum');
+		foreach ($data->result() as $row) {
+	?>
 	<div id="topic_wrapper">
 		<div class="each_topic" id="1063" last_activity="2016-03-18 10:54:57" last_activity_by ="" judul="pemrograman-java-mobille">
 			<div class="col-15">
@@ -24,38 +30,33 @@
 
 			<div class="col-65">
 				<div class="pertanyaan">
-					<a href="forum/pertanyaan/pemrograman-java-mobille.html"> pemrograman java mobille </a>
+					<a href="forum/pertanyaan/pemrograman-java-mobille.html"> <?php echo $row->title; ?> </a>
 				</div>
 
 				<div class="pertanyaan_by">
-					oleh @<a href="user/profile/kazuna018.html">kazuna018</a>
+					oleh @<a href="user/profile/kazuna018.html">
+						<?php
+							$this->db->select('username');
+							$this->db->where('id_users', $row->creator);
+							$uname = $this->db->get('users');
+							echo $uname->result()[0]->username;
+						?>
+					</a>
 				</div>
 
 				<div class="waktu_pertanyaan">
-		        	|| Diposting 16 menit yang lalu
+		        	<?php $tgl = explode(' ', $row->created); echo $tgl[0]; ?>
 		        </div>
 
 				<div class="tag_pertanyaan">
-				  <span><a href="forum/tag/index.html">index.html</a></span>
-				</div>
-			</div>
-
-			<div class="col-10">
-				<div class="jumlah_jawaban jumlah_jawaban_kosong">
-					0 <span>Jawaban</span>
-				</div>
-			</div>
-
-			<div class="col-10">
-				<div class="jumlah_jawaban">
-					0 <span>kali dilihat</span>
+				  <span><a href="forum/tag/index.html"><?php echo $row->tags; ?></a></span>
 				</div>
 			</div>
 
 	    	<div class="clear"></div>
 		</div>
 	</div>
-
+	<?php } ?>
 	<div class="pagination">
 	<a href='forum/halaman/1.html'> << </a>
 	<a href='forum/halaman/1.html'>1</a>

@@ -13,7 +13,7 @@
   <meta property="og:image" content="<?php echo base_url('assets/asset/homepage/sk_white_transparent.png');?>">
   <meta property="og:description" content="Belajar Web Programming dan Design Online di SekolahKoding">
 </head> 
-<body class="body-class">
+<body class="body-class" oncontextmenu="return false">
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
