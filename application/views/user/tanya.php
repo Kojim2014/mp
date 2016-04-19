@@ -40,7 +40,7 @@
     
   <div id="data_diri">
       <div id="data_diri_main">
-         <img src="<?php echo base_url('assets/asset/homepage/guru.png'); ?>" width="150">
+         <img src="<?php echo base_url('assets/web/images/c4.jpg');?>" width="150">
         <div id="fullname"> <p> dimasferianto</p> </div>
         <p> @dimdf </p>
       </div>

@@ -9,6 +9,7 @@
 		<meta name="keywords" content="video, tutorial,,  programming, belajar,web,design, development, bahasa, indonesia">
 		<meta name="author" content="SekolahKoding">
 		<link rel="stylesheet" href="<?php echo base_url('assets/user/css/main-app.css');?>" charset="utf-8">	
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/login/font-awesome/css/font-awesome.css'); ?>">
 		<link rel="stylesheet" href="<?php echo base_url('assets/user/css/hover-min.css') ?>">
 <script src="<?php echo base_url('assets/user/js/jquery-2.1.3.min.js');?>"></script>
@@ -19,7 +20,7 @@
 		<meta property="og:image" content="/asset/blue-logo.png">
 		<meta property="og:description" content="Daftar kelas di SekolahKoding, tempat belajar Web Programming dan Design Online di SekolahKoding">
 	</head>
-	<body class="body-class">
+	<body class="body-class"> 
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -39,7 +40,7 @@
     
   <div id="data_diri">
       <div id="data_diri_main">
-         <img src="<?php echo base_url('assets/asset/homepage/guru.png'); ?>" width="150">
+         <img src="<?php echo base_url('assets/web/images/c4.jpg');?>" width="150">
         <div id="fullname"> <p> dimasferianto</p> </div>
         <p> @dimdf </p>
       </div>
@@ -114,51 +115,14 @@ $(document).ready(function() {
 }); //end jquery doc ready
 </script>
   		</div>
-
-          <div class="title_content">
-            <h1> Daftar Kelas
-                         </h1>
+        <div class="title_content">
+        <a href="<?php echo site_url('main/tambahkls');?>"> <button type="button" style="float:right;" class="btn btn-default">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Tambah Kelas</button> </a>
+        <h1> Daftar Kelas</h1>
          </div>
-
-         <div id="daftar_materi">
+      <div id="daftar_materi">
            
 
-<select name="daftar_pelajaran" id="select_daftar_pelajaran">
-	        <option class="option_pelajaran" value="/kelas">Semua Topik</option>
-	    	        <option class="option_pelajaran" value="/kelas/tag/html"
-	          	          >
-	          Html	        </option>
-	    	        <option class="option_pelajaran" value="/kelas/tag/css"
-	          	          >
-	          Css	        </option>
-	    	        <option class="option_pelajaran" value="/kelas/tag/javascript"
-	          	          >
-	          Javascript	        </option>
-	    	        <option class="option_pelajaran" value="/kelas/tag/database"
-	          	          >
-	          Database	        </option>
-	    	        <option class="option_pelajaran" value="/kelas/tag/php"
-	          	          >
-	          Php	        </option>
-	    	        <option class="option_pelajaran" value="/kelas/tag/ruby"
-	          	          >
-	          Ruby	        </option>
-	    	        <option class="option_pelajaran" value="/kelas/tag/design"
-	          	          >
-	          Design	        </option>
-	    	        <option class="option_pelajaran" value="/kelas/tag/java"
-	          	          >
-	          Java	        </option>
-	    	        <option class="option_pelajaran" value="/kelas/tag/tool"
-	          	          >
-	          Tool	        </option>
-	    	        <option class="option_pelajaran" value="/kelas/tag/bebas"
-	          	          >
-	          Bebas	        </option>
-	    	        <option class="option_pelajaran" value="/kelas/tag/laravel"
-	          	          >
-	          Laravel	        </option>
-	    </select>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -185,56 +149,19 @@ $('select[name="daftar_pelajaran"]').change(function() {
 
           <div class="content content-materi">
 
-                        <div class="each_playlist">
-                  <a class="link_pl" href="video/Membuat-halaman-depan-facebook.html">
-                    <img src="<?php echo base_url('assets/asset/cover/front-end_fb.png');?>" alt=" Membuat halaman depan facebook" />
-                    <div class="playlist_nama"> Membuat halaman depan facebook </div>
-                    <div class="playlist_desc"> Latihan html dan css dengan membuat halaman depan facebook </div>
-                  </a>
-              </div>
+         <?php 
+         $query = $this->db->get('kelas');
+         foreach ($query->result() as $data) {
+          ?>
                       <div class="each_playlist">
-                  <a class="link_pl" href="video/Mengamankan-website-php.html">
-                    <img src="<?php echo base_url('assets/asset/cover/php-security.png'); ?>" alt=" Mengamankan website php" />
-                    <div class="playlist_nama"> Mengamankan website php </div>
-                    <div class="playlist_desc"> Belajar dasar-dasar kemanan pada website khususnya php, mencegah serangan hacker dari merusak website kita </div>
+                  <a class="link_pl" href="#">
+                    <img src="<?php echo base_url()."assets/photo/fotokelas/".$data->foto; ?>" alt=" Mengamankan website php" />
+                    <div class="playlist_nama"> <?php echo $data->nama_kelas; ?> </div>
+                    <div class="playlist_desc"> <?php echo $data->deskripsi; ?> </div>
                   </a>
               </div>
-                      <div class="each_playlist">
-                  <a class="link_pl" href="video/Membuat-blog-dengan-laravel.html">
-                    <img src="<?php echo base_url('assets/asset/cover/laravel-blog.png');?>" alt=" Membuat blog dengan laravel" />
-                    <div class="playlist_nama"> Membuat blog dengan laravel </div>
-                    <div class="playlist_desc"> Belajar sistem crud pada laravel dengan restful controller sambil membuat blog dengan berbagai fungsi yang menarik </div>
-                  </a>
-              </div>
-                      <div class="each_playlist">
-                  <a class="link_pl" href="video/Sistem-login-dan-register-di-laravel.html">
-                    <img src="<?php echo base_url('assets/asset/cover/laravel-auth.png');?>" alt=" Sistem login dan register di laravel" />
-                    <div class="playlist_nama"> Sistem login dan register di laravel </div>
-                    <div class="playlist_desc"> Sistem autentikasi user atau register dan login pada laravel 5.2 </div>
-                  </a>
-              </div>
-                      <div class="each_playlist">
-                  <a class="link_pl" href="video/belajar-crud-dengan-ajax-dan-php.html">
-                    <img src="<?php echo base_url('assets/asset/cover/laravel-auth.png');?>" alt=" belajar crud dengan ajax dan php" />
-                    <div class="playlist_nama"> belajar crud dengan ajax dan php </div>
-                    <div class="playlist_desc"> Belajar bagaimana cara mengimplementasikan crud dengan ajax dan php </div>
-                  </a>
-              </div>
-                      <div class="each_playlist">
-                  <a class="link_pl" href="video/Membuat-Pagination-dengan-php.html">
-                    <img src="<?php echo base_url('assets/asset/cover/laravel-auth.png');?>" alt=" Membuat Pagination dengan php" />
-                    <div class="playlist_nama"> Membuat Pagination dengan php </div>
-                    <div class="playlist_desc"> bagaimana cara membuat sistem pagination di php dan mysql </div>
-                  </a>
-              </div>
-                      <div class="each_playlist">
-                  <a class="link_pl" href="video/Berkenalan-dengan-bootstrap.html">
-                    <img src="<?php echo base_url('assets/asset/cover/bootstrap.png');?>" alt=" Berkenalan dengan bootstrap" />
-                    <div class="playlist_nama"> Berkenalan dengan bootstrap </div>
-                    <div class="playlist_desc"> Cara membuat website responsive dengan cepat, menggunakan salah satu framework frontend yang sangat populer yaitu bootstrap </div>
-                  </a>
-              </div>
-         
+
+          <?php } ?>
           
           <!-- ______________________Pagination______________________ -->
                       <div class="pagination">

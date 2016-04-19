@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Learner a education bootstrap Website Template | Home :: w3layouts</title>
+<title>Mediap</title>
 <!-- Bootstrap -->
 <link href="<?php echo base_url('assets/web/css/bootstrap.min.css');?>" rel='stylesheet' type='text/css' />
 <link href="<?php echo base_url('assets/web/css/bootstrap.css');?>" rel='stylesheet' type='text/css' />
@@ -57,16 +57,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 			});
 		</script>
-		<!-- //Owl Carousel Assets -->
-<!----font-Awesome----->
-<!----font-Awesome----->
+		<!-- Owl Carousel Assets -->
+<!-- font-Awesome -->
 </head>
 <body>
 <div class="header_bg">
 <div class="container">
 	<div class="row header">
 		<div class="logo navbar-left">
-			<h1><a href="<?php echo site_url('Main');?>">Sinau </a></h1>
+			<h1><a href="<?php echo site_url('Main');?>">Portal Media.p</a></h1>
 		</div>
 		<div class="clearfix"></div>
 	</div>
@@ -88,11 +87,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
 		        <li class="active"><a href="<?php echo site_url('Main');?>">Home</a></li>
-		        <li><a href="<?php echo site_url('main/tentang');?>">About</a></li>
-		        <li><a href="<?php echo site_url('main/masuk');?>">Login</a></li>
+		        <li><a href="<?php echo site_url('main/tentang');?>">Tentang</a></li>
+		        <li><a href="<?php echo site_url('main/masuk');?>">Masuk</a></li>
 		        <li><a href="<?php echo site_url('main/daftar');?>">Daftar</a></li>
 		      </ul>
-		    </div><!-- /.navbar-collapse -->
+		    </div><!-- /.navbar-collapse
 		    <!-- start soc_icons -->
 		</nav>
 	</div>
@@ -101,23 +100,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="container">
 		<div id="da-slider" class="da-slider text-center">
 			<div class="da-slide">
-				<h2>education portal</h2>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<span class="hide_text"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></p>
+				<h2 style="color:white">Selamat Datang</h2>
+				<p style="color:white">Salam Kenal bagi anda semua yang sudah berkunjung di Web Portal Media.p,<span class="hide_text"> Mari Kita Baca Ulasan-ulasan singkat Tentang Portal Media.p  Di slide-slide Berikut.</span></p>
 				<h3 class="da-link"><a href="single-page.html" class="fa-btn btn-1 btn-1e">view more</a></h3>
 			</div>
 			<div class="da-slide">
-				<h2>online educations</h2>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<span class="hide_text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></p>
+				<h2 style="color:white">Portal Media.p</h2>
+				<p style="color:white">Portal Media.p Sebagai Sarana Pembelajaran Berbasis WEB.<span class="hide_text">Di jaman Perumbuhan Teknologi yang semakin pesat, Manusia bisa Mencari atau mengetahui suatu ilmu dari bidang teknologi, salah satu nya teknologi sarana pembelajaran berbasis web yang sudah banyak di aplikasikan di kehidupan saat ini.</span></p>
 				<h3 class="da-link"><a href="single-page.html" class="fa-btn btn-1 btn-1e">view more</a></h3>
 			</div>
 			<div class="da-slide">
-				<h2>education portal</h2>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<span class="hide_text"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></p>
+				<h2 style="color:white">Tujuan Media.p</h2>
+				<p style="color:white">Tujuan Adanya Portal Media.p Adalah Sebagai Berikut.<span class="hide_text">Portal Media.p Memiliki Tujuan Agar Pelajar Tidak Hanya Menimba Ilmu Di Sekolah Saja Dengan,adanya Portal Media.p Pelajar bisa, Menambah ilmu yang berhubungan dengan sekolahnya lewat Portal Media.p.</span></p>
 				<h3 class="da-link"><a href="single-page.html" class="fa-btn btn-1 btn-1e">view more</a></h3>
 			</div>
 			<div class="da-slide">
-				<h2>online educations</h2>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<span class="hide_text"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></p>
+				<h2 style="color:white">Fitur Dalam Media.p</h2>
+				<p style="color:white">Portal Media.p memiliki Fitur Pembelajaran yang Efektif.<span class="hide_text"> Portal Media.p Memiliki Fitur yang sangat bermanfaat dalam menambah ilmu, mulai dari Artikel pembelajaran yang di berikan oleh guru, forum yang sangat bermanfaat untuk shareing ilmu dan untuk saling bertanya ke teman-teman..</span></p>
 				<h3 class="da-link"><a href="single-page.html" class="fa-btn btn-1 btn-1e">view more</a></h3>
 			</div>
 	   </div>s
@@ -126,74 +125,114 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="main_bg"><!-- start main -->
 	<div class="container">
 		<div class="main row">
+			<!-- Modal Pertama  -->
 			<div class="col-md-3 images_1_of_4 text-center">
-				<span class="bg"><i class="fa fa-globe"></i></span>
-				<h4><a href="#">Sed Porta Dolor</a></h4>
+				<span class="bg"><i class="fa fa-book"></i></span>
+				<h4>Sed Porta Dolor</h4>
 				<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 1500s.</p>
-				<a href="#popup" class="fa-btn btn-1 btn-1e">read more</a>
-				<div id="closed"></div> 
-              <div class="popup-wrapper" id="popup">
-                <div class="popup-container">
-    
-                    <h2>Ikuti Update !!</h2>
-                    <p>Daripada hanya melihasdasdsadsaat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
-                    <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
-                    <a class="popup-close" href="#akdmik">X</a>
-                  
-                </div>
-              </div>
-			</div>
-			<div class="col-md-3 images_1_of_4 bg1 text-center">
-				<span class="bg"><i class="fa fa-laptop"></i></span>
-				<h4><a href="#">Lorem Ipsum is</a></h4>
-				<p class="para">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-				<a href="#popup1" class="fa-btn btn-1 btn-1e">read more</a>
-				<div id="closed"></div>
-              <div class="popup-wrapper" id="popup1">
-                <div class="popup-container">
-    
-                    <h2>Ikuti Update !!</h2>
-                    <p>Daripada hanya melihasdasdsadsaat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
-                    <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
-                    <a class="popup-close" href="#akdmik">X</a>
-                  
-                </div>
-              </div>
-			</div>
-			<div class="col-md-3 images_1_of_4 bg1 text-center">
-				<span class="bg"><i class="fa fa-cog"></i></span>
-				<h4><a href="#">Sed Porta Dolor</a></h4>
-				<p class="para">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32  by H. Rackham.</p>
-				<a href="#popup3" class="fa-btn btn-1 btn-1e">read more</a>
-				<div id="closed"></div>
-              <div class="popup-wrapper" id="popup3">
-                <div class="popup-container">
-    
-                    <h2>Ikuti Update !!</h2>
-                    <p>Daripada hanya melihasdasdsadsaat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
-                    <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
-                    <a class="popup-close" href="#akdmik">X</a>
-                  
-                </div>
-              </div>
-			</div>		
+			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+			<div class="modal fade" id="myModal" role="dialog">
+		    <div class="modal-dialog">
+		    
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title">Modal Header</h4>
+		        </div>
+		        <div class="modal-body">
+		          <p>Modal 1.</p>
+		        </div>
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        </div>
+		      </div>
+		      
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Modal Kedua -->
 
 			<div class="col-md-3 images_1_of_4 bg1 text-center">
-				<span class="bg"><i class="fa fa-shield"></i> </span>
-				<h4><a href="#">Contrary  belief</a></h4>
+				<span class="bg"><i class="fa fa-laptop"></i></span>
+				<h4>Lorem Ipsum is</h4>
+				<p class="para">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+				<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal1">Open Modal</button>
+			<div class="modal fade" id="myModal1" role="dialog">
+		    <div class="modal-dialog">
+		    
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title">Modal Header</h4>
+		        </div>
+		        <div class="modal-body">
+		          <p>Modal 2.</p>
+		        </div>
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        </div>
+		      </div>
+		      
+		    </div>
+		  </div>
+			</div>
+		<!-- Modal Ketiga -->
+
+			<div class="col-md-3 images_1_of_4 bg1 text-center">
+				<span class="bg"><i class="fa fa-users" arial-hidden="true"></i></span>
+				<h4>Sed Porta Dolor</h4>
+				<p class="para">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32  by H. Rackham.</p>
+		<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal2">Open Modal</button>
+			<div class="modal fade" id="myModal2" role="dialog">
+		    <div class="modal-dialog">
+		    
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title">Modal Header</h4>
+		        </div>
+		        <div class="modal-body">
+		          <p>Modal 3.</p>
+		        </div>
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        </div>
+		      </div>
+		      
+		    </div>
+		  </div>
+			</div>		
+
+			<!-- Modal Keempat -->
+
+			<div class="col-md-3 images_1_of_4 bg1 text-center">
+				<span class="bg"><i class="fa fa-home"></i> </span>
+				<h4>Contrary  belief</h4>
 				<p class="para">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-				<a href="#popup4" class="fa-btn btn-1 btn-1e">read more</a>
-		<div id="closed"></div>
-              <div class="popup-wrapper" id="popup4">
-                <div class="popup-container">
-    
-                    <h2>Ikuti Update !!</h2>
-                    <p>Daripada hanya melihasdasdsadsaat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
-                    <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
-                    <a class="popup-close" href="#akdmik">X</a>
-                  
-                </div>
-              </div>		
+			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal3">Open Modal</button>
+			<div class="modal fade" id="myModal3" role="dialog">
+		    <div class="modal-dialog">
+		    
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title">Modal Header</h4>
+		        </div>
+		        <div class="modal-body">
+		          <p>Modal 4.</p>
+		        </div>
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        </div>
+		      </div>
+		      
+		    </div>
+		  </div>
 			</div>	
 		</div>
 	</div>
@@ -202,7 +241,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="container">
 		<div class="main row">
 			<div class="col-md-6 content_left">
-				<img src="<?php echo base_url('assets/web/images/pic1.jpg');?>" alt="" class="img-responsive">
+				<img src="<?php echo base_url('assets/web/images/sukses.jpg');?>" alt="" class="img-responsive">
 			</div>
 			<div class="col-md-6 content_right">
 				<h4>Lorem Ipsum is simply <span>dummy text of the ornare  </span> vulputate printing and  There are many variations of passages.</h4>

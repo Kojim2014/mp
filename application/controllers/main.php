@@ -52,6 +52,37 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('user/edit');
 	}
+	public function tambahkls()
+	{
+
+		$this->load->view('user/addkelas');
+	}
+	 function savekls()
+	{
+         $config['upload_path']          = './assets/photo/fotokelas';
+         $config['allowed_types']        = 'gif|jpg|png|jpeg|bmp';
+         $config['max_size']     = '100';
+               
+
+                $this->load->library('upload', $config);
+
+                if ( ! $this->upload->do_upload())
+                {
+                        $error = array('error' => $this->upload->display_errors());
+                        redirect('main/tambahkls');
+                }
+                else
+                {
+                        $data = array('upload_data' => $this->upload->data());
+                        $nama_kelas       = $this->input->post('nama');
+                        $foto    =$_FILES['userfile'] ['name'];
+                        $deskripsi 	= $this->input->post('deskripsi');
+                        $this->main_model->uploadkelas($nama_kelas, $foto, $deskripsi); 
+                        redirect('main/kelaspel');
+
+
+                }
+	}
 }
 
 /* End of file main.php */
