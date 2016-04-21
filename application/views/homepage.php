@@ -61,6 +61,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- font-Awesome -->
 </head>
 <body>
+<<<<<<< HEAD
 <div class="header_bg">
 <div class="container">
 	<div class="row header">
@@ -386,6 +387,210 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<!----//End-img-cursual---->
 	</div>
+=======
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '389996164532722',
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "<?php echo base_url('/assets/user/js/sdk.js') ?>";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','<?php echo base_url('/assets/user/js/analytics.js') ?>','ga');
+
+  ga('create', 'UA-59878621-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  <div class="section section_landing">
+    <div class="wrapper">
+        <header class="clearfix">
+          <div id="logo"><img src="<?php echo base_url();?>assets/asset/homepage/sk_white_transparent.png" alt="logo-sekolahkoding"></div>
+          <nav>
+            <div id="toggle_menu">Menu</div>
+            <div id="menu_wrap">
+             <a  href="#tentang" onclick="gotoo($(''+$(this).attr('href')+''));"><b>Tentang</b></a>
+             <a  href="#testi" onclick="gotoo($(''+$(this).attr('href')+''));"><b>Testimoni</b></a>
+             <a  href="#panduan" onclick="gotoo($(''+$(this).attr('href')+''));"><b>Panduan</b></a>
+            </div>
+          </nav>
+        </header>
+        <div id="main_text">
+           <h2>"WEB Media Pembelajaran</h2> 
+           <h2>Belajar Lebih Modern dan Interaktif Dengan Media Pembelajaran Berbasis WEB</h2> 
+           <h3>Sebar Ilmu  Sebar Kebaikan"</h3>
+        </div>
+
+        <div id="tombol_wrapper">
+          <a rel='hover-shadow' href="<?php echo site_url('main/daftar'); ?>" class='button turqoise hover-shadow tombol'>Daftar</a>
+          <a rel='hover-shadow' href="<?php echo site_url('main/masuk'); ?>" class='button turqoise hover-shadow tombol'>Masuk</a>
+        </div>
+
+        <div id="back-top">
+          <a href="#top"><img class="gtop" src="<?php echo base_url();?>assets/asset/homepage/top.png" alt=""> </a>
+        </div>
+        <div class="gmb1" id="gmb" style="display:none;"><img src="<?php echo base_url();?>assets/asset/homepage/buk.png" alt=""></div>
+        <div class="gmb2" id="gmb" style="display:none;"><img src="<?php echo base_url();?>assets/asset/homepage/kal.png" alt=""></div>
+        <div class="gmb3" id="gmb" style="display:none;"><img src="<?php echo base_url();?>assets/asset/homepage/kom.png" alt=""></div>
+        <div class="gmb4" id="gmb" style="display:none;"><img src="<?php echo base_url();?>assets/asset/homepage/ner.png" alt=""></div>
+        <div class="gmb5" id="gmb" style="display:none;"><img src="<?php echo base_url();?>assets/asset/homepage/diskusi.png" alt=""></div>
+        <div class="gmb6" id="gmb" style="display:none;"><img src="<?php echo base_url();?>assets/asset/homepage/guru.png" alt=""></div>
+    </div>
+  </div>
+ <div class="wow rollIn">
+  <div class="section section_donasi" id="tentang">
+    <div class="wrapper">
+    <h4><span>Tentang WEB Media Pembelajaran</span></h4>
+        <h5 align="left">Apa Itu Web Media Pembelajaran? </h5>
+        <p style="padding-left:3%" align="left"><b>-</b> Web media Pembelajaran Adalah sebuah Situs yang Memuat Tentang Berbagai Macam Mata Pelajarn Yang berbasis WEB.</p>
+        <br>
+        <h5 align="left">Kenapa Harus Menggunakan WEB Media Pembelajaran? </h5>
+        <p style="padding-left:3%" align="left"><b>-</b> WEB Media Pembelajaran Berfungsi Sebagai Media Shareing Berbagai Macam Pelajaran, Antara Pendidik Dan Peserta Didik,Content Yang Dapat Di shareing Antara Lain Artikel,Video dan Diskusi Forum.</p>
+        <br>
+        <h5 align="left">Apa Tujuan WEB Media Pembelajaran? </h5>
+        <p style="padding-left:3%" align="left"><b>-</b> Tujuan WEB MEdia Pembelajaran Adalah Peserta Didik Tidak hanya Aktif Belajar Disekolah saja Tetapi Bisa Aktif Belajar Lewat WEB Media Pembelajaran, Sehingga Belajar Bisa Lebih Efektif dan Efisien.</p>
+    </div>
+  </div>
+  </div>
+  <div class="section section_testimoni" id="testi">
+    <div class="wrapper">
+          <h4><span> Testimonial </span></h4>
+          <div class="each_testimoni clearfix wow flipInX">
+            <img  src=" <?php echo base_url();?>assets/asset/homepage/peter_jack.jpg" alt="">
+            <p>"Sebagai sebuah komunitas programming terbesar di indonesia, PHP Indonesia memiliki kewajiban moral untuk bersinergi dengan organisasi manapun yang memiliki tujuan yang sama yakni pengembangan SDM TI yang berkualitas bagi Indonesia. Setelah berdiskusi panjang lebar dengan Founder Sekolah Koding, saya sangat yakin Sekolah Koding adalah sebuah institusi pengembangan skill programming yang memiliki visi dan misi yang hebat untuk kemajuan TI di Indonesia dan dunia, oleh karena itu menjalin hubungan yang baik dengan Sekolah Koding adalah sebuah aliansi strategis demi mencapai tujuan bersama. Sukses untuk Sekolah Koding, mari BERSAMA kita BERKARYA, dan bersama kita BERJAYA!!!!.... "</p>
+            <div id="testimoni_oleh"><a href="http://phpindonesia.or.id/">Peter J. Kambey, <span>Head of Executive | PHP Indonesia Community</span></a></div>
+          </div>
+          <div class="each_testimoni clearfix wow flipInX">
+            <img src="<?php echo base_url();?>assets/asset/homepage/oriza.jpg" alt="foto ahmad oriza co founder codepolita">
+            <p class="testimoni_mini">"Penyampaian materi yang lugas disertai semangat berbagi menjadi hal yang sangat luar biasa. Good job Sekolah Koding."</p>
+            <div id="testimoni_oleh"><a href="http://codepolitan.com/">Ahmad Oriza, <span>Co-Founder Codepolitan</span></a></div>
+          </div>
+          <div class="each_testimoni clearfix wow flipInX">
+            <img src="<?php echo base_url();?>assets/asset/homepage/fajar.jpg" alt="foto fajar founder startupmengajar">
+            <p class="testimoni_mini">"Sekolah Koding tempat yang tepat untuk belajar programming. Tutorial yang banyak & lengkap serta berbahasa Indonesia loh! Buruan belajar bersama-sama dengan pelajar lainnya di seluruh penjuru Indonesia hanya di SekolahKoding.com"</p>
+            <div id="testimoni_oleh"><a href="http://leanskill.com/"> Fajar, <span>Founder leanskill.com</span></a></div>
+          </div>
+      </div>
+    </div>
+
+  <div class="section section_highlight" id="panduan">
+    <div class="wrapper">
+    <h4><span> Panduan </span></h4>
+        <div id="col_video" class="wow rollIn">
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/Y7oZU3T867M" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="short_menu" class="wow slideInRight">
+          <p>Tidak tahu apa-apa? Mau mulai dari 0? jangan khawatir!</p>
+          <a href="kelas/index.html"><img src="<?php echo base_url('assets/asset/homepage/sm_nonton.png');?>" alt="belajar web development logo">Nonton ratusan kelas yang terus diupdate</a>
+          <a href="forum.html" class="short_menu_child"><img src="<?php echo base_url('assets/asset/homepage/sm_forum.png');?>" alt="forum web developer indonesia logo">Diskusi dengan ribuan member lain</a>
+          <a href="perpustakaan.html" class="short_menu_child"><img src="<?php echo base_url('assets/asset/homepage/sm_perpus.png');?>" alt="belajar membuat website logo">Baca referensi pelajaran di perpustakaan</a>
+          <a href="perjalanan.html" class="short_menu_child"><img src="<?php echo base_url('assets/asset/homepage/sm_peta.png');?>" alt="belajar cara membuat website logo">Lihat peta pelajaran untuk memulai</a>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="section section_perjalanan">
+    <div class="wrapper">
+        <h4><span>Ringkasan</span></h4>
+        <div class="each_perjalanan each_perjalanan_fe wow slideInDown">
+          
+          <div class="perjalanan_wrapper">
+            <div class="each_perjalanan_title"> Front End </div>
+            <img src="<?php echo base_url('assets/asset/cover/css3.png');?>" alt="cara menjadi web developer">
+            <div class="each_perjalanan_desc">
+            Kelas berfungsi sebagai tempat untuk guru memberikan materi berdasarkan kelas tersebut.<a href="#popup"class="popup-link">Detail</a>
+            </div>
+          </div>
+          <div id="closed"></div>
+              <div class="popup-wrapper" id="popup">
+                <div class="popup-container">
+    
+                    <h2>Ikuti Update !!</h2>
+                    <p>Daripada hanya sbdvdvgsvhdhscgmelihat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
+                    <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
+                    <a class="popup-close" href="#akdmik">X</a>
+                  
+                </div>
+              </div>
+        </div>
+
+        <div class="each_perjalanan each_perjalanan_folio wow slideInDown">
+          <div class="perjalanan_wrapper">
+            <div class="each_perjalanan_title"> Membuat Portofolio </div>
+            <img src="<?php echo base_url('assets/asset/cover/tema_wp.png');?>" alt="">
+            <div class="each_perjalanan_desc">
+            Kelas berfungsi sebagai tempat untuk guru memberikan materi berdasarkan kelas tersebut.<a href="#popup1"class="popup-link">Detail</a>
+            </div>
+          </div>
+          <div id="closed"></div>
+              <div class="popup-wrapper" id="popup1">
+                <div class="popup-container">
+    
+                    <h2>Ikuti Update !!</h2>
+                    <p>Daripada hanya melihat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
+                    <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
+                    <a class="popup-close" href="#akdmik">X</a>
+                  
+                </div>
+              </div>
+        </div>
+
+        <div class="each_perjalanan each_perjalanan_php wow slideInDown">
+          <div class="perjalanan_wrapper">
+            <div class="each_perjalanan_title"> PHP </div>
+            <img src="<?php echo base_url('assets/asset/cover/php-oop.png');?>" alt="belajar php cover">
+            <div class="each_perjalanan_desc">
+            Kelas berfungsi sebagai tempat untuk guru memberikan materi berdasarkan kelas tersebut.<a href="#popup2"class="popup-link">Detail</a>
+            </div>
+          </div>
+          <div id="closed"></div>
+              <div class="popup-wrapper" id="popup2">
+                <div class="popup-container">
+    
+                    <h2>Ikuti Update !!</h2>
+                    <p>Daripada hanya melihat demo untuk popup-nya saja, lebih baik masukkan juga email anda agar mendapatkan pemberitahuan saat ada update posting menarik lain seperti ini.<br/>
+                    <strong>Percayalah, saya hanya akan mengirim sesuatu yang bermanfaat untuk anda :)</strong></p>
+                    <a class="popup-close" href="#akdmik">X</a>
+                  
+                </div>
+              </div>
+        </div>
+
+
+
+
+
+    </div> 
+  </div>
+
+
+  <div class="wow slideInUp">
+<!--   <div class="section section_partner">
+    <div class="wrapper">
+        <h4><span>Partner Kami</span></h4>
+        <a class="partner_cs" target="_blank" href="http://codesaya.com/"><img id="ri" src="<?php echo base_url('assets/asset/homepage/codesaya_logo_blue.png');?>" alt=""></a>
+        <a class="partner_cp" target="_blank" href="http://codepolitan.com/"><img id="ri" src="<?php echo base_url('assets/asset/homepage/codepolitan-logo_small.png');?>" alt=""></a>
+        <a class="partner_php" target="_blank" href="http://www.phpindonesia.or.id/"><img id="ri" src="<?php echo base_url('assets/asset/homepage/php_indonesia.png');?>" alt=""></a>
+        <a class="partner_pp" target="_blank" href="http://pondokprogrammer.com/"><img id="ri" src="<?php echo base_url('assets/asset/homepage/Logo-PP1.png');?>" alt=""></a>
+    </div>
+  </div> -->
+>>>>>>> cd2d995f24e788386a60d2c9d048045be628202e
 </div>
 
 <div class="footer_bg"><!-- start footer -->

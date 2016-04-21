@@ -2,16 +2,40 @@
 <html >
   <head>
   <meta charset="UTF-8">
-  <title>Sign-Up/Login Form</title>
+  <title><?php echo ($data == "masuk") ? "Sign-in" : (($data == "daftar") ? "Sign-up" : "")?> Page</title>
 
   <link href='<?php echo base_url('/assets/login/css/titilium.css') ?>' rel='stylesheet' type='text/css'>    
   <link rel="stylesheet" href="<?php echo base_url('/assets/login/css/normalize.css') ?>">  
   <link rel="stylesheet" href="<?php echo base_url('/assets/login/css/style.css') ?>">
+  <style type="text/css">
+    .logo {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .logo img {
+      max-width: 100%;
+      max-height: 100%;
+      position: inline;
+    }
+    .jekel select {
+      height: 50px;
+      border: 0;
+      background-color: white;
+      color: #4d4d4d;
+      font-family: 'oswaldregular', Calibri;
+      text-transform: uppercase;    
+      font-size: 22px;
+      padding: 10px 0 5px 6px;
+      cursor:pointer;
+      -webkit-appearance: none;
+    }
+  </style>
 </head>
 <body>
 
   <div class="form">
-    <div class="logo"><img src="" alt="Logo"></div>
+    <div class="logo"><img src="<?php echo base_url('/assets/img/bg-desk.jpg') ?>" alt="Logo"></div>
     <ul class="tab-group">
       <li class="tab <?php echo ($data == "masuk") ? "active" : ""?>"><a id="masuk" href="#login">Masuk</a></li>
       <li class="tab <?php echo ($data == "daftar") ? "active" : ""?>"><a id="daftar" href="#signup">Daftar</a></li>
@@ -19,31 +43,42 @@
 
     <div class="tab-content">
       <div id="signup" style="display: <?php echo ($data == "masuk") ? "none" : '' ?>">   
-        <h1>Sign Up for Free</h1>
+        <?php 
+          if ($this->session->flashdata('regret')) {
+            echo "<h1>".$this->session->flashdata('regret')."</h1>";
+          }
+        ?>
       
         <!-- Form -->
-        <form action="<?php echo site_url('main/masuk') ?>" method="post" onsubmit="return pwcf()">
+        <form action="<?php echo site_url('main/register') ?>" method="post" onsubmit="return pwcf()">
           <div class="top-row">
             <div class="field-wrap">
               <label>
                 First Name<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" />
+              <input type="text" name="fname" required autocomplete="off" />
             </div>
           
             <div class="field-wrap">
               <label>
                 Last Name<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off"/>
+              <input type="text" name="lname" required autocomplete="off"/>
             </div>
           </div>
   
           <div class="field-wrap">
             <label>
+              Username<span class="req">*</span>
+            </label>
+            <input type="text" name="uname" required autocomplete="off"/>
+          </div>
+
+          <div class="field-wrap">
+            <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input type="email" name="email" required autocomplete="off"/>
           </div>
           
           <div class="top-row">
@@ -51,7 +86,7 @@
               <label>
                 Password<span class="req">*</span>
               </label>
-              <input type="password" id="pass" required autocomplete="off" />
+              <input type="password" name="pword" id="pass" required autocomplete="off" />
             </div>
           
             <div class="field-wrap">
@@ -61,27 +96,49 @@
               <input type="password" id="confpass" required autocomplete="off"/>
             </div>
           </div>
+
+          <div class="field-wrap">
+            <label>
+              Contact Person<span class="req">*</span>
+            </label>
+            <input type="text" name="conpers" required autocomplete="off"/>
+          </div>
+
+          <div class="field-wrap">
+            <div class="jekel">
+              <select id="gender" name="jekel">
+                <option> - Jenis Kelamin - </option>
+                <option value="laki-laki">laki-laki</option>
+                <option value="perempuan">perempuan</option>
+              </select>
+            </div>
+          </div>
+
           <button type="submit" class="button button-block"/>Register</button>
         </form>
       </div>
 
       <div id="login"  style="display: <?php echo ($data == "daftar") ? "none" : '' ?>">
-        <h1>Log In to Start Study!</h1>
-      
+        <?php 
+          if ($this->session->flashdata('login')) {
+            echo "<h1>".$this->session->flashdata('login')."</h1>";
+          }
+        ?>
+
         <form action="<?php echo site_url('main/login'); ?>" method="post">
       
           <div class="field-wrap">
             <label>
-              Email Address<span class="req">*</span>
+              Username<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input type="text" name="username" required autocomplete="off"/>
           </div>
       
           <div class="field-wrap">
             <label>
               Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input type="password" name="password" required autocomplete="off"/>
           </div>
       
           <p class="forgot"><a href="<?php echo site_url('main/forgot'); ?>">Forgot Password?</a></p>
@@ -145,7 +202,12 @@
       var id = $(this).attr('id');
       var url = "<?php echo site_url('main/" + id + "') ?>";
       history.pushState(state, title, url);
-          
+      if (id === "masuk") {
+        var title = "Sign-in"
+      }else if(id === "daftar"){
+        var title = "Sign-up"
+      }
+      $("title").html(title + " Page");
     });
 
     function pwcf() {
@@ -159,7 +221,13 @@
             match = false;
         }
         else {
+          if ($( "#gender option:selected" ).text() == " - Jenis Kelamin - ") {
+            alert("Pilih Jenis Kelamin!");
+            match = false;
+          }
+          else {
             match = true;
+          }
         }
         return match;
     }
