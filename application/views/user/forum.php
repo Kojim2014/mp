@@ -1,10 +1,10 @@
 <div class="title_content">
-  <h1>Forum</h1>
+  <p>Forum</p>
 </div>
 
 <div class="content">
 	<div id="create_forum">
-		<a href="user.html"><span>Tanya ✎</span></a>
+		<a href="<?php echo site_url('home/tanya');?>"><span>Tanya ✎</span></a>
 	</div>
 
 	<select name="daftar_pelajaran" id="select_daftar_pelajaran">

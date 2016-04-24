@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="author" content="SekolahKoding">
   <link rel="stylesheet" href="<?php echo base_url('assets/user/css/main-app.css');?>" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/login/font-awesome/css/font-awesome.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/user/css/hover-min.css') ?>">
   <script src="<?php echo base_url('assets/user/js/jquery-2.1.4.min.js'); ?>"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="icon" href="<?php echo base_url('assets/favicon.ico'); ?>" type="image/x-icon" />
@@ -68,9 +71,14 @@
 		<div id="blue-logo">
   		  <a href="../../user.html"><img src="<?php echo base_url('/assets/asset/atom-bg.png') ?>" alt=""/></a>
 		</div>
-		<a rel='bubble-float-left' class='button orange bubble-float-left notif'>Notifikasi</a>
-		<script src="<?php echo base_url('assets/user/js/sweetalert-dev.js'); ?>"></script>
-		<link rel="stylesheet" href="<?php echo base_url('assets/user/css/sweetalert.css'); ?>">
+		<div class="dropdown button orange bubble-float-bottom notif"><div style="margin-top:-15%;">Notifikasi <span>3</span></div>
+		  <button class="dropbtn"></button>
+		  <div class="dropdown-content">
+		    <a href="#">Linhgvgjvcvhvhvhjvk 1</a>
+		    <a href="#">Link 2</a>
+		    <a href="#">Link 3</a>
+		  </div>
+		</div>
 	  </div>
 	  
 	  <div class="clear"></div>
@@ -82,6 +90,10 @@
 	  	  $this->load->view('user/forum');
 	  	}elseif ($this->uri->segment(2) == "user") {
 	  	  $this->load->view('user/member');
+	  	}elseif ($this->uri->segment(2) == "tambahkls") {
+	  	  $this->load->view('user/addkelas');
+	  	}elseif ($this->uri->segment(2) == "tanya") {
+	  	  $this->load->view('user/tanya');
 	  	}else {
 	  	  $this->load->view('user/beranda');
 	  	}
@@ -92,7 +104,6 @@
 		<span style="padding-left:10px;">&copy; 2016 <span>SekolahKoding</span></span>
 	  </div>
 	</div>
-	
 	<div class="clear"></div>
 
   </div>
