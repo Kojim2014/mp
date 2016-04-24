@@ -8,7 +8,7 @@
     foreach ($query->result() as $hasil) {
   ?>
     <div class="each_user col-33" id="13434">
-      <a href="<?php echo site_url('user'); ?>">
+      <a href="<?php echo site_url('user'); ?>?id=<?php echo $hasil->id_users; ?>">
         <img class="col-40"	src="<?php echo base_url('assets/asset/homepage/fajar.jpg');?>">
         <div class="userlist-info col-45">
          <p class="nama"><?php echo $hasil->username; ?></p>
