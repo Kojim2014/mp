@@ -15,7 +15,7 @@
           ?>
                       <div class="each_playlist">
                   <a class="link_pl" href="#">
-                    <img src="<?php echo base_url()."assets/photo/fotokelas/".$data->foto; ?>" alt=" Mengamankan website php" />
+                    <img style="widht:50%; height:35%;>" src="<?php echo base_url()."assets/photo/fotokelas/".$data->foto; ?>" alt=" Mengamankan website php" />
                     <div class="playlist_nama"> <?php echo $data->nama_kelas; ?> </div>
                     <div class="playlist_desc"> <?php echo $data->deskripsi; ?> </div>
                   </a>

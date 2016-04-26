@@ -12,7 +12,7 @@
 <form action="<?php echo site_url('home/tanyaforum') ?>" method="POST" onsubmit="kon()">
   <div class="panel panel-success">
     <div class="panel-heading">
-      <h3 class="panel-title">Judul</h3>
+      <h3 class="panel-title">Judul</h3> 
     </div>
     <div class="panel-body">
       <div class="input-group">
@@ -71,4 +71,8 @@
       return ret;
     }
   }
+
+  $('.summernote').summernote({
+  airMode: true
+});
 </script>

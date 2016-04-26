@@ -19,6 +19,10 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('about');
 	}
+	public function pageeror()
+	{
+		$this->load->view('errors/eror');
+	}
 	public function masuk()
 	{
 		$data['data'] = "masuk";
@@ -46,10 +50,6 @@ class Main extends CI_Controller {
 		$this->load->view('forgot');
 	}
 	
-	public function edit_profile()
-	{
-		$this->load->view('user/edit');
-	}
 	
 	 
 

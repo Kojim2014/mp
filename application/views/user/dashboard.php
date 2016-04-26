@@ -42,7 +42,7 @@
 		</p>
 		<div id="biodata"><p>  </p></div>
 
-		<a style="float:right;" href="">Edit Profile</a>
+		<a style="float:right;" href="<?php echo site_url('home/edit_profile');?>">Edit Profile</a>
 	  </div>
 	  <hr>
 	  <div id="menu_left_bottom">
@@ -94,6 +94,8 @@
 	  	  $this->load->view('user/addkelas');
 	  	}elseif ($this->uri->segment(2) == "tanya") {
 	  	  $this->load->view('user/tanya');
+	  	}elseif ($this->uri->segment(2) == "edit_profile") {
+	  	  $this->load->view('user/edit');
 	  	}else {
 	  	  $this->load->view('user/beranda');
 	  	}

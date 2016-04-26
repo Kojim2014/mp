@@ -21,11 +21,10 @@ class Main_model extends CI_Model {
 		  $result = $query->result();
 		  if($result)
 		  {
-		    $sess_array = array();
 		    foreach($result as $row)
 		    {
 		      if ($row->foto != '' || $row->foto != null) {
-	         	$foto = "berisi";
+	         	$foto = $row->foto;
 	          }else{
 	          	$foto = "default.png";
 	          }
@@ -106,7 +105,7 @@ class Main_model extends CI_Model {
 		echo "Title : ".$this->input->post('title');
 		echo "Konten : ".$this->input->post('konten');
 		echo "Tags : ".$this->input->post('tag');
-	}
+	} 
 
 }
 
