@@ -8,10 +8,11 @@ class Main_model extends CI_Model {
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 		
-		$this->db->select('id_users, id_lembaga, nama_lengkap, jkl, foto, username, password, email, level, cp, create_date');
+		$this->db->select('id_users, nama_lengkap, jkl, foto, username, password, email, level, cp, create_date');
 		$this->db->from('users');
 		$this->db->where('username', $username);
 		$this->db->where('password', $password);
+		// $this->db->where('status', '1');
 		$this->db->limit(1);
 		 
 		$query = $this->db->get();
@@ -37,7 +38,6 @@ class Main_model extends CI_Model {
 
 		      $sess_array = array(
 		        'uid' => $row->id_users,
-		        'idlem' => $row->id_lembaga,
 		        'nama' => $row->nama_lengkap,
 		        'kelamin' => $row->jkl,
 		        'foto' => $foto,
@@ -70,6 +70,7 @@ class Main_model extends CI_Model {
 		$insert = array(
 			'nama_lengkap' => $this->input->post('fname')." ".$this->input->post('lname'),
 			'jkl' => $this->input->post('jekel'),
+			'foto'=> 'guru.png',
 			'username' => $this->input->post('uname'),
 			'password' => $this->input->post('pword'),
 			'email' => $this->input->post('email'),
@@ -91,7 +92,6 @@ class Main_model extends CI_Model {
 		// $simpan=$this->db->query("INSERT INTO `dbmp`.`kelas` (`id_kelas`, `id_lembaga`, `nama_kelas`, `foto`, `deskripsi`) VALUES (NULL, NULL, '$nama_kelas', '$foto', '$deskripsi')");
 		$val = array(
 				'id_kelas' => NULL,
-				'id_lembaga' => NULL,
 				'nama_kelas' => $nama_kelas,
 				'foto' => $foto,
 				'deskripsi' => $deskripsi
@@ -103,10 +103,101 @@ class Main_model extends CI_Model {
 	public function tanya()
 	{
 		echo "Title : ".$this->input->post('title');
-		echo "Konten : ".$this->input->post('konten');
+		echo "Konten : ". htmlspecialchars($this->input->post('content'));
 		echo "Tags : ".$this->input->post('tag');
-	} 
+	}
+	public function save_materi() 
+	{
+		$save_data = array(
+				'id_kelas'	=> $this->input->post('id_kelas'),
+				'title'	=> $this->input->post('title'),
+				'content'			=> $this->input->post('content'),
+				'creator'			=> $this->input->post('creator'),
+				'created'			=> $this->input->post('created'),
+				'updated'			=> $this->input->post('updated')
+				
+			);
 
+		$save = $this->db->insert('materi', $save_data);
+		redirect('home/mkelas/'.$this->input->post('id_kelas'),'refresh');
+	}
+
+	public function editpro()
+	{
+		try {
+			if ( !$this->upload->do_upload()){
+			$error = array('error' => $this->upload->display_errors());
+			print_r($error);
+			}else{
+				$data = $this->upload->data();
+				$e = array(
+				        'nama' => $this->input->post('nama_lengkap'),
+				        'foto' => $_FILES['userfile']['name'],
+				        'username' => $this->input->post('username'),
+				        'password' => $this->input->post('password'),
+				        'email' => $this->input->post('email'),
+				        'contact' => $this->input->post('cp')
+					);
+				$update = array(
+						'nama_lengkap' => $e['nama'],
+						'foto' => $data['file_name'],
+						'username' => $e['username'],
+						'password' => $e['password'],
+						'email' => $e['email'],
+						'cp' => $e['contact']
+					);
+
+				$this->db->where('id_users', $this->session->userdata('uid'));
+				$cek = $this->db->update('users', $update);
+			
+				if($cek) {
+					$this->session->set_userdata($e);
+					redirect('home','refresh');
+				}
+				else {
+					echo "Gagal";
+				}
+			}
+		}catch (Exception $e) {
+			echo "<script type='text/javasript'>alert('Batal Upload')</script>";
+			redirect('home','refresh');
+		}
+	}
+
+	public function get_kelas($id = NULL)
+	{ 
+		$this->db->where('id_kelas', $id);
+		return $this->db->get('kelas');
+	}
+	public function get_materi($id = NULL)
+	{ 
+		$this->db->where('id_materi', $id);
+		return $this->db->get('materi');
+	}
+	public function save_follow()
+	{
+			$save_data = array(
+				// 'id_kelas'	=> $this->input->post($this->uri->segment(3)),
+				'id_kelas'	=> $this->input->post('id'),
+				'id_user'	=> $this->session->userdata('uid')
+			);
+
+		 $save =  $this->db->insert('gabung', $save_data);
+		// redirect('home/mkelas/'.$this->input->post('id_kelas'),'refresh');
+		print_r($save_data);
+	}
+		public function un_follow()
+	{
+			$save_data = array(
+				// 'id_kelas'	=> $this->input->post($this->uri->segment(3)),
+				'id_kelas'	=> $this->input->post('id'),
+				'id_user'	=> $this->session->userdata('uid')
+			);
+
+		 $save =  $this->db->delete('gabung', $save_data);
+		// redirect('home/mkelas/'.$this->input->post('id_kelas'),'refresh');
+		print_r($save_data);
+	}
 }
 
 /* End of file main_model.php */

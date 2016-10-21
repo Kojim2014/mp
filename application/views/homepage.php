@@ -65,7 +65,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="container">
 	<div class="row header">
 		<div class="logo navbar-left">
-			<h1><a href="<?php echo site_url('Main');?>">Portal Media.p</a></h1>
+			<h1><a href="<?=base_url()?>">Portal Media.p</a></h1>
 		</div>
 		<div class="clearfix"></div>
 	</div>
@@ -102,24 +102,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="da-slide">
 				<h2 style="color:white">Selamat Datang</h2>
 				<p style="color:white">Salam Kenal bagi anda semua yang sudah berkunjung di Web Portal Media.p,<span class="hide_text"> Mari Kita Baca Ulasan-ulasan singkat Tentang Portal Media.p  Di slide-slide Berikut.</span></p>
-				<h3 class="da-link"><a href="single-page.html" class="fa-btn btn-1 btn-1e">view more</a></h3>
+				<!-- <h3 class="da-link"><a href="single-page.html" class="fa-btn btn-1 btn-1e">view more</a></h3> -->
 			</div>
 			<div class="da-slide">
 				<h2 style="color:white">Portal Media.p</h2>
 				<p style="color:white">Portal Media.p Sebagai Sarana Pembelajaran Berbasis WEB.<span class="hide_text">Di jaman Perumbuhan Teknologi yang semakin pesat, Manusia bisa Mencari atau mengetahui suatu ilmu dari bidang teknologi, salah satu nya teknologi sarana pembelajaran berbasis web yang sudah banyak di aplikasikan di kehidupan saat ini.</span></p>
-				<h3 class="da-link"><a href="single-page.html" class="fa-btn btn-1 btn-1e">view more</a></h3>
+				<!-- <h3 class="da-link"><a href="single-page.html" class="fa-btn btn-1 btn-1e">view more</a></h3> -->
 			</div>
 			<div class="da-slide">
 				<h2 style="color:white">Tujuan Media.p</h2>
 				<p style="color:white">Tujuan Adanya Portal Media.p Adalah Sebagai Berikut.<span class="hide_text">Portal Media.p Memiliki Tujuan Agar Pelajar Tidak Hanya Menimba Ilmu Di Sekolah Saja Dengan,adanya Portal Media.p Pelajar bisa, Menambah ilmu yang berhubungan dengan sekolahnya lewat Portal Media.p.</span></p>
-				<h3 class="da-link"><a href="single-page.html" class="fa-btn btn-1 btn-1e">view more</a></h3>
+				<!-- <h3 class="da-link"><a href="single-page.html" class="fa-btn btn-1 btn-1e">view more</a></h3> -->
 			</div>
 			<div class="da-slide">
 				<h2 style="color:white">Fitur Dalam Media.p</h2>
 				<p style="color:white">Portal Media.p memiliki Fitur Pembelajaran yang Efektif.<span class="hide_text"> Portal Media.p Memiliki Fitur yang sangat bermanfaat dalam menambah ilmu, mulai dari Artikel pembelajaran yang di berikan oleh guru, forum yang sangat bermanfaat untuk shareing ilmu dan untuk saling bertanya ke teman-teman..</span></p>
-				<h3 class="da-link"><a href="single-page.html" class="fa-btn btn-1 btn-1e">view more</a></h3>
+				<!-- <h3 class="da-link"><a href="single-page.html" class="fa-btn btn-1 btn-1e">view more</a></h3> -->
+
 			</div>
-	   </div>s
+	   </div>
 	</div>
 </div><!-- end slider -->
 <div class="main_bg"><!-- start main -->
@@ -402,7 +403,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 		<div class="row  footer">
 			<div class="copy text-center">
-				<p class="link"><span>&#169; All rights reserved | Design by&nbsp;<a href="http://w3layouts.com/"> W3Layouts</a></span></p>
+				<p class="link"><span>&#169; All rights reserved | Design by&nbsp;<a href=""> Media Pembelajaran</a></span></p>
 			</div>
 		</div>
 	</div>

@@ -1,20 +1,20 @@
 <div class="title_content"> <p> Daftar User: </p> </div>
 <div class="content content-userlist">
-  <?php 
-  $query = $this->db->get('users');
-  foreach ($query->result() as $hasil) {
-   ?>
-                    <div class="each_user col-33" id="13434">
-              <a href="user/profile/maulana20.html">
-                <img class="col-40"	src="<?php echo base_url('assets/asset/homepage/fajar.jpg');?>">
-                <div class="userlist-info col-45">
-                 <p class="nama"><?php echo $hasil->username; ?></p>
-                 <p><?=$hasil->nama_lengkap;?></p>
-                 <p></p>
-                </div>
-              </a>
-            </div>
-   <?php } ?>
+  <?php
+    $query = $this->db->get('users');
+    foreach ($query->result() as $hasil) {
+  ?>
+    <div class="each_user col-33" id="13434">
+      <a href="<?=site_url('user');?>?id=<?=$hasil->id_users;?>">
+        <img class="col-40"	src="<?php echo base_url('assets/photo/fotoprofile/'.$hasil->foto);?>">
+        <div class="userlist-info col-45">
+         <p class="nama"><?=$hasil->username;?></p>
+         <p><?=$hasil->nama_lengkap;?></p>
+         <p></p>
+        </div>
+      </a>
+    </div>
+  <?php } ?>
 
   <div class="clear"></div>
   <div class="pagination">

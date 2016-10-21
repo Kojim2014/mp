@@ -7,10 +7,10 @@
       <!-- left column -->
       <div class="col-md-3">
         <div class="text-center">
-          <img src="<?php echo base_url('assets/web/images/c4.jpg');?>" class="avatar img-circle" alt="avatar">
+          <img id="output" style="object-fit: fill; " src="<?php echo base_url('assets/photo/fotoprofile/'.$this->session->userdata('foto'));?>" class="avatar img-square" alt="avatar">
           <h6>Upload a different photo...</h6>
           
-          <input type="file" name="userfile" class="form-control">
+          <input type="file" onchange="loadFile(event)" name="userfile" class="form-control">
         </div>
       </div>
       
@@ -72,4 +72,11 @@
   function goback() {
     window.history.go(-1);
   }
+
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
+
+  
 </script>

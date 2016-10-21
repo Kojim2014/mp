@@ -1,13 +1,29 @@
 <div id="daftar_kelas">
   <div class="title_content"><p> Kelas yang di ikuti </p></div>
-  <div class="content content_profil">
-	<li class="cover-wrapper">
-	  <a href="../../kelas/video/Belajar-Codeigniter-untuk-pemula.html">
-		<div class="bg_transparent"></div>
-		<p>Belajar Codeigniter untuk pemula</p>
-		<img src="<?php echo base_url('assets/asset/cover/codeigniter.png');?>" alt="" />
-	  </a>
-	</li>
-	<div class="clear"></div>
-  </div>
+  
+  <?php 
+  // $this->db->select('id_gabung, id_kelas');
+  $this->db->from('gabung g');
+  $this->db->join('kelas k', 'g.id_kelas = k.id_kelas', 'left');
+  $this->db->where('g.id_user', $this->session->userdata('uid'));
+  $kelas = $this->db->get();
+
+  foreach ($kelas->result() as $key => $value) { ?>
+	  <div class="content content_profil">
+		<li class="cover-wrapper">
+		  <a href="<?php echo base_url('home/mkelas/' . $value->id_kelas) ?>">
+			<div class="bg_transparent"></div>
+			<p><?php echo $value->nama_kelas ?></p>
+			<img src="<?php echo base_url('assets/photo/fotokelas/'.$value->foto);?>" alt="" />
+		  </a>
+		</li>
+		<div class="clear"></div>
+	  </div>
+
+
+
+
+
+  <?php } ?>
+
 </div>

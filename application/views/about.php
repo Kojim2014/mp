@@ -31,7 +31,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="container">
 	<div class="row header">
 		<div class="logo navbar-left">
-			<h1><a href="<?php echo site_url('Main');?>">Sinau</a></h1>
+			<h1><a href="<?php echo site_url('Main');?>"> <font color="white"></font></a></h1>
 		</div>
 
 		<div class="clearfix"></div>

@@ -26,8 +26,13 @@
             <div class="col-md-8">
               <button type="submit" value="submit" class="btn btn-success">Submit</button>
               <span></span>
-              <button onclick="goback()" class="btn btn-default">Cancel</button>
+              <button onclick="goback()" name="action" type="submit" class="btn btn-default">Cancel</button>
             </div>
           </div>
           <?=form_close();?>
-          </div> <!-- end daftar kelas-->
+          </div> <!-- end daftar kelas--> 
+          <script>
+function goBack() {
+    window.history.go(-1);
+}
+</script>

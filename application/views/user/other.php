@@ -1,12 +1,21 @@
 <html>
+<?php
+	$this->db->where('id_users', $this->input->get('id'));
+	$this->db->limit(1);
+	$data = $this->db->get('users');
+	foreach ($data->result() as $row) {
+		$ultah = explode(" ", $row->create_date);
+	    $date = explode("-", $ultah[0]);
+	    $tgl = new DateTime();
+	    $tgl->setDate($date[0], $date[1], $date[2]);
+	    $birthday = $tgl->format('M').", ".$date[0];
+
+?>
 <head>
-  <title><?php echo $this->session->userdata('nama'); ?> | Member Belajar</title>
+  <title><?php echo $row->nama_lengkap; ?> | Member Belajar</title>
   <meta charset="UTF-8">
   <meta name="author" content="SekolahKoding">
   <link rel="stylesheet" href="<?php echo base_url('assets/user/css/main-app.css');?>" charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css');?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/login/font-awesome/css/font-awesome.css'); ?>">
-	<link rel="stylesheet" href="<?php echo base_url('assets/user/css/hover-min.css') ?>">
   <script src="<?php echo base_url('assets/user/js/jquery-2.1.4.min.js'); ?>"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="icon" href="<?php echo base_url('assets/favicon.ico'); ?>" type="image/x-icon" />
@@ -32,17 +41,13 @@
 	<div id="menu_left" class="menu_profil">
 	  <div id="data_diri">
 		<div id="data_diri_main">
-		  <img src="<?php echo base_url('assets/photo/fotoprofile/'.$this->session->userdata('foto')); ?>" width="150">
-		  <div id="fullname"><p> <?php echo $this->session->userdata('nama'); ?></p></div>
-		  <p>@<?php echo $this->session->userdata('username'); ?></p>
+		  <img src="<?php echo base_url('assets/asset/homepage/guru.png'); ?>" width="150">
+		  <div id="fullname"><p> <?php echo $row->nama_lengkap; ?></p></div>
+		  <p>@<?php echo $row->username; ?></p>
 		</div>
-
 		<p> <img src="<?php echo base_url('assets/asset/time-icon.png');?>" alt="" />
-		  Bergabung sejak <?php echo $this->session->userdata('birthday'); ?>
+		  Bergabung sejak <?php echo $birthday; ?>
 		</p>
-		<div id="biodata"><p>  </p></div>
-
-		<a style="float:right;" href="<?php echo site_url('home/edit_profile');?>">Edit Profile</a>
 	  </div>
 	  <hr>
 	  <div id="menu_left_bottom">
@@ -71,50 +76,37 @@
 		<div id="blue-logo">
   		  <a href="../../user.html"><img src="<?php echo base_url('/assets/asset/atom-bg.png') ?>" alt=""/></a>
 		</div>
-		<div class="dropdown button orange bubble-float-bottom notif"><div style="margin-top:-15%;">Notifikasi <span>3</span></div>
-		  <button class="dropbtn"></button>
-		  <div class="dropdown-content">
-		    <a href="#">Linhgvgjvcvhvhvhjvk 1</a>
-		    <a href="#">Link 2</a>
-		    <a href="#">Link 3</a>
-		  </div>
-		</div>
+		<a rel='bubble-float-left' class='button orange bubble-float-left notif'>Notifikasi</a>
+		<script src="<?php echo base_url('assets/user/js/sweetalert-dev.js'); ?>"></script>
+		<link rel="stylesheet" href="<?php echo base_url('assets/user/css/sweetalert.css'); ?>">
 	  </div>
 	  
 	  <div class="clear"></div>
 	  
-	  <?php
-	  	if ($this->uri->segment(2) == "kelas") {
-	  	  $this->load->view('user/kelas');
-	  	}elseif ($this->uri->segment(2) == "forum") {
-	  	  $this->load->view('user/forum');
-	  	}elseif ($this->uri->segment(2) == "user") {
-	  	  $this->load->view('user/member');
-	  	}elseif ($this->uri->segment(2) == "tambahkls") {
-	  	  $this->load->view('user/addkelas');
-	  	}elseif ($this->uri->segment(2) == "tanya") {
-	  	  $this->load->view('user/tanya');
-	  	}elseif ($this->uri->segment(2) == "edit_profile") {
-	  	  $this->load->view('user/edit');
-	  	}elseif ($this->uri->segment(2) == "mkelas") {
-	  	  $this->load->view('user/masukkelas');
-	  	}elseif ($this->uri->segment(2) == "addmateri") {
-	  	  $this->load->view('user/tmbmateri');
-	  	}elseif ($this->uri->segment(2) == "vmateri") {
-	  	  $this->load->view('user/viewmateri');
-	  	}else {
-	  	  $this->load->view('user/beranda');
-	  	}
-	  ?>
+	  <div id="daftar_kelas">
+	    <div class="title_content"><p> Data <?php echo $row->nama_lengkap; ?> </p></div>
+	    <div class="content content_profil">
+	 	  <li class="cover-wrapper">
+		    <a href="../../kelas/video/Belajar-Codeigniter-untuk-pemula.html">
+		 	  <div class="bg_transparent"></div>
+			  <p>Belajar Codeigniter untuk pemula</p>
+			  <img src="<?php echo base_url('assets/asset/cover/codeigniter.png');?>" alt="" />
+		    </a>
+		  </li>
+		  <div class="clear"></div>
+	    </div>
+	  </div>
 
 	  <div class="clear_h"></div>
 	  <div id="footer">
 		<span style="padding-left:10px;">&copy; 2016 <span>SekolahKoding</span></span>
 	  </div>
 	</div>
+	
 	<div class="clear"></div>
 
   </div>
 
 </body>
+<?php } ?>
 </html>

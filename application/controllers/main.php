@@ -8,7 +8,7 @@ class Main extends CI_Controller {
 		parent::__construct();
 		if ($this->session->userdata('uid')) {
 			redirect('home','refresh');
-		}
+		} 
 	}
 
 	public function index()
@@ -18,10 +18,6 @@ class Main extends CI_Controller {
 	public function tentang()
 	{
 		$this->load->view('about');
-	}
-	public function pageeror()
-	{
-		$this->load->view('errors/eror');
 	}
 	public function masuk()
 	{
