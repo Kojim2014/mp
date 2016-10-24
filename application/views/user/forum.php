@@ -24,13 +24,19 @@
 		<div class="each_topic" id="1063" last_activity="2016-03-18 10:54:57" last_activity_by ="" judul="pemrograman-java-mobille">
 			<div class="col-15">
 				<div class="pertanyaan_by_foto">
-					<img src="<?php echo base_url('/assets/asset/atom-bg.png') ?>" width=50 />
+					<?php
+						$user = $this->db->where('id_users', $row->creator);
+						$user = $this->db->get('users')->result();
+						foreach ($user as $pict) {
+					?>
+					<img src="<?php echo base_url('assets/photo/fotoprofile/'.$pict->foto) ?>" width=50 />
+					<?php } ?>
 				</div>
 			</div>
 
 			<div class="col-65">
 				<div class="pertanyaan">
-					<a href="forum/pertanyaan/pemrograman-java-mobille.html"> <?php echo $row->title; ?> </a>
+					<a href="<?= site_url('home/forum/'.$row->id_forum) ?>"> <?php echo $row->title; ?> </a>
 				</div>
 
 				<div class="pertanyaan_by">
@@ -49,7 +55,9 @@
 		        </div>
 
 				<div class="tag_pertanyaan">
-				  <span><a href="forum/tag/index.html"><?php echo $row->tags; ?></a></span>
+				  <?php $tag = explode(',', $row->tags); foreach ($tag as $tags) {?>
+					<span><a href="forum/tag/index.html"><?php echo $tags; ?></a></span>
+				  <?php } ?>
 				</div>
 			</div>
 

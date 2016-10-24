@@ -39,7 +39,7 @@
       <h3 class="panel-title">Tags</h3>
     </div>
 
-    <select style="width:100%; height: 100%;" name="tag" class="js-example-basic-multiple" multiple="multiple">
+    <select style="width:100%; height: 100%;" name="tag[]" class="js-example-basic-multiple" multiple="multiple">
       <option value="AL">Alabama</option>
       <option value="WY">Wyoming</option>
       <option value="AA">AHAHA</option>

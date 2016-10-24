@@ -111,7 +111,15 @@ class Home extends CI_Controller {
 
 	public function tanyaforum()
 	{
-		$this->main_model->tanya();
+		date_default_timezone_set("Asia/Jakarta");
+		$value = array(
+				'title' => $this->input->post('title'),
+				'content' => $this->input->post('content'),
+				'creator' => $this->session->userdata('uid'),
+				'created' => date("Y-m-d H:i:s"),
+				'tags' => implode(',', $this->input->post('tag'))
+			);
+		$this->main_model->tanya($value);
 	}
 
 	public function follow()
