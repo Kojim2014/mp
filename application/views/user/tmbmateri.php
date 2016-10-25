@@ -1,7 +1,7 @@
           <div class="title_content"> <p> Tambah Kelas </p></div>
 
           <div class="col-md-9 personal-info">
-           <?=form_open('home/savemateri');?>
+           <?=form_open_multipart('home/save_materi');?>
               <input  type="hidden" name="id_kelas" value="<?php echo $this->uri->segment(3) ?>">
           <div class="form-group">
             <label class="col-lg-3 control-label">title:</label>
@@ -12,7 +12,7 @@
           <div class="form-group">
             <label class="col-lg-3 control-label">content:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" name="content">
+              <input class="form-control" type="file" name="userfile">
             </div>
           </div>
           <div class="form-group">

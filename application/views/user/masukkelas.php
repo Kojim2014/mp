@@ -28,11 +28,11 @@ $this->db->where('id_kelas', $this->uri->segment(3));
 $get = $this->db->get('materi');
 foreach ($get->result() as $data) {
  ?>
-  <div class="video-lists">
-        <a href="<?php echo site_url("Home/vmateri/".$data->id_materi); ?>">
-                <?=$data->title;?>   </a>
+<div class="video-lists">
+        <a href="<?php echo site_url("Home/vmateri/".$data->id_materi); ?>"> <?=$data->title;?></a>
   </div>
     <?php } ?>
 </div>
+
 </div>
  </div>

@@ -41,8 +41,8 @@
                       <span class="remove_b"> UnFollow </span>
                     </a>
                   </div>
+              <a onclick="return confirm('Apakah anda yakin akan menghapus Kelas ini?')" href="<?php echo site_url('Home/delkelas/'.$data->id_kelas);?>">X</a>
               </div>
-
           <?php } ?>
 
 </div>

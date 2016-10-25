@@ -33,6 +33,7 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('user/dashboard');
 	}
+
 	
 	public function mkelas()
 	{
@@ -98,6 +99,31 @@ class Home extends CI_Controller {
                 redirect('home/kelas');
         }
 	}
+function save_materi()
+	{
+         $config['upload_path']          = './assets/file/filemateri';
+         $config['allowed_types']        = 'gif|jpg|png|jpeg|bmp|doc|docx|pptx|xls|xlsx|pdf|zip|rar';
+         $config['max_size']     		 = '2048000';
+
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->do_upload())
+        {
+                $error = array('error' => $this->upload->display_errors());
+                print_r($error);
+        }else{
+                $data = $this->upload->data();
+                $id_kelas = $this->input->post('id_kelas');
+                $title       = $this->input->post('title');
+                $content    =  $data['file_name'];
+                $ukuranfile = $data['file_size'];
+                $creator 	= $this->input->post('creator');
+                $created 	= $this->input->post('created');
+                $updated 	= $this->input->post('updated');
+                $this->Main_model->uploadmateri($id_kelas,$title, $content, $ukuranfile, $creator,$created,$updated); 
+                redirect('home/mkelas/'.$this->input->post('id_kelas'),'refresh');
+        }
+	}
 
 	public function savemateri()
 	{
@@ -123,6 +149,17 @@ class Home extends CI_Controller {
 	{
 		$this->Main_model->un_follow();
 		
+	}
+	public function delkelas()
+	{
+		$id = $this->uri->segment(3);
+		$data = $this->db->delete("kelas",array("id_kelas"=>"$id"));
+		if ($data) {
+			redirect('home/kelas');
+        }
+		else{
+			echo "Gagal menghapus kelas yang dipilih !";
+		}
 	}
 }
 

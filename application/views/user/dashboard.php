@@ -69,7 +69,7 @@
 	<div id="main_wrapper" class="main_profil">
 	  <div id="menu-top-profil">
 		<div id="blue-logo">
-  		  <a href="../../user.html"><img src="<?php echo base_url('/assets/asset/atom-bg.png') ?>" alt=""/></a>
+  		  <!-- <a href="../../user.html"><img src="<?php echo base_url('/assets/asset/atom-bg.png') ?>" alt=""/></a> -->
 		</div>
 		<div class="dropdown button orange bubble-float-bottom notif"><div style="margin-top:-15%;">Notifikasi <span>3</span></div>
 		  <button class="dropbtn"></button>

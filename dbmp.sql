@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 24 Agu 2016 pada 08.15
--- Versi Server: 5.6.16
+-- Generation Time: Oct 24, 2016 at 08:11 AM
+-- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `forum`
+-- Table structure for table `forum`
 --
 
 CREATE TABLE IF NOT EXISTS `forum` (
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `forum` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `forum_comments`
+-- Table structure for table `forum_comments`
 --
 
 CREATE TABLE IF NOT EXISTS `forum_comments` (
@@ -57,29 +57,30 @@ CREATE TABLE IF NOT EXISTS `forum_comments` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `gabung`
+-- Table structure for table `gabung`
 --
 
 CREATE TABLE IF NOT EXISTS `gabung` (
-  `id_gabung` int(80) NOT NULL AUTO_INCREMENT,
-  `id_user` int(80) NOT NULL,
-  `id_kelas` int(80) NOT NULL,
-  PRIMARY KEY (`id_gabung`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=52 ;
+  `id_gabung` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
+  `id_kelas` int(11) NOT NULL,
+  PRIMARY KEY (`id_gabung`),
+  KEY `id_user` (`id_user`),
+  KEY `id_kelas` (`id_kelas`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
--- Dumping data untuk tabel `gabung`
+-- Dumping data for table `gabung`
 --
 
 INSERT INTO `gabung` (`id_gabung`, `id_user`, `id_kelas`) VALUES
-(13, 2, 10),
-(50, 1, 8),
-(51, 1, 11);
+(15, 9, 14),
+(16, 8, 13);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kelas`
+-- Table structure for table `kelas`
 --
 
 CREATE TABLE IF NOT EXISTS `kelas` (
@@ -89,24 +90,20 @@ CREATE TABLE IF NOT EXISTS `kelas` (
   `deskripsi` text,
   `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_kelas`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
--- Dumping data untuk tabel `kelas`
+-- Dumping data for table `kelas`
 --
 
 INSERT INTO `kelas` (`id_kelas`, `nama_kelas`, `foto`, `deskripsi`, `create_date`) VALUES
-(6, 'Kelas Menggambar', 'esko.png', 'kelas menggambar teks', '0000-00-00 00:00:00'),
-(7, 'kelas fotografer', 'ad.jpg', 'kita belajar foto-foto yuk', '0000-00-00 00:00:00'),
-(8, 'kelas pertama', 'boler.png', 'coba ke4', '0000-00-00 00:00:00'),
-(10, 'Kelas Fotografi', 'ad.jpg', 'Kelas Fotografi', '0000-00-00 00:00:00'),
-(11, 'Kelas Lain', 'gambar-211.jpg', 'Keyboard', '2016-04-21 03:18:09'),
-(12, 'kelasq', 'ad.jpg', 'test', '2016-05-26 03:56:02');
+(13, 'kelas koding', 'Capture.JPG', 'belajar code', '2016-08-24 14:03:00'),
+(14, 'kelas kodingan', 'boler.png', 'belajar kodingan', '2016-08-25 07:36:29');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `materi`
+-- Table structure for table `materi`
 --
 
 CREATE TABLE IF NOT EXISTS `materi` (
@@ -120,22 +117,20 @@ CREATE TABLE IF NOT EXISTS `materi` (
   PRIMARY KEY (`id_materi`),
   KEY `updated` (`updated`),
   KEY `id_kelas` (`id_kelas`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data untuk tabel `materi`
+-- Dumping data for table `materi`
 --
 
 INSERT INTO `materi` (`id_materi`, `id_kelas`, `title`, `content`, `creator`, `created`, `updated`) VALUES
-(2, 6, 'title', 'content', 'dimas', '2016-08-07 00:00:00', '2016-08-07 00:00:00'),
-(3, 6, 'title1', 'content2', 'dim', '2016-08-07 00:00:00', '2016-08-07 00:00:00'),
-(4, 6, 'judul', 'contentnya', 'dimasdimas', '2016-08-15 00:00:00', '2016-08-18 00:00:00'),
-(5, 7, 'megang SLR', 'belom', 'dimas', '2016-08-10 00:00:00', '2016-08-11 00:00:00');
+(1, 14, 'html', 'belajar tag', 'dimas', '2016-08-25 00:00:00', '2016-08-25 00:00:00'),
+(2, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `transaksi_materi`
+-- Table structure for table `transaksi_materi`
 --
 
 CREATE TABLE IF NOT EXISTS `transaksi_materi` (
@@ -153,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `transaksi_materi` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -169,39 +164,42 @@ CREATE TABLE IF NOT EXISTS `users` (
   `status` enum('0','1') DEFAULT NULL,
   `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_users`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id_users`, `nama_lengkap`, `jkl`, `foto`, `username`, `password`, `email`, `level`, `cp`, `status`, `create_date`) VALUES
-(1, NULL, '', '11.jpg', 'admin', 'admin', 'dimas@mail.com', '1', NULL, NULL, '2016-07-30 04:53:02'),
-(2, 'haha', '', 'guru.png', 'coba', 'coba', '', '1', NULL, NULL, '2016-08-10 07:26:59'),
-(4, 'Crepes Luzi', 'laki-laki', 'guru.png', 'baberak', 'baberak', 'baberak@gmail.com', '', '081273868461', '1', '2016-08-10 07:27:03'),
-(5, 'tes 1', 'laki-laki', 'guru.png', 'tes1', 'testing', 'tes1@gmail.com', '', '98796779', '1', '2016-08-10 07:27:07'),
-(6, 'ahaha', 'laki-laki', 'boler.png', 'dim1', 'qwerty', 'aka@mail.com', '', '0877', '1', '2016-08-10 07:12:48'),
-(7, 'satu dua', 'laki-laki', 'pr.jpg', 'tiga', '1', 'haha@nf.com', '', '089', '1', '2016-08-10 08:50:34');
+(8, 'dimas ferianto', 'laki-laki', 'guru.png', 'admin', 'admin', 'dimas@mail.com', '', '08328979723', '1', '2016-08-24 13:59:46'),
+(9, 'puguh rismadi', 'laki-laki', 'guru.png', 'puguhrismadi', '123123', 'puguhrismadi@gmail.com', '', '0868685797', '1', '2016-08-25 07:24:22');
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `forum_comments`
+-- Constraints for table `forum_comments`
 --
 ALTER TABLE `forum_comments`
   ADD CONSTRAINT `forum_comments_ibfk_1` FOREIGN KEY (`id_forum`) REFERENCES `forum` (`id_forum`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `forum_comments_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_users`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
--- Ketidakleluasaan untuk tabel `materi`
+-- Constraints for table `gabung`
+--
+ALTER TABLE `gabung`
+  ADD CONSTRAINT `gabung_ibfk_1` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id_kelas`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `gabung_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_users`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `materi`
 --
 ALTER TABLE `materi`
   ADD CONSTRAINT `materi_ibfk_1` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id_kelas`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
--- Ketidakleluasaan untuk tabel `transaksi_materi`
+-- Constraints for table `transaksi_materi`
 --
 ALTER TABLE `transaksi_materi`
   ADD CONSTRAINT `transaksi_materi_ibfk_2` FOREIGN KEY (`id_materi`) REFERENCES `materi` (`id_materi`) ON DELETE CASCADE ON UPDATE NO ACTION,

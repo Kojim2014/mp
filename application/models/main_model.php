@@ -97,7 +97,22 @@ class Main_model extends CI_Model {
 				'deskripsi' => $deskripsi
 				);
 		$this->db->insert('kelas', $val);
-	    return site_url('home/kelas'); 
+	    return site_url('home/vmateri'); 
+	}
+public function uploadmateri($id_kelas,$title, $content,$ukuranfile,$creator,$created,$updated){
+		// $simpan=$this->db->query("INSERT INTO `dbmp`.`kelas` (`id_kelas`, `id_lembaga`, `nama_kelas`, `foto`, `deskripsi`) VALUES (NULL, NULL, '$nama_kelas', '$foto', '$deskripsi')");
+		$val = array(
+				
+				'id_kelas' => $id_kelas,
+				'title' => $title,
+				'content' => $content,
+				'ukuranfile' => $ukuranfile,
+				'creator' => $creator,
+				'created' => $created,
+				'updated' => $updated
+				);
+		$this->db->insert('materi', $val);
+	    return redirect('home/mkelas/'.$this->input->post('id_kelas'),'refresh');
 	}
 
 	public function tanya()
