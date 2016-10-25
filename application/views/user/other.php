@@ -26,22 +26,13 @@
   <meta property="og:description" content="Belajar Web Programming dan Design Online di SekolahKoding">
 </head> 
 <body class="body-class" oncontextmenu="return false">
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-59878621-1', 'auto');
-    ga('send', 'pageview');
-  </script>
 
   <div id="page-wrapper">
     <div id="menu_left_back"></div>
 	<div id="menu_left" class="menu_profil">
 	  <div id="data_diri">
 		<div id="data_diri_main">
-		  <img src="<?php echo base_url('assets/asset/homepage/guru.png'); ?>" width="150">
+		  <img src="<?php echo base_url('assets/photo/fotoprofile/'.$row->foto); ?>" width="150">
 		  <div id="fullname"><p> <?php echo $row->nama_lengkap; ?></p></div>
 		  <p>@<?php echo $row->username; ?></p>
 		</div>
@@ -83,26 +74,32 @@
 	  
 	  <div class="clear"></div>
 	  
-<div id="daftar_kelas">
-  <div class="title_content"><p> Kelas yang di ikuti <?php echo $row->nama_lengkap; ?> </p></div>
-  
-  <?php 
-  // $this->db->select('id_gabung, id_kelas');
-  $this->db->from('gabung g');
-  $this->db->join('kelas k', 'g.id_kelas = k.id_kelas', 'left');
-  $this->db->where('g.id_user');
-  $kelas = $this->db->get();
+	  <div id="daftar_kelas">
+	    <div class="title_content"><p> Data <?php echo $row->nama_lengkap; ?> </p></div>
+	    <div class="content content_profil">
+			
+		<?php
+			$gabung = $this->db->where('id_user', $this->input->get('id'));
+			$gabung = $this->db->get('gabung');
+			if ($gabung->num_rows() < 1) {
+				echo "Tidak ada kelas yang di ikuti.";
+			}else {
+				foreach ($gabung->result() as $key) {
+					$dakel = $this->db->where('id_kelas', $key->id_kelas);
+					$dakel = $this->db->get('kelas')->result();
+					foreach ($dakel as $data) {
+		?>
+	 	  <li class="cover-wrapper">
+		    <a href="<?= site_url("Home/mkelas/".$data->id_kelas); ?>">
+		 	  <div class="bg_transparent"></div>
+			  <p><?= $data->nama_kelas ?></p>
+			  <img src="<?php echo base_url('assets/photo/fotokelas/'.$data->foto);?>" alt="" />
+		    </a>
+		  </li>
+		<?php } } } ?>
 
-  foreach ($kelas->result() as $key => $value) { ?>
-	  <div class="content content_profil">
-		<li class="cover-wrapper">
-		  <a href="<?php echo base_url('home/mkelas/' . $value->id_kelas) ?>">
-			<div class="bg_transparent"></div>
-			<p><?php echo $value->nama_kelas ?></p>
-			<img src="<?php echo base_url('assets/photo/fotokelas/'.$value->foto);?>" alt="" />
-		  </a>
-		</li>
-		<div class="clear"></div>
+		  <div class="clear"></div>
+	    </div>
 	  </div>
 
 

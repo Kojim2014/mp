@@ -87,7 +87,11 @@
 	  	if ($this->uri->segment(2) == "kelas") {
 	  	  $this->load->view('user/kelas');
 	  	}elseif ($this->uri->segment(2) == "forum") {
-	  	  $this->load->view('user/forum');
+	  	  if ($this->uri->segment(3) != null) {
+	  	  	$this->load->view('user/forumview');
+	  	  }else {
+		  	$this->load->view('user/forum');
+		  }
 	  	}elseif ($this->uri->segment(2) == "user") {
 	  	  $this->load->view('user/member');
 	  	}elseif ($this->uri->segment(2) == "tambahkls") {

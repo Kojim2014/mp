@@ -115,11 +115,13 @@ public function uploadmateri($id_kelas,$title, $content,$ukuranfile,$creator,$cr
 	    return redirect('home/mkelas/'.$this->input->post('id_kelas'),'refresh');
 	}
 
-	public function tanya()
+	public function tanya($value)
 	{
-		echo "Title : ".$this->input->post('title');
-		echo "Konten : ". htmlspecialchars($this->input->post('content'));
-		echo "Tags : ".$this->input->post('tag');
+		$this->db->insert('forum', $value);
+		redirect('home/forum','refresh');
+		// foreach ($value as $data) {
+		// 	echo $data."<br>";
+		// }
 	}
 	public function save_materi() 
 	{
