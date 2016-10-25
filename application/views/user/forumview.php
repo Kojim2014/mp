@@ -39,7 +39,7 @@
 			$tag = explode(',', $tarum->tags);
 			foreach ($tag as $tags) {
 		?>
-		<span><a href=""><?= $tags ?></a></span>
+		<span><a href="<?= site_url('home/forum') ?>?tag=<?= $tags ?>"><?= $tags ?></a></span>
 		<?php } ?>
 	</div>
 </div>
@@ -48,3 +48,4 @@
 
 <div id="isi_pertanyaan"><?= $tarum->content ?></div>
 <?php } ?>
+</div>

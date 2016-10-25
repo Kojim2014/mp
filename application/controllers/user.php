@@ -15,7 +15,11 @@ class User extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('user/other');
+		if ($this->input->get('id') == $this->session->userdata('uid')) {
+			redirect('home','refresh');
+		}else {
+			$this->load->view('user/other');
+		}
 	}
 
 }
