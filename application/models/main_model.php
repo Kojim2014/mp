@@ -74,7 +74,8 @@ class Main_model extends CI_Model {
 			'username' => $this->input->post('uname'),
 			'password' => $this->input->post('pword'),
 			'email' => $this->input->post('email'),
-			'level' => 'siswa',
+			'level' => $this->input->post('level'),
+			// 'level' => 'siswa',
 			'cp' => $this->input->post('conpers'),
 			'status' => '1'
 			);

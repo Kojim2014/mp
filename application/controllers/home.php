@@ -169,6 +169,18 @@ function save_materi()
 			echo "Gagal menghapus kelas yang dipilih !";
 		}
 	}
+	public function delmateri()
+	{
+		$id = $this->uri->segment(3);
+		$data = $this->db->delete("materi",array("id_materi"=>"$id"));
+		if ($data) {
+			redirect('home/mkelas/'.$this->input->post('id_kelas'),'refresh');
+        }
+		else{
+			echo "Gagal menghapus kelas yang dipilih !";
+		}
+	}
+	
 }
 
 /* End of file home.php */

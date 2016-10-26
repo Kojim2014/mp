@@ -66,13 +66,7 @@
               <input type="text" name="lname" required autocomplete="off"/>
             </div>
           </div>
-  
-          <div class="field-wrap">
-            <label>
-              Username<span class="req">*</span>
-            </label>
-            <input type="text" name="uname" required autocomplete="off"/>
-          </div>
+
 
           <div class="field-wrap">
             <label>
@@ -80,7 +74,14 @@
             </label>
             <input type="email" name="email" required autocomplete="off"/>
           </div>
-          
+            
+          <div class="field-wrap">
+            <label>
+              Username<span class="req">*</span>
+            </label>
+            <input type="text" name="uname" required autocomplete="off"/>
+          </div>
+
           <div class="top-row">
             <div class="field-wrap">
               <label>
@@ -94,6 +95,16 @@
                 Confirm Password<span class="req">*</span>
               </label>
               <input type="password" id="confpass" required autocomplete="off"/>
+            </div>
+          </div>
+        
+        <div class="field-wrap">
+            <div class="jekel">
+              <select id="level" name="level">
+                <option> - Daftar Sebagai - </option>
+                <option value="guru">guru</option>
+                <option value="siswa">siswa</option>
+              </select>
             </div>
           </div>
 

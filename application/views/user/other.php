@@ -102,12 +102,6 @@
 	    </div>
 	  </div>
 
-
-
-
-
-  <?php } ?>
-
 </div>
 
 	  <div class="clear_h"></div>

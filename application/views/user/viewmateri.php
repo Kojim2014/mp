@@ -23,7 +23,7 @@ foreach ($get->result() as $data) { ?>
   	<tr>
   		<td><?php echo $data->content; ?></td>
   		<td><?php echo $data->ukuranfile."KB";?></td>
-  		<td><a href="<?php echo base_url('assets/file/filemateri/'.$data->content); ?>"> download di sini</a></td>
+  		<td><a href="<?php echo base_url('assets/file/filemateri/'.$data->content); ?>"> Buka File</a></td>
   	</tr>
   </tbody>
   </table>

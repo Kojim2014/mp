@@ -21,7 +21,8 @@ foreach ($get->result() as $data) { ?>
             <div id="daftar_episode">
               <h4>Daftar Materi</h4>
           	   <!--List Kategori-->
-<div id="video-lists-wrapper">
+
+<!-- <div id="video-lists-wrapper">
   
 <?php 
 $this->db->where('id_kelas', $this->uri->segment(3));
@@ -33,6 +34,23 @@ foreach ($get->result() as $data) {
   </div>
     <?php } ?>
 </div>
-
+ -->
+ <?php 
+$this->db->where('id_kelas', $this->uri->segment(3));
+$get = $this->db->get('materi');
+foreach ($get->result() as $data) {
+ ?>
+<table>
+  <tr>
+ <td><div class="list-group">
+  
+  </div>
+  <td width="700"><div class="list-group">
+  <a href="<?php echo site_url("Home/vmateri/".$data->id_materi); ?>" class="list-group-item list-group-item-success"><?=$data->title;?></a></div></td>
+  <td><div class="list-group">
+  <a onclick="return confirm('Apakah anda yakin akan menghapus Kelas ini?')" href="<?php echo site_url('Home/delmateri/'.$data->id_materi);?>" class="list-group-item list-group-item-success">Hapus</a></div></td></td>
+  </tr>
+</table>
+<?php } ?>
 </div>
  </div>

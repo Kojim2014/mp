@@ -1,4 +1,4 @@
-          <div class="title_content"> <p> Tambah Kelas </p></div>
+          <div class="title_content"> <p> Tambah Materi </p></div>
 
           <div class="col-md-9 personal-info">
            <?=form_open_multipart('home/save_materi');?>

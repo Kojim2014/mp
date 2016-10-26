@@ -44,8 +44,10 @@
 						<?php
 							$this->db->select('username');
 							$this->db->where('id_users', $row->creator);
-							$uname = $this->db->get('users');
-							echo $uname->result()[0]->username;
+							$uname = $this->db->get('users')->result();
+							foreach ($uname as $name) {
+								echo $name->username;
+							}
 						?>
 					</a>
 				</div>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 24, 2016 at 08:11 AM
+-- Generation Time: Oct 26, 2016 at 08:22 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -35,7 +35,14 @@ CREATE TABLE IF NOT EXISTS `forum` (
   `tags` text,
   PRIMARY KEY (`id_forum`),
   KEY `creator` (`creator`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `forum`
+--
+
+INSERT INTO `forum` (`id_forum`, `title`, `content`, `creator`, `created`, `tags`) VALUES
+(1, 'tes', '<p>tes&nbsp;&nbsp;&nbsp;&nbsp;</p>', 8, '2016-10-25 01:30:19', 'WY');
 
 -- --------------------------------------------------------
 
@@ -74,7 +81,6 @@ CREATE TABLE IF NOT EXISTS `gabung` (
 --
 
 INSERT INTO `gabung` (`id_gabung`, `id_user`, `id_kelas`) VALUES
-(15, 9, 14),
 (16, 8, 13);
 
 -- --------------------------------------------------------
@@ -90,15 +96,14 @@ CREATE TABLE IF NOT EXISTS `kelas` (
   `deskripsi` text,
   `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_kelas`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `kelas`
 --
 
 INSERT INTO `kelas` (`id_kelas`, `nama_kelas`, `foto`, `deskripsi`, `create_date`) VALUES
-(13, 'kelas koding', 'Capture.JPG', 'belajar code', '2016-08-24 14:03:00'),
-(14, 'kelas kodingan', 'boler.png', 'belajar kodingan', '2016-08-25 07:36:29');
+(13, 'kelas koding', 'Capture.JPG', 'belajar code', '2016-08-24 14:03:00');
 
 -- --------------------------------------------------------
 
@@ -111,21 +116,23 @@ CREATE TABLE IF NOT EXISTS `materi` (
   `id_kelas` int(11) DEFAULT NULL,
   `title` varchar(45) DEFAULT NULL,
   `content` text,
+  `ukuranfile` text NOT NULL,
   `creator` varchar(50) DEFAULT NULL,
   `created` datetime DEFAULT NULL,
   `updated` datetime DEFAULT NULL,
   PRIMARY KEY (`id_materi`),
   KEY `updated` (`updated`),
   KEY `id_kelas` (`id_kelas`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `materi`
 --
 
-INSERT INTO `materi` (`id_materi`, `id_kelas`, `title`, `content`, `creator`, `created`, `updated`) VALUES
-(1, 14, 'html', 'belajar tag', 'dimas', '2016-08-25 00:00:00', '2016-08-25 00:00:00'),
-(2, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `materi` (`id_materi`, `id_kelas`, `title`, `content`, `ukuranfile`, `creator`, `created`, `updated`) VALUES
+(11, 13, 'tes', 'cloud-computing-nodejs-121226072217-phpapp02.pdf', '1516.78', 'dim', '2015-12-31 00:00:00', '2016-10-24 00:00:00'),
+(12, 13, 'node', 'Belajar_Membuat_API_Menggunakan_Node_js__.pdf', '3267.83', 'creator', '2016-12-31 00:00:00', '2016-12-31 00:00:00'),
+(13, 13, 'test', 'Authenticate_a_Node1.pdf', '2123.04', 'tes', '2016-12-31 00:00:00', '2016-12-31 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -159,12 +166,12 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` varchar(100) DEFAULT NULL,
   `password` varchar(50) DEFAULT NULL,
   `email` varchar(45) NOT NULL,
-  `level` enum('1','2','3','4') DEFAULT NULL,
+  `level` enum('admin','guru','siswa') DEFAULT NULL,
   `cp` varchar(15) DEFAULT NULL,
   `status` enum('0','1') DEFAULT NULL,
   `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_users`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `users`

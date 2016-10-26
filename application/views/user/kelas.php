@@ -41,7 +41,9 @@
                       <span class="remove_b"> UnFollow </span>
                     </a>
                   </div>
+                       <?php if ($this->session->userdata('level')=='admin'||$this->session->userdata('level')=='guru') { ?>                                
               <a onclick="return confirm('Apakah anda yakin akan menghapus Kelas ini?')" href="<?php echo site_url('Home/delkelas/'.$data->id_kelas);?>">X</a>
+              <?php } ?>
               </div>
           <?php } ?>
 
