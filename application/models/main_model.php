@@ -140,6 +140,12 @@ public function uploadmateri($id_kelas,$title, $content,$ukuranfile,$creator,$cr
 		redirect('home/mkelas/'.$this->input->post('id_kelas'),'refresh');
 	}
 
+	public function comment($value)
+	{
+		$this->db->insert('forum_comments', $value);
+		redirect('home/forum','refresh');
+	}
+
 	public function editpro()
 	{
 		try {

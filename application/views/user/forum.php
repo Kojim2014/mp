@@ -7,18 +7,45 @@
 		<a href="<?php echo site_url('home/tanya');?>"><span>Tanya ✎</span></a>
 	</div>
 
-	<select name="daftar_pelajaran" id="select_daftar_pelajaran">
-	<option class="option_pelajaran" value="/forum">Semua Topik</option>
-	<option class="option_pelajaran" value="/forum">1</option>
-	</select>
+	<!-- <select name="daftar_pelajaran" id="select_daftar_pelajaran" onclick="tag()" onchange="tag()">
+		<option id="tagas" class="option_pelajaran"> -- Tags -- </option>
+		<?php
+			$tag = $this->db->get('forum_tag')->result();
+			foreach ($tag as $tags) {
+		?>
+		<option class="option_pelajaran" value="<?= $tags->tag ?>"><?= $tags->tag ?></option>
+		<?php } ?>
+	</select> -->
+
+	<div class="clear"></div>
+
+	<div class="tag_pertanyaan" style="padding-top: 10px;">
+		<span><a href="<?= site_url('home/forum') ?>">ALL</a></span>
+	  <?php
+		$tag = $this->db->get('forum_tag')->result();
+		  foreach ($tag as $tags) {
+	  ?>
+		<span><a href="<?= site_url('home/forum') ?>?tag=<?= $tags->tag ?>"><?php echo $tags->tag; ?></a></span>
+	  <?php } ?>
+	</div>
 
 	<div class="clear"></div>
 
 	<?php
-		$this->db->order_by('created', 'DESC');
-		$this->db->limit(10);
-		$data = $this->db->get('forum');
-		foreach ($data->result() as $row) {
+		
+		if (is_null($this->input->get('tag')) == false) {
+			$spectag = $this->input->get('tag');
+			$this->db->from('forum');
+			$data = $this->db->query("SELECT * FROM forum WHERE tags Like '%{$spectag}%' ORDER BY forum.created DESC")->result();
+			// $this->db->limit(10);
+			// $data = $this->db->get('forum')->result();
+		}else {
+			$this->db->order_by('created', 'DESC');
+			// $this->db->limit(10);
+			$data = $this->db->get('forum')->result();
+		}
+		foreach ($data as $row) {
+
 	?>
 	<div id="topic_wrapper">
 		<div class="each_topic" id="1063" last_activity="2016-03-18 10:54:57" last_activity_by ="" judul="pemrograman-java-mobille">
@@ -26,6 +53,7 @@
 				<div class="pertanyaan_by_foto">
 					<?php
 						$user = $this->db->where('id_users', $row->creator);
+						$user = $this->db->limit(1);
 						$user = $this->db->get('users')->result();
 						foreach ($user as $pict) {
 					?>
@@ -40,7 +68,7 @@
 				</div>
 
 				<div class="pertanyaan_by">
-					oleh @<a href="user/profile/kazuna018.html">
+					oleh @<a href="<?=site_url('user');?>?id=<?=$row->creator;?>">
 						<?php
 							$this->db->select('username');
 							$this->db->where('id_users', $row->creator);
@@ -58,7 +86,7 @@
 
 				<div class="tag_pertanyaan">
 				  <?php $tag = explode(',', $row->tags); foreach ($tag as $tags) {?>
-					<span><a href="forum/tag/index.html"><?php echo $tags; ?></a></span>
+					<span><a href="<?= site_url('home/forum') ?>?tag=<?= $tags ?>"><?php echo $tags; ?></a></span>
 				  <?php } ?>
 				</div>
 			</div>
@@ -67,15 +95,10 @@
 		</div>
 	</div>
 	<?php } ?>
-	<div class="pagination">
-	<a href='forum/halaman/1.html'> << </a>
-	<a href='forum/halaman/1.html'>1</a>
-    <a href='forum/halaman/2.html'>2</a>
-    <a href='forum/halaman/3.html'>3</a>
-    <a href='forum/halaman/4.html'>4</a>
-    <a href='forum/halaman/5.html'>5</a>
-    <a href='forum/halaman/6.html'>6</a>
-    <a href='forum/halaman/7.html'>7</a>
-    <a href='forum/halaman/61.html'> >> </a>
-	</div>
 </div>
+<script type="text/javascript">
+	function tag() {
+		$("#tagas").attr('disabled', '');
+		document.getElementsByTagName('option')[1].setAttribute('selected', '');
+	}
+</script>

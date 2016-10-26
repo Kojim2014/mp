@@ -180,6 +180,17 @@ function save_materi()
 			echo "Gagal menghapus kelas yang dipilih !";
 		}
 	}
+
+	public function comment()
+	{
+		$value = array(
+				'id_forum' => $this->input->get('forum'),
+				'id_user' => $this->session->userdata('uid'),
+				'comment' => $this->input->post('komentar'),
+				'status' => '1'
+			);
+		$this->main_model->comment($value);
+	}
 	
 }
 

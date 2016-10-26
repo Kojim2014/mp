@@ -16,6 +16,9 @@
   <meta charset="UTF-8">
   <meta name="author" content="SekolahKoding">
   <link rel="stylesheet" href="<?php echo base_url('assets/user/css/main-app.css');?>" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/login/font-awesome/css/font-awesome.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/user/css/hover-min.css') ?>">
   <script src="<?php echo base_url('assets/user/js/jquery-2.1.4.min.js'); ?>"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="icon" href="<?php echo base_url('assets/favicon.ico'); ?>" type="image/x-icon" />
@@ -28,7 +31,7 @@
 <body class="body-class" oncontextmenu="return false">
 
   <div id="page-wrapper">
-    <div id="menu_left_back"></div>
+    <div id="menu_left_back">
 	<div id="menu_left" class="menu_profil">
 	  <div id="data_diri">
 		<div id="data_diri_main">
@@ -61,7 +64,7 @@
 	  
 	  <div class="clear"></div>
 	</div>
-
+	</div>
 	<div id="main_wrapper" class="main_profil">
 	  <div id="menu-top-profil">
 		<div id="blue-logo">

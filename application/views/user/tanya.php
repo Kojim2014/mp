@@ -1,6 +1,6 @@
 <script src="<?php echo base_url('assets/user/js/select2.min.js');?>"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/user/css/select2.min.css');?>">
-<link href="<?php echo base_url('/assets/user/css/summernote.css') ?>" rel="stylesheet">
+<link href="<?php echo base_url('assets/user/css/summernote.css') ?>" rel="stylesheet">
 <link href="<?php echo base_url('assets/user/css/bootstrap.css');?>" rel="stylesheet">
 <script src="<?php echo base_url('assets/user/js/bootstrap.js');?>"></script> 
 <script src="<?php echo base_url('assets/user/js/summernote.js');?>"></script>
@@ -40,9 +40,12 @@
     </div>
 
     <select style="width:100%; height: 100%;" name="tag[]" class="js-example-basic-multiple" multiple="multiple">
-      <option value="AL">Alabama</option>
-      <option value="WY">Wyoming</option>
-      <option value="AA">AHAHA</option>
+      <?php
+        $tags = $this->db->get('forum_tag')->result();
+        foreach ($tags as $tag) {
+      ?>
+        <option value="<?= $tag->tag ?>"><?= $tag->tag ?></option>
+      <?php } ?>
     </select>
   </div>
 
@@ -75,9 +78,12 @@
   }
 
   $('.summernote').summernote({
-  airMode: true
-});
-var postForm = function() {
-  var content = $('textarea[name="content"]').html($('#summernote').code());
-}
+    airMode: true
+  });
+
+  $(".modal-backdrop").attr('style', 'z-index:0');
+
+  var postForm = function() {
+    var content = $('textarea[name="content"]').html($('#summernote').code());
+  }
 </script>
