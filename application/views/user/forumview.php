@@ -60,8 +60,8 @@
 		foreach ($jwb as $jwbn) {
 	?>
 	<div class="each_jawaban " id="each_jawaban__2845" >
-		<div class="col-15 vote-wrapper">
-			<div class="col-30">
+		<div class="col-15 vote-wrapper" style="padding-top:1%;">
+			<!-- <div class="col-30" style="padding-top:15%;">
 				<div class="vote-jawaban" id="vote_jawaban__1" data-reply-id="2845">
 					<img src="<?= base_url('assets/asset/icon/vote-up.png') ?>" alt="icon vote up" />
 				</div>
@@ -70,9 +70,17 @@
 				</div>
 			</div>
 
-			<div class="col-30" id="total-vote-jawaban"> 0 </div>
+			<div class="col-70" id="total-vote-jawaban"> 0 </div>
 			<div class="clear"></div>
-			<div id="flash-vote-jawaban"></div>
+			<div id="flash-vote-jawaban"></div> -->
+
+			<?php
+				$this->db->where('id_users', $jwbn->id_user);
+				$daser = $this->db->get('users')->result();
+				foreach ($daser as $key) {
+			?>
+			<img class="img img-rounded" src="<?= base_url('assets/photo/fotoprofile/'.$key->foto) ?>" style="width:75%;height:15%;" />
+			<?php } ?>
 		</div>
 
 		<div class="col-85">
@@ -99,9 +107,6 @@
 					$daser = $this->db->get('users')->result();
 					foreach ($daser as $key) {
 				?>
-				<div class="jawaban_by_foto">
-					<img src="<?= base_url('assets/photo/fotoprofile/'.$key->foto) ?>" width=50 />
-				</div>
 				<div class="jawaban_by">
 					<a href="<?=site_url('user');?>?id=<?=$jwbn->id_user;?>">@<?= $key->username ?> </a>
 				</div>
